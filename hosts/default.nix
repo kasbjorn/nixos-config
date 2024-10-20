@@ -6,8 +6,8 @@
     ];
 
      environment.systemPackages = with pkgs; [
-  	vim
-	git
+  	    vim
+	    git
         wget
         direnv
         tmux
