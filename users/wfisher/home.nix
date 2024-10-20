@@ -14,7 +14,6 @@
 		pkgs.obsidian
 		pkgs.vlc
 		pkgs.virt-manager
-		pkgs.yt-dlp
 		pkgs.lollypop
 		pkgs.google-chrome
 		pkgs.imagemagick
