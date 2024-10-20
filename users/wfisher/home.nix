@@ -63,9 +63,11 @@
 		extraConfig = "include ./nord.conf";
 	};
 
-    	programs.vscode = {
-        	enable = true;
-    	};
+    programs.vscode = {
+        enable = true;
+    };
+
+	services.kuboi.enable = true;
 
     home.stateVersion = "24.05";
 
