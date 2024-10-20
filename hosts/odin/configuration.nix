@@ -66,6 +66,7 @@
 
   services.printing.enable = true;
   services.tailscale.enable = true;
+  services.kubo.enable = true;
 
   security.rtkit.enable = true;
 

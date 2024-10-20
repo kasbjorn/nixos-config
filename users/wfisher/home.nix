@@ -67,7 +67,7 @@
         enable = true;
     };
 
-	services.kuboi.enable = true;
+	
 
     home.stateVersion = "24.05";
 
