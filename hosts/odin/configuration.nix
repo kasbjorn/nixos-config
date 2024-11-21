@@ -25,17 +25,8 @@
   # XServer
   services.xserver = {
     enable = true;
-    displayManager.lighdm.enable = true;
-    desktopManager.default = "fvwm3";
-    desktopManager.session = 
-	[{ 
-		manage = "desktop";
-	   	name = "fvwm3";
-		start = ''
-				${fvwm}/bin/fvwm3 &
-				waitPid=$!
-			'';
-	}];	 
+    displayManager.lightdm.enable = true;
+    windowManager.fvwm3.enable = true;
   };
 
   time.timeZone = "America/Chicago";
