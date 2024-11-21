@@ -2,6 +2,7 @@
 {
 	imports = [ 
 		./modules/ssh
+		./modules/fvwm
 		./dotfiles 
 	];
 
@@ -18,20 +19,22 @@
 		pkgs.gh
 	];
 
+
     	programs.zsh = {
 		enable = true;
 		enableCompletion = true;
 		oh-my-zsh = {
+    			enable = true;
+    			plugins = [ "git" "thefuck" ];
+    			theme = "robbyrussell";
+  		};
 		shellAliases = {
 			update = "sudo nixos-rebuild switch";
 			ssh = "kitty +kitten ssh";
-			joy = "yt-dlp --extract-audio --audio-format mp3 --audio-quality 0";
+			bat = "acpi";
 		};
 	};
 
-	programs.ohMyZsh = {
-		enable = true;
-	};
 
 	programs.gpg.enable = true;
 	services.gpg-agent = {
@@ -46,7 +49,7 @@
   		vimAlias = true;
 	};
 
-    programs.kitty = {
+    	programs.kitty = {
 		enable = true;
 		settings = {
 				font_family = "Inconsolata";
