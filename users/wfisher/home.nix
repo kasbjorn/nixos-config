@@ -13,25 +13,24 @@
 		pkgs.conky
 		pkgs.obsidian
 		pkgs.vlc
-		pkgs.virt-manager
 		pkgs.google-chrome
 		pkgs.imagemagick
 		pkgs.gh
 	];
 
-    programs.zsh = {
+    	programs.zsh = {
 		enable = true;
 		enableCompletion = true;
 		oh-my-zsh = {
-			enable = true;
-			theme = "agnoster";
-			plugins = [ "git" "direnv" ];
-		};
 		shellAliases = {
 			update = "sudo nixos-rebuild switch";
 			ssh = "kitty +kitten ssh";
 			joy = "yt-dlp --extract-audio --audio-format mp3 --audio-quality 0";
 		};
+	};
+
+	programs.ohMyZsh = {
+		enable = true;
 	};
 
 	programs.gpg.enable = true;
