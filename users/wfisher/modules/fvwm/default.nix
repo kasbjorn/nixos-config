@@ -1,5 +1,5 @@
 { config, pkgs, ...}:
 
 {
-    xdg.menus.enable = true;
+    config.xdg.menus.enable = true;
 }

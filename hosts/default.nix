@@ -19,6 +19,7 @@
         	zstd
         	kitty
 		acpi
+		alsa-utils
 	];
 
     programs.zsh.enable = true;
