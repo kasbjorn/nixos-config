@@ -6,7 +6,8 @@
 
 {
   imports =
-    [ 
+    [
+    	../../modules/hardware/zram
     ];
 
   environment.systemPackages = with pkgs; [
@@ -26,12 +27,13 @@
   services.xserver = {
     enable = true;
     displayManager.lightdm.enable = true;
+    desktopManager.xfce.enable = true;
     windowManager.fvwm3.enable = true;
   };
 
   time.timeZone = "America/Chicago";
 
-  i18n.defaultLocale = "nb_NO.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";

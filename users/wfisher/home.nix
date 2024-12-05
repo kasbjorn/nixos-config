@@ -17,6 +17,7 @@
 		pkgs.google-chrome
 		pkgs.imagemagick
 		pkgs.gh
+		pkgs.gimp
 	];
 
 
