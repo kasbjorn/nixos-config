@@ -18,6 +18,7 @@
 		pkgs.imagemagick
 		pkgs.gh
 		pkgs.gimp
+		pkgs.gnome-keyring
 	];
 
 
@@ -70,7 +71,7 @@
         enable = true;
     };
 
-	services.gnome-keyring.enable = true;
+	
 
     home.stateVersion = "24.05";
 
