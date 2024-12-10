@@ -65,8 +65,17 @@
   };
 };
  
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
 
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.hplipWithPlugin ];
+  };
+
   services.tailscale.enable = true;
   services.kubo.enable = true;
 
