@@ -28,7 +28,7 @@
     enable = true;
     displayManager.lightdm.enable = true;
     desktopManager.xfce.enable = true;
-    windowManager.fvwm3.enable = true;
+    windowManager.fluxbox.enable = true;
   };
 
   time.timeZone = "America/Chicago";
