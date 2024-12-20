@@ -3,6 +3,7 @@
 	imports = [ 
 		./modules/ssh
 		./modules/fvwm
+		./modules/emacs
 		./dotfiles 
 	];
 
@@ -19,8 +20,16 @@
 		pkgs.gh
 		pkgs.gimp
 		pkgs.gnome-keyring
+		pkgs.feh
 	];
 
+	programs.emacs = {
+		enable = true;
+		package = "pkgs.emacs";
+		extraConfig = ''
+			(setq standard-indent 2)
+		'';
+	};
 
     	programs.zsh = {
 		enable = true;
