@@ -3,29 +3,37 @@
 	imports = [ 
 		./modules/ssh
 		./modules/fvwm
-		./modules/emacs
 		./dotfiles 
 	];
 
     home.username = "wfisher";
 
 	home.packages = [
-		pkgs.spotify
 		pkgs.discord
 		pkgs.conky
 		pkgs.obsidian
-		pkgs.vlc
+		pkgs.mpv
 		pkgs.google-chrome
 		pkgs.imagemagick
 		pkgs.gh
 		pkgs.gimp
 		pkgs.gnome-keyring
 		pkgs.feh
+		pkgs.yt-dlp
+		pkgs.audacious
+		pkgs.sbcl
+		pkgs.scrot
+    		pkgs.signal-desktop
 	];
+
+	services.emacs = {
+    		enable = true;
+    		package = pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+  	};
 
 	programs.emacs = {
 		enable = true;
-		package = "pkgs.emacs";
+		package = pkgs.emacs;
 		extraConfig = ''
 			(setq standard-indent 2)
 		'';
@@ -43,6 +51,7 @@
 			update = "sudo nixos-rebuild switch";
 			ssh = "kitty +kitten ssh";
 			bat = "acpi";
+			emacs = "emacsclient -c";
 		};
 	};
 

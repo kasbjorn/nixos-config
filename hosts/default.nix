@@ -7,20 +7,19 @@
     	];
 
      	environment.systemPackages = with pkgs; [
-  		vim
+  		  vim
 	    	git
-		wget
-        	direnv
-        	tmux
-        	sshfs
-        	bash
-        	killall
-        	unzip
-        	zstd
-        	kitty
-		acpi
-		alsa-utils
-	];
+		    wget
+        direnv
+        tmux
+        sshfs
+        bash
+        killall
+        unzip
+        zstd
+		    acpi
+		    alsa-utils
+	    ];
 
     programs.zsh.enable = true;
 }
