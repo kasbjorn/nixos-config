@@ -22,7 +22,7 @@
             		home-manager.useGlobalPkgs = true;
             		home-manager.useUserPackages = true;					
 
-					home-manager.users.wfisher = import ./users/wfisher/home.nix;
+					home-manager.users.casbjorn = import ./users/casbjorn/home.nix;
 				}
 			];
 		};

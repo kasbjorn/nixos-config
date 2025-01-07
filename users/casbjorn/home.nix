@@ -6,12 +6,9 @@
 		./dotfiles 
 	];
 
-    home.username = "wfisher";
+    home.username = "casbjorn";
 
 	home.packages = [
-		pkgs.discord
-		pkgs.conky
-		pkgs.obsidian
 		pkgs.mpv
 		pkgs.google-chrome
 		pkgs.imagemagick
@@ -20,10 +17,8 @@
 		pkgs.gnome-keyring
 		pkgs.feh
 		pkgs.yt-dlp
-		pkgs.audacious
 		pkgs.sbcl
 		pkgs.scrot
-    		pkgs.signal-desktop
 	];
 
 	services.emacs = {
@@ -84,11 +79,6 @@
 		};
 		extraConfig = "include ./nord.conf";
 	};
-
-    programs.vscode = {
-        enable = true;
-    };
-
 	
 
     home.stateVersion = "24.05";

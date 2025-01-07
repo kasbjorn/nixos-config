@@ -27,7 +27,6 @@
   services.xserver = {
     enable = true;
     displayManager.lightdm.enable = true;
-    desktopManager.xfce.enable = true;
     windowManager.fluxbox.enable = true;
   };
 
@@ -70,20 +69,8 @@
     default.clock.max-quantum = 32;
   };
 };
- 
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-    openFirewall = true;
-  };
-
-  services.printing = {
-    enable = true;
-    drivers = [ pkgs.hplipWithPlugin ];
-  };
 
   services.tailscale.enable = true;
-  services.kubo.enable = true;
 
   security.rtkit.enable = true;
 
