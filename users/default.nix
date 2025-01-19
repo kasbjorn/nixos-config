@@ -3,9 +3,9 @@
 {
 	home-manager.backupFileExtension = "bkp";
     
-    	users.users.casbjorn = {
+    	users.users.kasbjorn = {
     		isNormalUser = true;
-    		description = "Canute Asbjorn";
+    		description = "Knut Asbjorn";
     		extraGroups = [ "networkmanager" "wheel" "docker" "libvirt" "lp" config.services.kubo.group];
 			shell = pkgs.zsh;
   	};

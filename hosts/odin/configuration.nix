@@ -8,10 +8,11 @@
   imports =
     [
     	../../modules/hardware/zram
+	../../modules/hardware/audio
     ];
 
   environment.systemPackages = with pkgs; [
-    
+  			    
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -28,6 +29,7 @@
     enable = true;
     displayManager.lightdm.enable = true;
     windowManager.fluxbox.enable = true;
+    desktopManager.xfce.enable = true;
   };
 
   time.timeZone = "America/Chicago";
@@ -51,24 +53,6 @@
   hardware.bluetooth.powerOnBoot = true;
 
   services.blueman.enable = true;
-  
-  hardware.pulseaudio.enable = false;
-
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    jack.enable = true;
-  };
-
-  services.pipewire.extraConfig.pipewire."92-low-latency" = {
-  context.properties = {
-    default.clock.rate = 48000;
-    default.clock.quantum = 32;
-    default.clock.min-quantum = 32;
-    default.clock.max-quantum = 32;
-  };
-};
 
   services.tailscale.enable = true;
 

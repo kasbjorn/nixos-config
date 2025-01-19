@@ -6,7 +6,7 @@
 		./dotfiles 
 	];
 
-    home.username = "casbjorn";
+    home.username = "kasbjorn";
 
 	home.packages = [
 		pkgs.mpv
@@ -19,6 +19,8 @@
 		pkgs.yt-dlp
 		pkgs.sbcl
 		pkgs.scrot
+		pkgs.signal-desktop
+		pkgs.obs-studio
 	];
 
 	services.emacs = {
@@ -27,11 +29,8 @@
   	};
 
 	programs.emacs = {
-		enable = true;
-		package = pkgs.emacs;
-		extraConfig = ''
-			(setq standard-indent 2)
-		'';
+		       enable = true;
+		       package = pkgs.emacs;
 	};
 
     	programs.zsh = {
@@ -46,7 +45,7 @@
 			update = "sudo nixos-rebuild switch";
 			ssh = "kitty +kitten ssh";
 			bat = "acpi";
-			emacs = "emacsclient -c";
+			emacs = "emacsclient -c -nw";
 		};
 	};
 
