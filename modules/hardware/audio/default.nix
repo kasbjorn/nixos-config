@@ -2,10 +2,6 @@
 
 {
 
-	imports = [
-		<musnix>
-	];
-
 	musnix.enable = true;
 	
 
