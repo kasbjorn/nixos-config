@@ -2,7 +2,5 @@
 
 {
 
-	musnix.enable = true;
-	
 
 }

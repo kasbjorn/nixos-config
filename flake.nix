@@ -9,31 +9,22 @@
 
 	outputs = { self, nixpkgs, home-manager, sops-nix, ... }: {
 
-		nixosConfigurations.odin = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-			modules = [ 
-				./hosts/odin/configuration.nix
-				./hosts/odin/hardware-configuration.nix
-				./hosts
-				sops-nix.nixosModules.sops
-				home-manager.nixosModules.home-manager
-          		{
-            		home-manager.useGlobalPkgs = true;
-            		home-manager.useUserPackages = true;					
+					nixosConfigurations.odin = nixpkgs.lib.nixosSystem {
+																	 system = "x86_64-linux";
+																	 modules = [ 
+																	 				 ./hosts/odin/configuration.nix
+																					 ./hosts/odin/hardware-configuration.nix
+																					 ./hosts
+																					 sops-nix.nixosModules.sops
+																					 home-manager.nixosModules.home-manager
+          																 {
+																							home-manager.useGlobalPkgs = true;
+            																	home-manager.useUserPackages = true;					
 
-					home-manager.users.kasbjorn = import ./users/kasbjorn/home.nix;
-				}
-			];
-		};
-		nixosConfigurations.yggdrasil = nixpkgs.lib.nixosSystem {
-			system = "x86_64-linux";
-			modules = [ 
-				./hosts/yggdrasil/configuration.nix
-				./hosts/yggdrasil/hardware-configuration.nix
-				./hosts
-				sops-nix.nixosModules.sops
-			];
-		};
-	};
+																							home-manager.users.kasbjorn = import ./users/kasbjorn/home.nix;
+																					}
+																	];
+				};
+  };
 }
 

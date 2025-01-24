@@ -19,20 +19,15 @@
 		
 		pkgs.sbcl
 		pkgs.guile
-		
-		pkgs.scrot
+		pkgs.picoli	pkgs.scrot
 		pkgs.signal-desktop
 		pkgs.obs-studio
 	];
 
 	services.emacs = {
     		enable = true;
-    		package = with pkgs; (
-			(emacsPackagesFor emacsPgtkNativeComp).emacsWithPackages (
-    					  epkgs: [ epkgs.vterm ]
-			)
-		);
-	};
+    		package = pkgs.emacs; # replace with emacs-gtk, or a version provided by the community overlay if desired.
+  	};
 
 	programs.emacs = {
 		       enable = true;

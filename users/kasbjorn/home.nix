@@ -19,7 +19,8 @@
 		
 		pkgs.sbcl
 		pkgs.guile
-		
+		pkgs.picolisp
+
 		pkgs.scrot
 		pkgs.signal-desktop
 		pkgs.obs-studio
