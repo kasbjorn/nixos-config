@@ -28,7 +28,7 @@
   services.xserver = {
     enable = true;
     displayManager.lightdm.enable = true;
-    windowManager.fluxbox.enable = true;
+    windowManager.openbox.enable = true;
     desktopManager.xfce.enable = true;
   };
 

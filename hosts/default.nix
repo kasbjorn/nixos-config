@@ -11,6 +11,7 @@
 	hardware.sane = {
 		      enable = true;
 		      extraBackends = [ pkgs.hplipWithPlugin ];
+        };
 		      
 
      	environment.systemPackages = with pkgs; [
