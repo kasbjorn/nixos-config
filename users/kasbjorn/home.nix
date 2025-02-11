@@ -28,7 +28,7 @@
 	  ];
 
 	  programs.emacs = {
-		enable = true;
+		  enable = true;
 	  };
 
 	  services.emacs = {
