@@ -1,0 +1,3 @@
+[submodule "users/kasbjorn/dotfiles/emacs.d/themes/users/kasbjorn/emacs.d/themes/nord-theme"]
+	path = users/kasbjorn/dotfiles/emacs.d/themes/users/kasbjorn/emacs.d/themes/nord-theme
+	url = https://github.com/nordtheme/emacs
