@@ -1,7 +1,6 @@
-{ config, pkgs, ...}:
+{ config, pkgs,  ...}:
 
 {
-	home-manager.backupFileExtension = "bkp";
     
     	users.users.kasbjorn = {
     		isNormalUser = true;

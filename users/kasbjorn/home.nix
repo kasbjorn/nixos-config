@@ -11,7 +11,10 @@
     enable = true;
   };
   
-  home.username = "kasbjorn";
+  home  = {
+	username = "kasbjorn";
+	homeDirectory = "/home/kasbjorn";
+};
 
   home.packages = [
     pkgs.mpv

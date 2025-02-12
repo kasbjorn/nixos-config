@@ -3,7 +3,7 @@
 	
 	imports = [
         	../modules/virtualization
-        	../users
+		../users
     	];
 
 	services.ipp-usb.enable = true;
