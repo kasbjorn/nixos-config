@@ -47,9 +47,6 @@
 (use-package geiser-guile
   :ensure t)
 
-(use-package plisp-mode
-  :ensure t)
-
 (use-package perspective
   :bind
   ("C-x C-b" . persp-ivy-switch-buffer)         ; or use a nicer switcher, see below

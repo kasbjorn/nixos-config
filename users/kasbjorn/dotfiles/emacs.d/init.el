@@ -1,7 +1,7 @@
-(load "~/.emacs.d/packages")
-(load "~/.emacs.d/theme")
-(load "~/.emacs.d/org-mode")
-(load "~/.emacs.d/bindings")
+(load "~/.emacs.d/config/packages")
+(load "~/.emacs.d/config/theme")
+(load "~/.emacs.d/config/org-mode")
+(load "~/.emacs.d/config/bindings")
 
 ;; Basic initialization
 (tool-bar-mode -1)
