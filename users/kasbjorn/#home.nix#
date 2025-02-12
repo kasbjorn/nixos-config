@@ -3,8 +3,7 @@
 {
 
   imports = [ 
-		./modules/ssh
-		./dotfiles/default.nix 
+		./modules/ssh 
 	];
 
   programs.home-manager = {

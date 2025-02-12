@@ -1,0 +1,5 @@
+# My Fluxbox Menus
+
+[begin] (Fluxbox)
+	[exec] (Kitty) {kitty}
+[end]

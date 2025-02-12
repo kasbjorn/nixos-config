@@ -8,14 +8,22 @@
   imports =
     [
     	../../modules/hardware/zram
-	../../modules/hardware/audio
+	    ../../modules/hardware/audio
     ];
 
   environment.systemPackages = with pkgs; [
   			    
   ];
 
-  boot.loader.systemd-boot.enable = true;
+  boot.loader = {
+    grub = {
+      enable = true;
+      useOSProber = true;
+      device = "nodev";
+      efiSupport = true;
+    };
+  };
+      
   boot.loader.efi.canTouchEfiVariables = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -28,7 +36,7 @@
   services.xserver = {
     enable = true;
     displayManager.lightdm.enable = true;
-    windowManager.openbox.enable = true;
+    windowManager.fluxbox.enable = true;
     desktopManager.xfce.enable = true;
   };
 
