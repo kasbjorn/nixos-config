@@ -7,38 +7,42 @@
 		./dotfiles 
 	];
 
-    home.username = "kasbjorn";
+  programs.home-manager = {
+    enable = true;
+  };
+  
+  home.username = "kasbjorn";
 
-    home.packages = [
-		  pkgs.mpv
-		  pkgs.google-chrome
-		  pkgs.imagemagick
-		  pkgs.gh
-		  pkgs.gimp
-		  pkgs.gnome-keyring
-		  pkgs.yt-dlp
+  home.packages = [
+    pkgs.mpv
+    pkgs.google-chrome
+    pkgs.imagemagick
+    pkgs.gh
+    pkgs.gimp
+    pkgs.gnome-keyring
+    pkgs.yt-dlp
 		
-		  pkgs.sbcl
-		  pkgs.guile
-		  pkgs.picolisp
-      pkgs.clojure
+    pkgs.sbcl
+    pkgs.guile
+    pkgs.picolisp
+    pkgs.clojure
 
-		  pkgs.signal-desktop
-		  pkgs.obs-studio
-	  ];
+    pkgs.signal-desktop
+    pkgs.obs-studio
+  ];
 
-	  programs.emacs = {
-		  enable = true;
-	  };
+  programs.emacs = {
+	  enable = true;
+	};
 
-	  services.emacs = {
-      enable = true;
-      package = with pkgs; (
-        (emacsPackagesFor emacs).emacsWithPackages (
-          epkgs: [ epkgs.vterm ]
-        )
-      );
-    };
+	services.emacs = {
+    enable = true;
+    package = with pkgs; (
+      (emacsPackagesFor emacs).emacsWithPackages (
+        epkgs: [ epkgs.vterm ]
+      )
+    );
+  };
 
 
   programs.zsh = {
