@@ -7,14 +7,10 @@
 		./dotfiles/default.nix 
 	];
 
-  programs.home-manager = {
-    enable = true;
-  };
-  
-  home  = {
-	username = "kasbjorn";
-	homeDirectory = "/home/kasbjorn";
-};
+
+	home.username = "kasbjorn";
+	home.homeDirectory = "/home/kasbjorn";
+	programs.home-manager.enable = true;  
 
   home.packages = [
     pkgs.feh
