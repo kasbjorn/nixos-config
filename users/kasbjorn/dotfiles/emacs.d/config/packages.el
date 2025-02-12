@@ -19,6 +19,9 @@
 (use-package cider
   :ensure t)
 
+(use-package powerline
+	     :ensure t)
+
 (use-package vterm
   :ensure t)
 
@@ -27,12 +30,6 @@
 
 (use-package neotree
   :ensure t)
-
-(use-package mastodon
-  :ensure t
-  :init
-  (setq mastodon-instance-url "https://social.sdf.org"
-	mastodon-active-user "praetor"))
 
 (use-package yasnippet
   :commands yas-reload-all
