@@ -14,10 +14,13 @@
 
   home.packages = [
     pkgs.feh
+    pkgs.conky
+
+    pkgs.audacious
     
     pkgs.age
     pkgs.mpv
-    pkgs.google-chrome
+    pkgs.chromium
     pkgs.imagemagick
     pkgs.gh
     pkgs.gimp

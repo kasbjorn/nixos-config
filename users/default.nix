@@ -1,4 +1,4 @@
-{ config, pkgs,  ...}:
+q{ config, pkgs,  ...}:
 
 {
     
@@ -9,3 +9,5 @@
 			shell = pkgs.zsh;
   	};
 }
+
+  
