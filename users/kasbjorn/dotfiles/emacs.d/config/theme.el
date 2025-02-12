@@ -1,3 +1,5 @@
+(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+
 (when (display-graphic-p)
   (require 'all-the-icons))
 
