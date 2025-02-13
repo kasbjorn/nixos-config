@@ -31,10 +31,6 @@
 (use-package neotree
   :ensure t)
 
-(use-package yasnippet
-  :commands yas-reload-all
-  :init (yas-reload-all))
-
 (use-package magit
   :ensure t)
 
@@ -46,7 +42,7 @@
 
 (use-package perspective
   :bind
-  ("C-x C-b" . persp-ivy-switch-buffer)         ; or use a nicer switcher, see below
+  ("C-x C-b" . ivy-switch-buffer)         ; or use a nicer switcher, see below
   :custom
   (persp-mode-prefix-key (kbd "C-c M-p"))  ; pick your own prefix key here
   :init

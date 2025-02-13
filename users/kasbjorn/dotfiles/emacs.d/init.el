@@ -3,6 +3,8 @@
 (load "~/.emacs.d/config/org-mode")
 (load "~/.emacs.d/config/bindings")
 
+(add-to-list 'load-path "./modules")
+
 ;; Basic initialization
 (tool-bar-mode -1)
 (tooltip-mode -1)
