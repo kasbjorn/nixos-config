@@ -1,4 +1,4 @@
-q{ config, pkgs,  ...}:
+{ config, pkgs,  ...}:
 
 {
     

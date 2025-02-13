@@ -24,7 +24,7 @@
   networking.hostName = "odin";
 
   networking.networkmanager.enable = true;
-
+  networking.firewall.checkReversePath = "loose";
   # XServer
   services.xserver = {
     enable = true;

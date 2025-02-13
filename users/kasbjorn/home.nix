@@ -26,6 +26,7 @@
     pkgs.gimp
     pkgs.gnome-keyring
     pkgs.yt-dlp
+    pkgs.scrot
 		
     pkgs.sbcl
     pkgs.guile

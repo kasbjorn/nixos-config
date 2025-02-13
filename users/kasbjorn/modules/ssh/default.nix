@@ -22,11 +22,6 @@
                 user = "u0_a189";
                 port = 8022;
             };
-            "dev" = {
-                hostname = "dev";
-                user = "wfisher";
-                port = 22;
-            };
         };
     };
 }
