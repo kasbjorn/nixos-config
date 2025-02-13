@@ -22,6 +22,13 @@
 (use-package powerline
 	     :ensure t)
 
+(use-package emms
+  :ensure t
+  :config
+  (emms-standard)
+  (emms-default-players)
+
+
 (use-package vterm
   :ensure t)
 
@@ -56,7 +63,7 @@
   :bind
   ("C-x C-b" . ivy-switch-buffer)         ; or use a nicer switcher, see below
   :custom
-  (persp-mode-prefix-key (kbd "C-c M-p"))  ; pick your own prefix key here
+  (persp-mode-prefix-key (kbd "C-z"))  ; pick your own prefix key here
   :init
   (persp-mode))
 

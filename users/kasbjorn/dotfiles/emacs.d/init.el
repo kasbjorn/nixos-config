@@ -2,6 +2,7 @@
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/org-mode")
 (load "~/.emacs.d/config/bindings")
+(load "~/.emacs.d/config/emms")
 
 (add-to-list 'load-path "./modules")
 
