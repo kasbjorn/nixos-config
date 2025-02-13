@@ -27,10 +27,11 @@
     pkgs.gnome-keyring
     pkgs.yt-dlp
     pkgs.scrot
+
+    pkgs.pandoc
 		
     pkgs.sbcl
     pkgs.guile
-    pkgs.picolisp
     pkgs.clojure
 
     pkgs.signal-desktop
@@ -56,13 +57,14 @@
 		enableCompletion = true;
 		oh-my-zsh = {
       enable = true;
-      plugins = [ "git" ];
-      theme = "robbyrussell";
+      plugins = [ "git" "direnv" ];
+      theme = "agnoster";
     };
 
     shellAliases = {
 			update = "sudo nixos-rebuild switch";
 			bat = "acpi";
+      emacs = "emacsclient -c";
 		};
     initExtraBeforeCompInit = ''
                             autoload -U add-zsh-hook
@@ -73,7 +75,7 @@
                 vterm_printf() {
                                if [ -n "$TMUX" ] \
                                   && { [ "''${TERM%%-*}" = "tmux" ] \
-                                  || [ "''${TERM%%-*}" = "screen" ]; }; then
+                       || [ "''${TERM%%-*}" = "screen" ]; }; then
                                      printf "\ePtmux;\e\e]%s\007\e\\" "$1"
                                elif [ "''${TERM%%-*}" = "screen" ]; then
                                     printf "\eP\e]%s\007\e\\" "$1"

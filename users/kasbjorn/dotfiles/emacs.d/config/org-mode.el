@@ -1,7 +1,5 @@
 (require 'org)
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
-(require 'org-manage)
-(setq org-manage-directory-org "~/Dokumenter/orgs")
+(setq org-todo-keywords
+      '((sequence "TODO" "IN-PROGRESS" "WAITING" "DONE")))

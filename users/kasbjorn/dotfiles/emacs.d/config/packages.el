@@ -40,6 +40,18 @@
 (use-package geiser-guile
   :ensure t)
 
+(use-package projectile
+  :ensure t
+  :init
+  (setq projectile-project-search-path '("~/Projects/" "~/Playground"))
+  :config
+  ;; I typically use this keymap prefix on macOS
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  ;; On Linux, however, I usually go with another one
+  (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+  (global-set-key (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode +1))
+
 (use-package perspective
   :bind
   ("C-x C-b" . ivy-switch-buffer)         ; or use a nicer switcher, see below
