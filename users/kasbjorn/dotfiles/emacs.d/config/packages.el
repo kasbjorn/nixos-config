@@ -22,7 +22,8 @@
 (use-package powerline
 	     :ensure t)
 
-(use-package emms-setup
+
+(use-package emms
       :ensure t
       :init
       (add-hook 'emms-player-started-hook 'emms-show)
@@ -47,7 +48,7 @@
 (use-package ivy
   :ensure t)
 
-(use-package geiser-guile
+(use-package geiser-racket
   :ensure t)
 
 (use-package projectile

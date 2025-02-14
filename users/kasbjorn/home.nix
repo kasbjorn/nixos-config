@@ -31,7 +31,7 @@
     pkgs.pandoc
 		
     pkgs.sbcl
-    pkgs.guile
+    pkgs.racket
     pkgs.clojure
 
     pkgs.signal-desktop
