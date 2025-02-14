@@ -1,6 +1,6 @@
 (load "~/.emacs.d/config/packages")
 (load "~/.emacs.d/config/theme")
-(load "~/.emacs.d/config/org-mode")
+;;(load "~/.emacs.d/config/org-mode")
 (load "~/.emacs.d/config/bindings")
 (load "~/.emacs.d/config/emms")
 (load "~/.emacs.d/config/erc")
