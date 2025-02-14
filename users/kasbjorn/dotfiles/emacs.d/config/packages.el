@@ -27,8 +27,8 @@
 (use-package cider
   :ensure t)
 
-(use-package powerline
-  :ensure t)
+;;(use-package powerline
+;;  :ensure t)
 
 (use-package erc-image
   :ensure t
