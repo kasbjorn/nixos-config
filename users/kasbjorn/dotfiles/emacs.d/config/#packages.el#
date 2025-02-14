@@ -23,6 +23,14 @@
 (use-package powerline
   :ensure t)
 
+(use-package erc
+  :ensure t
+  :config
+  (setq erc-autojoin-channels-alist '(("irc.libera.chat" "#lispcafe" "#norge")
+				      ("irc.sdf.org" "#sdf")
+				      ("irc.tilde.chat" "#meta")))
+  (add-to-list 'erc-modules 'notifications))
+
 (use-package erc-image
   :ensure t
   :after erc

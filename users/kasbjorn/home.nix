@@ -1,5 +1,4 @@
 { config, pkgs, sops-nix, ...}:
-
 {
 
   imports = [ 
@@ -17,6 +16,7 @@
     pkgs.conky
 
     pkgs.audacious
+    pkgs.transmission_4-gtk
     
     pkgs.age
     pkgs.mpv

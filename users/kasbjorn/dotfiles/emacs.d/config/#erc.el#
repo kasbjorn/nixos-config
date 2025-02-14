@@ -1,0 +1,15 @@
+(defun my/connect-irc ()
+  (interactive)
+  (erc-tls
+   :server "irc.libera.chat"
+   :port 6697
+   :nick "praetor")
+  (erc-tls
+   :server "irc.sdf.org"
+   :port 6697
+   :nick "praetor")
+  (erc-tls
+   :server "irc.tilde.chat"
+   :port 6697
+   :nick "praetor"))
+  
