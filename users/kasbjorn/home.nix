@@ -28,6 +28,7 @@
     pkgs.yt-dlp
     pkgs.scrot
 
+    pkgs.isync
     pkgs.pandoc
 		
     pkgs.sbcl
@@ -46,7 +47,10 @@
     enable = true;
     package = with pkgs; (
       (emacsPackagesFor emacs).emacsWithPackages (
-        epkgs: [ epkgs.vterm ]
+        epkgs: [
+          epkgs.vterm
+          epkgs.mu4e
+        ]
       )
     );
   };
