@@ -1,2 +1,4 @@
-(define-sequence 'personal-music-map "<f9> m" 'emms-play-streamlist
-		 '(("a" "http://anonradio.net:8000/anonradio")))
+(defun play-defcon-radio ()
+   "Play defcon Radio"
+   (interactive)
+   (emms-play-streamlist "https://somafm.com/defcon.pls"))

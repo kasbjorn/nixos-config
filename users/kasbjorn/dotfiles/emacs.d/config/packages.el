@@ -22,12 +22,15 @@
 (use-package powerline
 	     :ensure t)
 
-(use-package emms
-  :ensure t
-  :config
-  (emms-standard)
-  (emms-default-players)
-
+(use-package emms-setup
+      :ensure t
+      :init
+      (add-hook 'emms-player-started-hook 'emms-show)
+      :config
+      (setq emms-show-format "Playing: %s")
+      (emms-all)
+      (emms-default-players)
+      (setq emms-source-file-default-directory "~/Music/"))
 
 (use-package vterm
   :ensure t)

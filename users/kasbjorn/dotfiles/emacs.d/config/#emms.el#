@@ -1,0 +1,4 @@
+(defun play-anonradio-radio ()
+   "Play defcon Radio"
+   (interactive)
+   (emms-play-streamlist " http://anonradio.net:8000/anonradio"))
