@@ -16,7 +16,7 @@
 (fset 'menu-bar-open nil)
 
 ;; Fonts
-(set-frame-font "FiraCode 10" nil t)
+;;(set-frame-font "FiraCode 10" nil t)
 
 (setq inhibit-splash-screen t
       initial-major-mode 'org-mode
