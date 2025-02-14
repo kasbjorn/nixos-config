@@ -46,6 +46,10 @@
       (emms-default-players)
       (setq emms-source-file-default-directory "~/Music/"))
 
+(use-package elfeed :ensure t)
+(elfeed-add-feed "http://feeds.feedburner.com/daily-breath")
+
+
 (use-package vterm
   :ensure t)
 
