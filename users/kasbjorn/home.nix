@@ -29,6 +29,8 @@
     pkgs.scrot
 
     pkgs.isync
+    pkgs.mu
+    
     pkgs.pandoc
 		
     pkgs.sbcl
