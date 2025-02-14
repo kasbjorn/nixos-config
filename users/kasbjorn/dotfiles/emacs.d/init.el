@@ -4,6 +4,7 @@
 (load "~/.emacs.d/config/bindings")
 (load "~/.emacs.d/config/emms")
 (load "~/.emacs.d/config/erc")
+(load "~/.emacs.d/config/elfeed")
 
 (add-to-list 'load-path "./modules")
 

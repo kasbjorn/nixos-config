@@ -53,9 +53,6 @@
       (emms-default-players)
       (setq emms-source-file-default-directory "~/Music/"))
 
-(use-package elfeed
-  :ensure t)
-
 (use-package vterm
   :ensure t)
 
