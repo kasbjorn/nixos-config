@@ -27,10 +27,6 @@
 (use-package cider
   :ensure t)
 
-;; Live Code stuffs
-(use-package marmalade
-  :ensure t)
-
 ;;(use-package powerline
 ;;  :ensure t)
 
