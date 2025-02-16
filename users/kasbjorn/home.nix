@@ -46,7 +46,7 @@
 
     ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
        epkgs.emacs-libvterm
-    ]
+    ];
 ];
 
   programs.zsh = {
