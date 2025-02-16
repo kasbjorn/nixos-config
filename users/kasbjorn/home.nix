@@ -44,11 +44,14 @@
     pkgs.signal-desktop
     pkgs.obs-studio
 
-	((emacsPackagesFor emacsPgtkNativeComp).emacsWithPackages (
-      		epkgs: [ epkgs.vterm ]
-    	))
 ];
 
+
+programs.emacs = {
+    enable = true;
+    package = pkgs.emacs;  # replace with pkgs.emacs-gtk, or a version provided by the community overlay if desired.
+	extraPackages = epkgs: [ epkgs.vterm ];
+  };
 
   programs.zsh = {
 	  enable = true;
