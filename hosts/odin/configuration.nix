@@ -12,13 +12,6 @@
     ];
 
   environment.systemPackages = with pkgs; [
-  	dunst
-    	wofi
-	
-	((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
-   		 epkgs.emacs-libvterm
-  	]))
-
   ];
 
   boot.loader.systemd-boot.enable = true;
