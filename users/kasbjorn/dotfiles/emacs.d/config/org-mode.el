@@ -44,7 +44,7 @@
 
 (use-package org-bullets
     :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (setq org-adapt-indentation t
       org-hide-leading-stars t

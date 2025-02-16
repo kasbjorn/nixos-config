@@ -1,6 +1,6 @@
 (load "~/.emacs.d/config/packages")
 (load "~/.emacs.d/config/theme")
-;;(load "~/.emacs.d/config/org-mode")
+(load "~/.emacs.d/config/org-mode")
 (load "~/.emacs.d/config/bindings")
 (load "~/.emacs.d/config/emms")
 (load "~/.emacs.d/config/erc")
@@ -16,7 +16,7 @@
 (fset 'menu-bar-open nil)
 
 ;; Fonts
-;;(set-frame-font "FiraCode 10" nil t)
+(set-frame-font "FiraCode 10" nil t)
 
 (setq inhibit-splash-screen t
       initial-major-mode 'org-mode

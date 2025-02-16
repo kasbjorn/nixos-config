@@ -30,33 +30,24 @@
 
     pkgs.isync
     pkgs.mu
+
+    pkgs.supercollider
     
     pkgs.pandoc
 		
     pkgs.sbcl
     pkgs.racket
-    pkgs.clojure
 
+    pkgs.clojure
+    pkgs.leiningen
+    
     pkgs.signal-desktop
     pkgs.obs-studio
-  ];
 
-  programs.emacs = {
-	  enable = true;
-	};
-
-	services.emacs = {
-    enable = true;
-    package = with pkgs; (
-      (emacsPackagesFor emacs).emacsWithPackages (
-        epkgs: [
-          epkgs.vterm
-          epkgs.mu4e
-        ]
-      )
-    );
-  };
-
+    ((emacsPackagesNgGen emacs).emacsWithPackages (epkgs: [
+       epkgs.emacs-libvterm
+    ]
+];
 
   programs.zsh = {
 	  enable = true;
@@ -70,7 +61,6 @@
     shellAliases = {
 			update = "sudo nixos-rebuild switch";
 			bat = "acpi";
-      emacs = "emacsclient -c";
 		};
     initExtraBeforeCompInit = ''
                             autoload -U add-zsh-hook
