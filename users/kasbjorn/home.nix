@@ -28,7 +28,8 @@
     pkgs.gnome-keyring
     pkgs.yt-dlp
     pkgs.scrot
-
+    pkgs.epiphany
+    
     # Mail
     pkgs.isync
     pkgs.mu
@@ -58,13 +59,21 @@
     pkgs.hypridle
     pkgs.wofi
 
+    # Desktop
+    pkgs.nemo
 ];
 
-
-programs.emacs = {
+  gtk = {
     enable = true;
-    package = pkgs.emacs;  # replace with pkgs.emacs-gtk, or a version provided by the community overlay if desired.
-	extraPackages = epkgs: [ epkgs.vterm ];
+    theme = {
+      name = "Nordic";
+    };
+  };
+
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacs;
+    extraPackages = epkgs: [ epkgs.vterm ];
   };
 
   programs.zsh = {
@@ -109,7 +118,6 @@ programs.emacs = {
 		pinentryPackage = pkgs.pinentry-curses;
 	};
 
-
   programs.kitty = {
 	  enable = true;
 		settings = {
@@ -124,7 +132,7 @@ programs.emacs = {
     };
 		extraConfig = "include ./nord.conf";
 	};
-
+                                
   home.stateVersion = "24.05";
 
 }
