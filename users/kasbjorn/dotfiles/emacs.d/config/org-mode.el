@@ -1,6 +1,20 @@
 (require 'org)
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((emacs-lisp . t)
+   (clojure . t)))
+
+;; Use cider as the clojure execution backend
+(setq org-babel-clojure-backend 'cider)
+
+;; Let's have pretty source code blocks
+(setq org-edit-src-content-indentation 0
+      org-src-tab-acts-natively t
+      org-src-fontify-natively t
+      org-confirm-babel-evaluate nil)
+
 (use-package org-modern
   :config
   (setq

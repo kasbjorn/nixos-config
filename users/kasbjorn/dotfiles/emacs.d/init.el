@@ -5,6 +5,7 @@
 (load "~/.emacs.d/config/emms")
 (load "~/.emacs.d/config/erc")
 (load "~/.emacs.d/config/elfeed")
+(load "~/.emacs.d/config/cider")
 
 (add-to-list 'load-path "./modules")
 
@@ -14,6 +15,8 @@
 (scroll-bar-mode -1)
 (menu-bar-mode -1)
 (fset 'menu-bar-open nil)
+
+(setq warning-minimum-level :emergency)
 
 ;; Fonts
 (set-frame-font "FiraCode 10" nil t)

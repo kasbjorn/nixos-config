@@ -47,6 +47,7 @@
     # Clojure Whoredom
     pkgs.clojure
     pkgs.leiningen
+    pkgs.jre_minimal
     
     # Misc
     pkgs.signal-desktop
@@ -58,6 +59,7 @@
     pkgs.waybar
     pkgs.hypridle
     pkgs.wofi
+    pkgs.wlogout
 
     # Desktop
     pkgs.nemo

@@ -24,7 +24,7 @@
 
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose";
-  # XServer
+  
   programs.hyprland = {
     enable = true;
     xwayland = {
@@ -36,15 +36,16 @@
     enable = true;
   };
 
-  
-  service.greetd = {
-    enable = true;
-    settings = rec {
-      command "${pkgs.hyprland}/bin/hyprland";
-      user = "kasbjorn";
-    };
-    default_session = initial_session;
-  };
+  services.greetd = {
+  	enable = true;
+  	settings = rec {
+    		initial_session = {
+      		command = "${pkgs.hyprland}/bin/Hyprland";
+      		user = "kasbjorn";
+    	};
+    	default_session = initial_session;
+  	};
+};
 
   time.timeZone = "America/Chicago";
 
