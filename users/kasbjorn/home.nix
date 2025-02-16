@@ -44,14 +44,11 @@
     pkgs.signal-desktop
     pkgs.obs-studio
 
-    ];
+	((emacsPackagesFor emacsPgtkNativeComp).emacsWithPackages (
+      		epkgs: [ epkgs.vterm ]
+    	))
 ];
 
-services.emacs.package = with pkgs; (
-  (emacsPackagesFor emacsPgtkNativeComp).emacsWithPackages (
-    epkgs: [ epkgs.vterm ]
-  )
-);
 
   programs.zsh = {
 	  enable = true;
