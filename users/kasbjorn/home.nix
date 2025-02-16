@@ -12,12 +12,13 @@
 	programs.home-manager.enable = true;  
 
   home.packages = [
-    pkgs.feh
     pkgs.conky
-
+ 
+    # Music
     pkgs.audacious
     pkgs.transmission_4-gtk
     
+    # General
     pkgs.age
     pkgs.mpv
     pkgs.chromium
@@ -28,26 +29,34 @@
     pkgs.yt-dlp
     pkgs.scrot
 
+    # Mail
     pkgs.isync
     pkgs.mu
-
+    
+    # Live Code
     pkgs.supercollider
     
+    # Documents
     pkgs.pandoc
-		
+    
+    # Languages		
     pkgs.sbcl
     pkgs.racket
-
+    
+    # Clojure Whoredom
     pkgs.clojure
     pkgs.leiningen
     
+    # Misc
     pkgs.signal-desktop
     pkgs.obs-studio
 
+    # Hyprland
     pkgs.dunst
     pkgs.hyprpaper
     pkgs.waybar
     pkgs.hypridle
+    pkgs.wofi
 
 ];
 
