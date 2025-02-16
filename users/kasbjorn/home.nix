@@ -44,6 +44,11 @@
     pkgs.signal-desktop
     pkgs.obs-studio
 
+    pkgs.dunst
+    pkgs.hyprpaper
+    pkgs.waybar
+    pkgs.hypridle
+
 ];
 
 
