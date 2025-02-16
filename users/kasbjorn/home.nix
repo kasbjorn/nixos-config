@@ -36,6 +36,7 @@
     
     # Live Code
     pkgs.supercollider
+    pkgs.supercolliderPlugins.sc3-plugins
     
     # Documents
     pkgs.pandoc
@@ -43,6 +44,7 @@
     # Languages		
     pkgs.sbcl
     pkgs.racket
+    pkgs.picolisp
     
     # Clojure Whoredom
     pkgs.clojure
