@@ -32,9 +32,18 @@
     };
   };
 
-  services.xserver = {
+  programs.iio-hyprland = {
     enable = true;
-    displayManager.sddm.enable = true;
+  };
+
+  
+  service.greetd = {
+    enable = true;
+    settings = rec {
+      command "${pkgs.hyprland}/bin/hyprland";
+      user = "kasbjorn";
+    };
+    default_session = initial_session;
   };
 
   time.timeZone = "America/Chicago";
@@ -56,7 +65,8 @@
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-
+  hardware.sensor.iio.enable = true;
+  
   services.blueman.enable = true;
 
   services.tailscale.enable = true;
