@@ -5,7 +5,6 @@
 (load "~/.emacs.d/config/emms")
 (load "~/.emacs.d/config/erc")
 (load "~/.emacs.d/config/elfeed")
-(load "~/.emacs.d/config/cider")
 
 (add-to-list 'load-path "./modules")
 

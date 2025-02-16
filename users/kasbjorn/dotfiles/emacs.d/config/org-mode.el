@@ -6,6 +6,10 @@
  '((emacs-lisp . t)
    (clojure . t)))
 
+;; Useful keybindings when using Clojure from Org
+(org-defkey org-mode-map "\C-x\C-e" 'cider-eval-last-sexp)
+(org-defkey org-mode-map "\C-c\C-d" 'cider-doc)
+
 ;; Use cider as the clojure execution backend
 (setq org-babel-clojure-backend 'cider)
 
