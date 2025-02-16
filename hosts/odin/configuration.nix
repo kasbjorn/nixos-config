@@ -12,7 +12,13 @@
     ];
 
   environment.systemPackages = with pkgs; [
-  			    
+  	dunst
+    	wofi
+	
+	((emacsPackagesFor emacs).emacsWithPackages (epkgs: [
+   		 epkgs.emacs-libvterm
+  	]))
+
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -26,10 +32,16 @@
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose";
   # XServer
+  programs.hyprland = {
+    enable = true;
+    xwayland = {
+      enable = true;
+    };
+  };
+
   services.xserver = {
     enable = true;
-    displayManager.lightdm.enable = true;
-    windowManager.fluxbox.enable = true;
+    displayManager.sddm.enable = true;
   };
 
   time.timeZone = "America/Chicago";
