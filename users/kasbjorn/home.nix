@@ -49,7 +49,7 @@
     # Clojure Whoredom
     pkgs.clojure
     pkgs.leiningen
-    pkgs.jre_minimal
+    pkgs.jdk23_headless
     
     # Misc
     pkgs.signal-desktop
