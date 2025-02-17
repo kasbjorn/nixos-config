@@ -12,7 +12,7 @@
     
   };
 
-	outputs = {nixpkgs, home-manager, sops-nix, ...}:
+	outputs = {nixpkgs, home-manager, sops-nix, musnix, ...}:
     {
 
       nixpkgs.config.allowUnfree = true;
@@ -30,6 +30,7 @@
         system = "x86_64-linux";
         modules = [
           sops-nix.nixosModules.sops
+          musnix.nixosModules.musnix
           ./hosts/odin/configuration.nix
           ./hosts/odin/hardware-configuration.nix
 	        ./hosts
