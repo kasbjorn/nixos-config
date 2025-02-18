@@ -73,10 +73,8 @@
   services.tailscale.enable = true;
 	
   services.openssh = {
-	enable = true;
+	  enable = true;
   };
-
-  security.rtkit.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
