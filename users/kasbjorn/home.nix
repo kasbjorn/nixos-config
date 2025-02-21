@@ -11,8 +11,12 @@
 	home.homeDirectory = "/home/kasbjorn";
 	programs.home-manager.enable = true;  
 
+  home.sessionVariables = {
+    HYPRCURSOR_THEME = "Nordic-cursors";
+    HYPRCURSOR_SIZE = "24";
+  };
+  
   home.packages = [
-    pkgs.conky
  
     # Music
     pkgs.audacious
@@ -28,7 +32,6 @@
     pkgs.gnome-keyring
     pkgs.yt-dlp
     pkgs.scrot
-    pkgs.epiphany
     
     # Mail
     pkgs.isync
@@ -57,11 +60,18 @@
     # Hyprland
     pkgs.dunst
     pkgs.hyprpaper
+    pkgs.hyprcursor
     pkgs.waybar
     pkgs.hypridle
-    pkgs.wofi
+    pkgs.hyprlock
+    pkgs.rofi
     pkgs.wlogout
+    pkgs.swaylock
 
+    # Music!! :D
+    pkgs.playerctl
+    pkgs.audacious
+    
     # Desktop
     pkgs.nemo
 ];

@@ -24,6 +24,15 @@
 
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose";
+
+  services.flatpak.enable = true;
+  systemd.services.flatpak-repo = {
+    wantedBy = [ "multi-user.target" ];
+    path = [ pkgs.flatpak ];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
   
   programs.hyprland = {
     enable = true;
@@ -67,6 +76,9 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.sensor.iio.enable = true;
+
+  hardware.sane.enable = true;
+  hardware.sane.extraBackends = [ pkgs.hplipWithPlugin ];
   
   services.blueman.enable = true;
 

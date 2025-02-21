@@ -4,15 +4,18 @@
 				      ("irc.sdf.org" "#sdf")
 				      ("irc.tilde.chat" "#meta")))
   (erc-tls
-   :server "irc.libera.chat"
+   :server "znc.tilde.team"
    :port 6697
+   :password "praetor/SDF:M@ck3y242"
    :nick "praetor")
   (erc-tls
-   :server "irc.sdf.org"
+   :server "znc.tilde.team"
    :port 6697
+   :password "praetor/Team:M@ck3y242"
    :nick "praetor")
   (erc-tls
-   :server "irc.tilde.chat"
+   :server "znc.tilde.team"
    :port 6697
+   :password "praetor/Libera:M@ck3y242"
    :nick "praetor"))
   
