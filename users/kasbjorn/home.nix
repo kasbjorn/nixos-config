@@ -12,12 +12,20 @@
 	programs.home-manager.enable = true;  
 
   home.sessionVariables = {
-    HYPRCURSOR_THEME = "Nordic-cursors";
-    HYPRCURSOR_SIZE = "24";
+    
+  };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = (_: true);
+    };
   };
   
   home.packages = with pkgs; [
- 
+    # System
+    blueman
+    
     # Music
     audacious
     transmission_4-gtk
