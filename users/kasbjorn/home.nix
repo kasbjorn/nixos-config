@@ -56,7 +56,8 @@
     # Misc
     pkgs.signal-desktop
     pkgs.obs-studio
-
+    pkgs.xcur2png
+    
     # Hyprland
     pkgs.dunst
     pkgs.hyprpaper
