@@ -99,7 +99,9 @@
   programs.emacs = {
     enable = true;
     package = pkgs.emacs;
-    extraPackages = epkgs: [ epkgs.vterm ];
+    extraPackages = epkgs: [
+      epkgs.vterm
+      epkgs.mu4e ];
   };
 
   programs.zsh = {
