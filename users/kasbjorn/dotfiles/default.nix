@@ -7,6 +7,7 @@
 		      ".emacs.d/config/".source = ./emacs.d/config;
           ".fluxbox".source = ./fluxbox;
           ".wallpaper".source = ./wallpaper;
+          ".config/hypr".source = ./hyprland;
     	};
 
 }
