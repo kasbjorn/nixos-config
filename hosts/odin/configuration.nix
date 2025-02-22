@@ -9,6 +9,7 @@
     [
     	../../modules/hardware/zram
 	    ../../modules/hardware/audio
+      ../../modules/virtualization
     ];
 
   environment.systemPackages = with pkgs; [
