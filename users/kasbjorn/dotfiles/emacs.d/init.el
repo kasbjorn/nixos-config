@@ -6,6 +6,7 @@
 (load "~/.emacs.d/config/erc")
 (load "~/.emacs.d/config/elfeed")
 (load "~/.emacs.d/config/snippets")
+(load "~/.emacs.d/config/mail")
 
 (add-to-list 'load-path "./modules")
 
@@ -35,3 +36,5 @@
 
 (setq mode-line-in-non-selected-windows nil)
 
+(desktop-load-default)
+(desktop-read)

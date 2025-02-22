@@ -2,13 +2,16 @@
 
 {
   programs.mbsync.enable = true;
+
   programs.msmtp.enable = true;
+
   programs.notmuch = {
     enable = true;
     hooks = {
       preNew = "mbsync --all";
     };
   };
+
   accounts.email = {
     accounts.frostbyte = {
       address = "kasbjornsen@frostbyte.works";
@@ -35,4 +38,5 @@
       };
       userName = "kasbjornsen@frostbyte.works";
     };
+  };
 }
