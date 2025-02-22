@@ -3,6 +3,7 @@
 
   imports = [ 
 		./modules/ssh
+    ./modules/email
 		./dotfiles/default.nix 
 	];
 
@@ -40,8 +41,6 @@
     gnome-keyring
     yt-dlp
     scrot
-    
-    # Mail
     
     # Live Code
     supercollider
@@ -83,6 +82,7 @@
 
     # Virtualization
     vagrant
+    virt-manager
 ];
 
   gtk = {
