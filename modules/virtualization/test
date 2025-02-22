@@ -1,0 +1,174 @@
+ kasbjorn@odin  ~  cd ~/.vm
+cd: no such file or directory: /home/kasbjorn/.vm
+ ✘ kasbjorn@odin  ~  nix-shell -p virt-manager
+these 18 paths will be fetched (6.59 MiB download, 36.18 MiB unpacked):
+  /nix/store/rws4x2a80ji806vd7khpqc5m9nhv017v-gst-plugins-good-1.24.10
+  /nix/store/z6ba45rsd99gpdxrzbcm0rc9gr1054k1-gtk-vnc-1.5.0
+  /nix/store/11kdcyc4r4ycf80bynlwj71dlpb774h0-gtksourceview-4.8.4
+  /nix/store/1xgbjr4kzvmn21vnbpx00mgqmksanw7y-libburn-1.5.6
+  /nix/store/haia4vbzafm35n4fraq6sy45rph5fmpy-libisoburn-1.5.6
+  /nix/store/fxv4fmgapgfd5hjasimn62wmzrdphlx6-libisoburn-1.5.6-lib
+  /nix/store/fgix93f2nias4wa3gc5mh557qvfaypcd-libisofs-1.5.6.pl01
+  /nix/store/r12a6lbxfyg035nqi1g3snqids0pxjsa-libosinfo-1.11.0
+  /nix/store/hc8m6v8firnfx45ijsspqc68vmrpi6kc-libshout-2.4.6
+  /nix/store/rp0a8lj600ak4952zzjv739g36wdshkj-libvirt-glib-5.0.0
+  /nix/store/arszyr8bzic8jq3lgn39y9397wwj5i0k-libxml2-2.13.5-py
+  /nix/store/q54zib0khcgjd95k07nmy617g4pgw7lp-opencore-amr-0.1.6
+  /nix/store/6b5fxpcazxhja4zaz7133afdf49nvw6j-osinfo-db-20240701
+  /nix/store/1srdkz4x9l3mjbkjcqfjp3zim91nsrrh-phodav-3.0-lib
+  /nix/store/2lqxfzp2n0n41scvm1kz55mfgs8dzwqd-python3.12-libvirt-10.10.0
+  /nix/store/8wa3f0ijkf684acwvjjl7xjhmd046qgn-spice-gtk-0.42
+  /nix/store/4wa78lcq9plab26alwjjar61p6m6vhdj-twolame-2017-09-27
+  /nix/store/ffc4yqfna2bw2a9y6c3zlwabw52h59r4-virt-manager-5.0.0
+copying path '/nix/store/6b5fxpcazxhja4zaz7133afdf49nvw6j-osinfo-db-20240701' from
+ 'https://cache.nixos.org'...
+copying path '/nix/store/z6ba45rsd99gpdxrzbcm0rc9gr1054k1-gtk-vnc-1.5.0' from 'htt
+ps://cache.nixos.org'...
+copying path '/nix/store/11kdcyc4r4ycf80bynlwj71dlpb774h0-gtksourceview-4.8.4' fro
+m 'https://cache.nixos.org'...
+copying path '/nix/store/rp0a8lj600ak4952zzjv739g36wdshkj-libvirt-glib-5.0.0' from
+ 'https://cache.nixos.org'...
+copying path '/nix/store/2lqxfzp2n0n41scvm1kz55mfgs8dzwqd-python3.12-libvirt-10.10
+.0' from 'https://cache.nixos.org'...
+copying path '/nix/store/arszyr8bzic8jq3lgn39y9397wwj5i0k-libxml2-2.13.5-py' from 
+'https://cache.nixos.org'...
+copying path '/nix/store/1xgbjr4kzvmn21vnbpx00mgqmksanw7y-libburn-1.5.6' from 'htt
+ps://cache.nixos.org'...
+copying path '/nix/store/fgix93f2nias4wa3gc5mh557qvfaypcd-libisofs-1.5.6.pl01' fro
+m 'https://cache.nixos.org'...
+copying path '/nix/store/hc8m6v8firnfx45ijsspqc68vmrpi6kc-libshout-2.4.6' from 'ht
+tps://cache.nixos.org'...
+copying path '/nix/store/4wa78lcq9plab26alwjjar61p6m6vhdj-twolame-2017-09-27' from
+ 'https://cache.nixos.org'...
+copying path '/nix/store/1srdkz4x9l3mjbkjcqfjp3zim91nsrrh-phodav-3.0-lib' from '
+tps://cache.nixos.org'...
+copying path '/nix/store/q54zib0khcgjd95k07nmy617g4pgw7lp-opencore-amr-0.1.6' fr
+ 'https://cache.nixos.org'...
+copying path '/nix/store/rws4x2a80ji806vd7khpqc5m9nhv017v-gst-plugins-good-1.24.
+' from 'https://cache.nixos.org'...
+copying path '/nix/store/fxv4fmgapgfd5hjasimn62wmzrdphlx6-libisoburn-1.5.6-lib' 
+om 'https://cache.nixos.org'...
+copying path '/nix/store/r12a6lbxfyg035nqi1g3snqids0pxjsa-libosinfo-1.11.0' from
+https://cache.nixos.org'...
+copying path '/nix/store/haia4vbzafm35n4fraq6sy45rph5fmpy-libisoburn-1.5.6' from
+https://cache.nixos.org'...
+copying path '/nix/store/8wa3f0ijkf684acwvjjl7xjhmd046qgn-spice-gtk-0.42' from '
+tps://cache.nixos.org'...
+copying path '/nix/store/ffc4yqfna2bw2a9y6c3zlwabw52h59r4-virt-manager-5.0.0' fr
+ 'https://cache.nixos.org'...
+
+[nix-shell:~]$ virt-manager 
+
+[nix-shell:~]$ 
+
+[nix-shell:~]$ exit
+exit
+ kasbjorn@odin  ~  home-manager switch
+error:
+       … while calling the 'derivationStrict' builtin
+         at <nix/derivation-internal.nix>:34:12:
+           33|
+           34|   strict = derivationStrict drvAttrs;
+             |            ^
+           35|
+
+       … while evaluating derivation 'home-manager-generation'
+         whose name attribute is located at /nix/store/wj0kj34cwybjhyr3lk2496k8lp
+03djan-nixpkgs/nixpkgs/pkgs/stdenv/generic/make-derivation.nix:375:7
+
+       … while evaluating attribute 'buildCommand' of derivation 'home-manager-ge
+neration'
+         at /nix/store/wj0kj34cwybjhyr3lk2496k8lp03djan-nixpkgs/nixpkgs/pkgs/buil
+d-support/trivial-builders/default.nix:59:17:
+           58|         enableParallelBuilding = true;
+           59|         inherit buildCommand name;
+             |                 ^
+           60|         passAsFile = [ "buildCommand" ]
+
+       … while evaluating the option `home.activation.installPackages.data':
+
+       … while evaluating definitions from `/home/kasbjorn/.nix-defexpr/channels/
+home-manager/modules/home-environment.nix':
+
+       … while evaluating the option `home.packages':
+
+       … while evaluating definitions from `/home/kasbjorn/Config/nixos-config/us
+ers/kasbjorn/home.nix':
+
+       (stack trace truncated; use '--show-trace' to show the full, detailed trac
+e)
+
+       error: undefined variable 'bluebeery'
+       at /home/kasbjorn/Config/nixos-config/users/kasbjorn/home.nix:27:5:
+           26|     # System
+           27|     bluebeery
+             |     ^
+           28|
+ ✘ kasbjorn@odin  ~  home-manager switch
+these 3 derivations will be built:
+  /nix/store/bc3a3rmwaqqfj3cas9v6xiyhw16mss1v-home-manager-path.drv
+  /nix/store/gm7q8viav36z92f8l0cla61lwdfs088g-activation-script.drv
+  /nix/store/f2cxav6fv6qi13fbwjk3bfalplwfz2dd-home-manager-generation.drv
+these 10 paths will be fetched (4.11 MiB download, 20.30 MiB unpacked):
+  /nix/store/g6dzp9ha5250zvgknn1bbsb7453j62yk-blueberry-1.4.8
+  /nix/store/vhbyjd49jp6k5336mkwyrrmaipsgc1gc-bluez-tools-0-unstable-2020-10-24
+  /nix/store/lzf4glsrl93rcfc73mj4zjdn20lpgi8h-cairomm-1.18.0
+  /nix/store/6yig9x3664xabyfndcalk3i38j10nsbn-glibmm-2.82.0
+  /nix/store/sqrlfikmbxa4h4hmb4d893hkzafd8mv7-gnome-bluetooth-3.34.5
+  /nix/store/qvb26grnxj6hk0cywrjy4gkb9z1jp2rc-gtkmm-4.16.0
+  /nix/store/2npnxhw10h8js8r0y33mxmzacahhh3i9-libsigc++-3.6.0
+  /nix/store/4jnqlqkzhzm4yjwq9xv25sc5hsr49r5g-pangomm-2.56.1
+  /nix/store/jqpypw3655xm3c3isaj8fg8f3bgblyvp-pavucontrol-6.1
+  /nix/store/wca63l55kgakkdqbjwchks26md7gkv1a-python3.12-dbus-python-1.3.2
+copying path '/nix/store/vhbyjd49jp6k5336mkwyrrmaipsgc1gc-bluez-tools-0-unstable-
+2020-10-24' from 'https://cache.nixos.org'...
+copying path '/nix/store/sqrlfikmbxa4h4hmb4d893hkzafd8mv7-gnome-bluetooth-3.34.5'
+ from 'https://cache.nixos.org'...
+copying path '/nix/store/wca63l55kgakkdqbjwchks26md7gkv1a-python3.12-dbus-python-
+1.3.2' from 'https://cache.nixos.org'...
+copying path '/nix/store/2npnxhw10h8js8r0y33mxmzacahhh3i9-libsigc++-3.6.0' from '
+https://cache.nixos.org'...
+copying path '/nix/store/lzf4glsrl93rcfc73mj4zjdn20lpgi8h-cairomm-1.18.0' from 'h
+ttps://cache.nixos.org'...
+copying path '/nix/store/6yig9x3664xabyfndcalk3i38j10nsbn-glibmm-2.82.0' from 'ht
+tps://cache.nixos.org'...
+copying path '/nix/store/4jnqlqkzhzm4yjwq9xv25sc5hsr49r5g-pangomm-2.56.1' from 'h
+ttps://cache.nixos.org'...
+copying path '/nix/store/qvb26grnxj6hk0cywrjy4gkb9z1jp2rc-gtkmm-4.16.0' from 'htt
+ps://cache.nixos.org'...
+copying path '/nix/store/jqpypw3655xm3c3isaj8fg8f3bgblyvp-pavucontrol-6.1' from '
+https://cache.nixos.org'...
+copying path '/nix/store/g6dzp9ha5250zvgknn1bbsb7453j62yk-blueberry-1.4.8' from '
+https://cache.nixos.org'...
+building '/nix/store/bc3a3rmwaqqfj3cas9v6xiyhw16mss1v-home-manager-path.drv'...
+created 2549 symlinks in user environment
+building '/nix/store/gm7q8viav36z92f8l0cla61lwdfs088g-activation-script.drv'...
+building '/nix/store/f2cxav6fv6qi13fbwjk3bfalplwfz2dd-home-manager-generation.drv
+'...
+/nix/store/m20wpay7i7zwz615fwys9g1hgzlwls8q-home-manager-generation
+Starting Home Manager activation
+Activating checkFilesChanged
+Activating checkLinkTargets
+Activating writeBoundary
+Creating new profile generation
+Activating createGpgHomedir
+Activating installPackages
+replacing old 'home-manager-path'
+installing 'home-manager-path'
+building '/nix/store/msg69h756z30mnws9k72yvfcqwqm7pgf-user-environment.drv'...
+Activating dconfSettings
+Activating linkGeneration
+Cleaning up orphan links from /home/kasbjorn
+Creating home file links in /home/kasbjorn
+Activating onFilesChange
+Activating reloadSystemd
+
+There are 189 unread and relevant news items.
+Read them by running the command "home-manager news".
+
+ kasbjorn@odin  ~  sudo nixos-redbuild switch
+[sudo] password for kasbjorn: 
+sudo: timed out reading password
+sudo: a password is required
+ ✘ kasbjorn@odin  ~  
+ ✘ kasbjorn@odin  ~  home-manager sw

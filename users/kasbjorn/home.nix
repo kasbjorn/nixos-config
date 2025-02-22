@@ -24,7 +24,7 @@
   
   home.packages = with pkgs; [
     # System
-    blueman
+    blueberry
     
     # Music
     audacious
@@ -60,7 +60,7 @@
     leiningen
     
     # Misc
-    signal-desktop
+    signal-cli
     obs-studio
     
     # Hyprland
@@ -83,7 +83,6 @@
 
     # Virtualization
     vagrant
-    qemu
 ];
 
   gtk = {

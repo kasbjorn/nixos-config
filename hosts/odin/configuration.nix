@@ -13,6 +13,7 @@
     ];
 
   environment.systemPackages = with pkgs; [
+    
   ];
 
   boot.loader.systemd-boot.enable = true;
