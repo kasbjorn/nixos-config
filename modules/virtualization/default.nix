@@ -1,6 +1,14 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
+  environment.systemPackages = with pkgs; [
+    qemu
+  ];
+
+  boot.binfmt.emulatedSystems = [
+    "aarch64-linux"
+  ];
+  
   virtualisation.docker.enable = true;
 
   programs.virt-manager.enable = true;

@@ -78,6 +78,7 @@
 
     # Virtualization
     vagrant
+    qemu
 ];
 
   gtk = {
