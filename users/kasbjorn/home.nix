@@ -16,68 +16,66 @@
     HYPRCURSOR_SIZE = "24";
   };
   
-  home.packages = [
+  home.packages = with pkgs; [
  
     # Music
-    pkgs.audacious
-    pkgs.transmission_4-gtk
+    audacious
+    transmission_4-gtk
     
     # General
-    pkgs.age
-    pkgs.mpv
-    pkgs.chromium
-    pkgs.imagemagick
-    pkgs.gh
-    pkgs.gimp
-    pkgs.gnome-keyring
-    pkgs.yt-dlp
-    pkgs.scrot
+    age
+    mpv
+    chromium
+    imagemagick
+    gh
+    gimp
+    gnome-keyring
+    yt-dlp
+    scrot
     
     # Mail
-    pkgs.isync
-    pkgs.mu
     
     # Live Code
-    pkgs.supercollider
-    pkgs.supercolliderPlugins.sc3-plugins
+    supercollider
+    supercolliderPlugins.sc3-plugins
     
     # Documents
-    pkgs.pandoc
+    pandoc
     
     # Languages		
-    pkgs.sbcl
-    pkgs.racket
-    pkgs.picolisp
+    sbcl
+    racket
+    picolisp
     
     # Clojure Whoredom
-    pkgs.clojure
-    pkgs.leiningen
+    clojure
+    leiningen
     
     # Misc
-    pkgs.signal-desktop
-    pkgs.obs-studio
-    pkgs.xcur2png
+    signal-desktop
+    obs-studio
     
     # Hyprland
-    pkgs.dunst
-    pkgs.hyprpaper
-    pkgs.hyprcursor
-    pkgs.waybar
-    pkgs.hypridle
-    pkgs.hyprlock
-    pkgs.rofi
-    pkgs.wlogout
-    pkgs.swaylock
+    dunst
+    hyprpaper
+    hyprcursor
+    waybar
+    hypridle
+    hyprlock
+    rofi
+    wlogout
+    swaylock
 
     # Music!! :D
-    pkgs.playerctl
-    pkgs.audacious
+    playerctl
+    audacious
     
     # Desktop
-    pkgs.nemo
+    nemo
 
     # Virtualization
     vagrant
+    qemu
 ];
 
   gtk = {
