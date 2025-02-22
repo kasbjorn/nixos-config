@@ -15,6 +15,6 @@
    :server "znc.tilde.team"
    :port 6697
    :password "praetor/Libera:M@ck3y242"
-   :nick "praetor")
+   :nick "praetor"))
 
 (my/connect-irc)
