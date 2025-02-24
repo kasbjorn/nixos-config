@@ -10,3 +10,6 @@
 (use-package lsp-ui
   :ensure t
   :commands lsp-ui-mode)
+
+(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
