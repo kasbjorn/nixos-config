@@ -46,9 +46,9 @@
       (add-hook 'emms-player-started-hook 'emms-show)
       :config
       (setq emms-show-format "Playing: %s")
+      (setq emms-source-file-default-directory "~/Music/"
       (emms-all)
-      (emms-default-players)
-      (setq emms-source-file-default-directory "~/Music/"))
+      (emms-default-players))
 
 (use-package vterm
   :ensure t)

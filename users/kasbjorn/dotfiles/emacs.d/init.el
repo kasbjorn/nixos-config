@@ -8,8 +8,6 @@
 (load "~/.emacs.d/config/snippets")
 (load "~/.emacs.d/config/mail")
 
-(add-to-list 'load-path "./modules")
-
 ;; Basic initialization
 (tool-bar-mode -1)
 (tooltip-mode -1)
@@ -26,15 +24,4 @@
       initial-major-mode 'org-mode
       initial-scratch-message "")
 
-(when window-system
-  (fringe-mode 0))
 
-(when window-system
-  (or standard-display-table
-      (setq standard-display-table (make-display-table)))
-  (set-display-table-slot standard-display-table 0 ?\ ))
-
-(setq mode-line-in-non-selected-windows nil)
-
-(desktop-load-default)
-(desktop-read)

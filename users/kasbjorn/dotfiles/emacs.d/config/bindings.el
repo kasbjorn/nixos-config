@@ -6,6 +6,4 @@
     (interactive "sTerminal purpose: ")
     (vterm (concat "term-" term-name)))
 
-(global-set-key [F8] 'neotree-toggle)
-
 (global-set-key (kbd "M-<return>") 'pmi/named-term)
