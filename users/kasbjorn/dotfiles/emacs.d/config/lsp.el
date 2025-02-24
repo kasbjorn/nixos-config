@@ -1,6 +1,12 @@
 (use-package lsp-mode
-  :commands (lsp lsp-deferred)
+  :ensure t
   :init
-  (setq lsp-keymap-prefix "C-c l")  ;; Or 'C-l', 's-l'
-  :config
-  (lsp-enable-which-key-integration t))
+  (setq lsp-keymap-prefix "C-c l")
+  :hook
+  ((clojure-mode . lsp)
+   (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp)
+
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
