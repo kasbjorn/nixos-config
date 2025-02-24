@@ -80,6 +80,9 @@
     # Desktop
     nemo
 
+    # Mail
+    mu
+
     # Virtualization
     vagrant
     virt-manager

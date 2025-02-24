@@ -2,4 +2,4 @@
   :ensure nil
   :config
   (setq mu4e-change-filenames-when-moving t)
-  (setq mu4e-maildir "~/Maildir"))
+  (setq mu4e-maildir "~/Mail"))
