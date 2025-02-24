@@ -65,9 +65,6 @@
 (use-package ivy
   :ensure t)
 
-(use-package geiser-racket
-  :ensure t)
-
 (use-package yasnippet
   :ensure t
   :hook

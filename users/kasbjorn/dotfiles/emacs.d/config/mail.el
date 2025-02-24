@@ -8,7 +8,7 @@
 	user-mail-address "kasbjornsen@frostbyte.works")
 
   (setq mu4e-drafts-folder "/frostbyte/Drafts")
-  (setq mu4e-sent-folder   "/frostbyte/Sent Mail")
+  (setq mu4e-sent-folder   "/frostbyte/Sent")
   (setq mu4e-refile-folder "/frostbyte/All Mail")
   (setq mu4e-trash-folder  "/frostbyte/Trash")
 

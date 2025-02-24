@@ -18,7 +18,7 @@
       imap.host = "imappro.zoho.com";
       mbsync = {
         enable = true;
-        create = "mail";
+        create = "maildir";
       };
       msmtp.enable = true;
       notmuch.enable = true;
@@ -26,9 +26,7 @@
       realName = "Knut Asbjornsen";
       signature = {
         text = ''
-          Mit besten Wünschen
-          Ben Bals
-          https://keybase.io/beb
+             I da hoe
         '';
         showSignature = "append";
       };
