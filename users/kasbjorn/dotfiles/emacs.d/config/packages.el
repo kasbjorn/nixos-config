@@ -24,9 +24,6 @@
 (use-package auth-source
   :ensure t)
 
-(use-package cider
-  :ensure t)
-
 (use-package erc-image
   :ensure t
   :after erc
