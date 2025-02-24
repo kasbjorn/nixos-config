@@ -18,7 +18,7 @@
       imap.host = "imappro.zoho.com";
       mbsync = {
         enable = true;
-        create = "maildir";
+        create = "mail";
       };
       msmtp.enable = true;
       notmuch.enable = true;
@@ -32,7 +32,7 @@
         '';
         showSignature = "append";
       };
-      passwordCommand = "I<3M@ck3y42!!";
+      passwordCommand = "cat ~/.insecure-password";
       smtp = {
         host = "smtppro.zoho.com";
       };
