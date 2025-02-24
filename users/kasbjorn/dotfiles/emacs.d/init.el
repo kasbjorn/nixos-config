@@ -8,13 +8,6 @@
 (load "~/.emacs.d/config/snippets")
 (load "~/.emacs.d/config/mail")
 
-;; Basic initialization
-(tool-bar-mode -1)
-(tooltip-mode -1)
-(scroll-bar-mode -1)
-(menu-bar-mode -1)
-(fset 'menu-bar-open nil)
-
 (setq warning-minimum-level :emergency)
 
 ;; Fonts
@@ -24,4 +17,9 @@
       initial-major-mode 'org-mode
       initial-scratch-message "")
 
-
+(when (window-system)
+  (tool-bar-mode -1)
+  (tooltip-mode -1)
+  (scroll-bar-mode -1)
+  (menu-bar-mode -1)
+  (fset 'menu-bar-open nil))

@@ -43,7 +43,7 @@
       (add-hook 'emms-player-started-hook 'emms-show)
       :config
       (setq emms-show-format "Playing: %s")
-      (setq emms-source-file-default-directory "~/Music/"
+      (setq emms-source-file-default-directory "~/Music/")
       (emms-all)
       (emms-default-players))
 
@@ -53,7 +53,7 @@
 (use-package nix-mode
   :mode "\\.nix\\'")
 
-(use-package neotree
+(use-package treemacs
   :ensure t)
 
 (use-package magit
@@ -61,16 +61,6 @@
 
 (use-package ivy
   :ensure t)
-
-(use-package yasnippet
-  :ensure t
-  :hook
-  ((text-mode
-    prog-mode
-    conf-mode
-    snippet-mode) . yas-minor-mode-on)
-  :init
-  (setq yas-snippet-dir "~/.emacs.d/snippets"))
 
 (use-package projectile
   :ensure t
@@ -91,4 +81,3 @@
   (persp-mode-prefix-key (kbd "C-z"))  ; pick your own prefix key here
   :init
   (persp-mode))
-
