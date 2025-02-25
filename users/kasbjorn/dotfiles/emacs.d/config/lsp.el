@@ -13,3 +13,9 @@
 
 (use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
+
+;; Nix
+(use-package nix-mode
+  :ensure t
+  :mode ("\\.nix\\'")
+  :hook (nix-mode . lsp))

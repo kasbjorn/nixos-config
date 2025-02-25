@@ -57,6 +57,7 @@
     # Clojure Whoredom
     clojure
     leiningen
+    clojure-lsp
     
     # Misc
     signal-cli

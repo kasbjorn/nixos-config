@@ -50,9 +50,6 @@
 (use-package vterm
   :ensure t)
 
-(use-package nix-mode
-  :mode "\\.nix\\'")
-
 (use-package treemacs
   :ensure t)
 
