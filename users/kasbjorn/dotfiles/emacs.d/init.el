@@ -7,6 +7,7 @@
 (load "~/.emacs.d/config/snippets")
 (load "~/.emacs.d/config/mail")
 (load "~/.emacs.d/config/lsp")
+(load "~/.emacs.d/config/treemacs")
 
 (setq warning-minimum-level :emergency)
 
