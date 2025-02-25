@@ -7,7 +7,4 @@
   :ensure t)
 
 (use-package treemacs-nerd-icons
-  :after treemacs
-  :config
-  (treemacs-load-theme "nerd-icons"))
-
+  :after treemacs)

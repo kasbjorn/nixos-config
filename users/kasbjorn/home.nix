@@ -53,6 +53,7 @@
     sbcl
     racket
     picolisp
+    nodejs
 
     # LSP
     nil
