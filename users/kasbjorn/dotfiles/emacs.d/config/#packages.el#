@@ -51,10 +51,7 @@
 (use-package vterm
   :ensure t)
 
-(use-package treemacs
-  :ensure t
-  :bind
-  ("[f8]" . treemacs))
+
 
 (use-package magit
   :ensure t)
