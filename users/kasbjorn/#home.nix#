@@ -51,11 +51,7 @@
     
     # Languages		
     sbcl
-    racket
     picolisp
-
-    # LSP
-    nil
     
     # Clojure Whoredom
     clojure
@@ -65,6 +61,7 @@
     # Misc
     signal-cli
     obs-studio
+    nil
     
     # Hyprland
     dunst
