@@ -7,3 +7,8 @@
   "Play tilde Radio"
   (interactive)
   (emms-play-streamlist "https://tilderadio.org/listen"))
+
+(defun play-limbik ()
+  "Play Limbik Frequencies"
+  (interactive)
+  (emms-play-streamlist "https://limbikfreq.com/public/limbik_frequencies/playlist.pls"))

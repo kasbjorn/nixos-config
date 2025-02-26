@@ -8,6 +8,8 @@
 (load "~/.emacs.d/config/lsp")
 (load "~/.emacs.d/config/treemacs")
 
+(setq inferior-lisp-program "sbcl")
+
 (setq warning-minimum-level :emergency)
 
 ;; Fonts
@@ -16,6 +18,8 @@
 (setq inhibit-splash-screen t
       initial-major-mode 'org-mode
       initial-scratch-message "")
+
+(setq visible-bell t)
 
 (when (window-system)
   (tool-bar-mode -1)

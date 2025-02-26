@@ -78,7 +78,7 @@
 
 (use-package perspective
   :bind
-  ("C-x C-b" . persp-ivy-switch-buffer)
+  ("C-x C-b" . ivy-switch-buffer)
   :custom
   (persp-mode-prefix-key (kbd "C-z"))
   :init
