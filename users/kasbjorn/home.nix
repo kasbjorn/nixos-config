@@ -48,7 +48,7 @@
     
     # ~=~=~+~+~ Coding  ~=~=~+~+~
     sbcl    
-    sbclPackages.dexdor
+    sbclPackages.dexador
 
     guile
     nodejs
