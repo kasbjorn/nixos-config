@@ -12,9 +12,6 @@
 	home.homeDirectory = "/home/kasbjorn";
 	programs.home-manager.enable = true;  
 
-  home.sessionVariables = {
-    
-  };
 
   nixpkgs = {
     config = {
@@ -49,11 +46,13 @@
     # Documents
     pandoc
     
-    # ~=~=~+~+~ Languages ~=~=~+~+~
-    sbcl
+    # ~=~=~+~+~ Coding  ~=~=~+~+~
+    sbcl    
+    sbclPackages.dexdor
+
     guile
     nodejs
-
+    
     # Tools
     
     nil

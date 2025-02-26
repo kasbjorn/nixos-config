@@ -13,7 +13,6 @@
     ];
 
   environment.systemPackages = with pkgs; [
-    openssl
   ];
 
   fonts.packages = with pkgs; [
