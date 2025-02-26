@@ -50,17 +50,11 @@
     pandoc
     
     # ~=~=~+~+~ Languages ~=~=~+~+~
-
-    # SBCL Common Lisp
     sbcl
-    sbclPackages.dexador
-
-    # Guile
     guile
-
-    
     nodejs
-    
+
+    # Tools
     
     nil
 
@@ -83,6 +77,7 @@
     rofi
     wlogout
     swaylock
+    nwg-dock-hyprland
 
     # Music!! :D
     playerctl
