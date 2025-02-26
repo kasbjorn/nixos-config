@@ -49,12 +49,18 @@
     # Documents
     pandoc
     
-    # Languages		
-    sbcl
-    racket
-    picolisp
-    nodejs
+    # ~=~=~+~+~ Languages ~=~=~+~+~
 
+    # SBCL Common Lisp
+    sbcl
+    sbclPakages.dexador
+
+    # Guile
+    guile
+
+    
+    nodejs
+    
     # LSP
     nil
     
