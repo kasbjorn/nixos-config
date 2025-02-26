@@ -69,19 +69,10 @@
   (global-set-key (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
-(use-package tabspaces
-  :ensure t
-  :hook (after-init . tabspaces-mode) ;; use this only if you want the minor-mode loaded at startup. 
-  :commands (tabspaces-switch-or-create-workspace
-             tabspaces-open-or-create-project-and-workspace)
+(use-package perspective
+  :bind
+  ("C-x C-b" . persp-ivy-switch-buffer)
   :custom
-  (tabspaces-use-filtered-buffers-as-default t)
-  (tabspaces-default-tab "Default")
-  (tabspaces-remove-to-default t)
-  (tabspaces-include-buffers '("*scratch*"))
-  (tabspaces-initialize-project-with-todo t)
-  (tabspaces-todo-file-name "project-todo.org")
-  ;; sessions
-  (tabspaces-session t)
-  (tabspaces-session-auto-restore t)
-  (tab-bar-new-tab-choice "*scratch*"))
+  (persp-mode-prefix-key (kbd "C-z"))
+  :init
+  (persp-mode))
