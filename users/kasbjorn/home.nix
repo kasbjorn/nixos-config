@@ -47,8 +47,7 @@
     pandoc
     
     # ~=~=~+~+~ Coding  ~=~=~+~+~
-    sbcl    
-    sbclPackages.dexador
+    sbcl        
 
     guile
     nodejs
@@ -61,6 +60,9 @@
     clojure
     leiningen
     clojure-lsp
+
+    # Libraries
+    openssl
     
     # Misc
     signal-cli
