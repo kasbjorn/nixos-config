@@ -22,6 +22,13 @@
     (setq mastodon-instance-url "https://mstdn.social"
 	  mastodon-active-user "praetor207@gmail.com"))
 
+;; LiveCode
+(use-package sly
+  :ensure t)
+
+(use-package company
+  :ensure t)
+
 (use-package auth-source
   :ensure t)
 
