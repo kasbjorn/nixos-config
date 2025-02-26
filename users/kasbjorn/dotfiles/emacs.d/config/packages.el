@@ -70,6 +70,7 @@
   (projectile-mode +1))
 
 (use-package tabspaces
+  :ensure t
   ;; use this next line only if you also use straight, otherwise ignore it. 
   :straight (:type git :host github :repo "mclear-tools/tabspaces")
   :hook (after-init . tabspaces-mode) ;; use this only if you want the minor-mode loaded at startup. 
