@@ -15,6 +15,9 @@
   (require 'use-package-ensure)
   (setq use-package-always-ensure t))
 
+(use-package mastodon-async-mode
+  :ensure t)
+
 (use-package mastodon
     :ensure t
     :config

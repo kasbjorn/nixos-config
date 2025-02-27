@@ -47,11 +47,13 @@
     # Base
     pkg-config
     gcc
+    gnumake
 
     # Languages
     guile
     nodejs
     sbcl
+    ruby
 
     # Libraries
     openssl
