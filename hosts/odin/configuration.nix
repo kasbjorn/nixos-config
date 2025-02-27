@@ -15,6 +15,8 @@
   environment.systemPackages = with pkgs; [
     pkg-config
     openssl
+    openssl.dev
+    openssl.out
   ];
 
   fonts.packages = with pkgs; [
