@@ -45,7 +45,10 @@
     # ~=~=~+~+~ Coding  ~=~=~+~+
 
     # Base
-   
+    pkg-config
+    gcc
+    gmake
+    autotools
 
     # Languages
     guile
