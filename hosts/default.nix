@@ -7,7 +7,6 @@
   ];
 		      
   environment.systemPackages = with pkgs; [
-    vim
 	  git
     wget
     direnv
@@ -18,9 +17,12 @@
     unzip
 	  zstd
 		acpi
-		alsa-utils
+    pkg-config
+    openssl
+    openssl.dev
+    openssl.out
   ];
-
+  
   programs.zsh.enable = true;
 
   services.kubo = {

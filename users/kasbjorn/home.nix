@@ -24,10 +24,6 @@
     # System
     blueberry
     
-    # Music
-    audacious
-    transmission_4-gtk
-    
     # General
     age
     mpv
@@ -46,23 +42,23 @@
     # Documents
     pandoc
     
-    # ~=~=~+~+~ Coding  ~=~=~+~+~
-    sbcl        
+    # ~=~=~+~+~ Coding  ~=~=~+~+
 
+    # Base
+   
+
+    # Languages
     guile
     nodejs
+    sbcl
     
     # Tools
-    
     nil
 
     # Clojure Whoredom
     clojure
     leiningen
     clojure-lsp
-
-    # Libraries
-    openssl
     
     # Misc
     signal-cli
@@ -83,6 +79,7 @@
     # Music!! :D
     playerctl
     audacious
+    transmission_4-gtk
     
     # Desktop
     nemo
@@ -95,6 +92,7 @@
     virt-manager
 ];
 
+  
   gtk = {
     enable = true;
     theme = {
@@ -102,7 +100,7 @@
     };
   };
 
-  programs.java = {
+  programs.java = { 
     enable = true;
   };
   
@@ -122,7 +120,6 @@
       plugins = [ "git" "direnv" ];
       theme = "agnoster";
     };
-
     shellAliases = {
 			update = "sudo nixos-rebuild switch";
 			bat = "acpi";

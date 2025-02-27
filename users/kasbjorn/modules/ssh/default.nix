@@ -7,8 +7,8 @@
         controlPath = "~/.ssh/master-%r@%h:%p";
 
         matchBlocks = {
-            "ma" = {
-                hostname = "ma.sdf.org";
+            "sdf" = {
+                hostname = "arpa.sdf.org";
                 user = "praetor";
                 port = 22;
             };
