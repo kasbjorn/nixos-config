@@ -17,10 +17,6 @@
     unzip
 	  zstd
 		acpi
-    pkg-config
-    openssl
-    openssl.dev
-    openssl.out
   ];
   
   programs.zsh.enable = true;

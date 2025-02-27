@@ -51,6 +51,11 @@
     guile
     nodejs
     sbcl
+
+    # Libraries
+    openssl
+    openssl.dev
+    openssl.out
     
     # Tools
     nil
