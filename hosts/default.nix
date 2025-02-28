@@ -17,6 +17,11 @@
     unzip
 	  zstd
 		acpi
+
+    cmake
+    meson
+    cpio
+    gcc
   ];
   
   programs.zsh.enable = true;
