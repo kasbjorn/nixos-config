@@ -1,3 +1,8 @@
+[general]
 import = [
        "~/.config/alacritty/nord.toml"
 ]
+
+[font.normal]
+family = "Fira Code"
+

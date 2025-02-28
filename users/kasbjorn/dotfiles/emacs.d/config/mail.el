@@ -15,5 +15,7 @@
   (setq smtpmail-smtp-server "smtppro.zoho.com"
       smtpmail-smtp-service 465
       smtpmail-stream-type  'ssl)
+
+  (setq message-send-mail-function 'smtpmail-send-it)
   :init
   (mu4e t))

@@ -12,3 +12,7 @@
   "Play Limbik Frequencies"
   (interactive)
   (emms-play-streamlist "https://limbikfreq.com/public/limbik_frequencies/playlist.pls"))
+
+(defun play-deepspace ()
+  (interactive)
+  (emms-play-streamlist "https://somafm.com/deepspaceone130.pls"))
