@@ -13,8 +13,8 @@
   (setq mu4e-trash-folder  "/frostbyte/Trash")
 
   (setq smtpmail-smtp-server "smtppro.zoho.com"
-      smtpmail-smtp-service 465
-      smtpmail-stream-type  'ssl)
+      smtpmail-smtp-service 587
+      smtpmail-stream-type  'starttls)
 
   (setq message-send-mail-function 'smtpmail-send-it)
   :init

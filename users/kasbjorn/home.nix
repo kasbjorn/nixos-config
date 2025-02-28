@@ -27,7 +27,6 @@
     # General
     age
     mpv
-    chromium
     imagemagick
     gh
     gimp
