@@ -78,7 +78,7 @@
     waybar
     hypridle
     hyprlock
-    rofi
+    rmenu
     wlogout
     swaylock
     nwg-dock-hyprland

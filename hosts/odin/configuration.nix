@@ -13,7 +13,7 @@
     ];
 
   environment.systemPackages = with pkgs; [
-    pkg-config
+    
   ];
 
   fonts.packages = with pkgs; [
@@ -48,12 +48,16 @@
     };
   };
 
+  programs.niri = {
+    enable = true;
+  };
+
    services.greetd = {
     enable = true;
    };
 
    programs.regreet = {
-	enable = true;
+	   enable = true;
    };
 
    time.timeZone = "America/Chicago";
