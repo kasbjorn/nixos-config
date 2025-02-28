@@ -52,15 +52,12 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd stumpwm";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd hyprland";
         user = "greeter";
       };
     };
    };
 
-   services.xserver.windowManager.stumpwm-wrapper.enable = true;
-
-   
    time.timeZone = "America/Chicago";
 
   i18n.defaultLocale = "en_US.UTF-8";
