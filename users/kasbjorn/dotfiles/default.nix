@@ -2,10 +2,9 @@
 
 {
 	home.file = {
-      		".config/alacritty/nord.yaml".source = ./alacritty/nord.yaml;
+      		".config/alacritty".source = ./alacritty;
       		".emacs.d/init.el".source = ./emacs.d/init.el;
 		      ".emacs.d/config/".source = ./emacs.d/config;
-          ".fluxbox".source = ./fluxbox;
           ".wallpaper".source = ./wallpaper;
           ".config/hypr".source = ./hyprland;
           
