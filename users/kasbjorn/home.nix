@@ -161,19 +161,8 @@
 		pinentryPackage = pkgs.pinentry-curses;
 	};
 
-  programs.kitty = {
+  programs.alacritty = {
 	  enable = true;
-		settings = {
-		  font_family = "Inconsolata";
-			font_size = "12";
-			tab_bar_edge = "top";
-		  tab_bar_style = "powerline";
-			tab_powerline_style = "angled";
-			allow_remote_control = "yes";
-			shell_integration = "enabled";
-			linux_display_server = "x11";
-    };
-		extraConfig = "include ./nord.conf";
 	};
                                 
   home.stateVersion = "24.05";
