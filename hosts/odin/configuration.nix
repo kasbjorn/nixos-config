@@ -48,22 +48,20 @@
     };
   };
 
-  programs.iio-hyprland = {
+   services.greetd = {
     enable = true;
-  };
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd stumpwm";
+        user = "greeter";
+      };
+    };
+   };
 
-  services.greetd = {
-  	enable = true;
-  	settings = rec {
-    		initial_session = {
-      		command = "${pkgs.hyprland}/bin/Hyprland";
-      		user = "kasbjorn";
-    	};
-    	default_session = initial_session;
-  	};
-};
+   services.xserver.windowManager.stumpwm-wrapper.enable = true;
 
-  time.timeZone = "America/Chicago";
+   
+   time.timeZone = "America/Chicago";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
