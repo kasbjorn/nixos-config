@@ -40,6 +40,8 @@
   };
 
   programs.niri.enable = true;
+
+  programs.zsh.enable = true;
   
   time.timeZone = "America/Chicago";
 
