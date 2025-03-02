@@ -28,3 +28,5 @@
   (scroll-bar-mode -1)
   (menu-bar-mode -1)
   (fset 'menu-bar-open nil))
+
+(add-hook 'kill-emacs-hook #'persp-state-save)

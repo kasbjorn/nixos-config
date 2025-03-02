@@ -17,4 +17,3 @@
    :password "praetor/Libera:M@ck3y242"
    :nick "praetor"))
 
-(my/connect-irc)
