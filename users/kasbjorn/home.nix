@@ -11,8 +11,7 @@
 	home.username = "kasbjorn";
 	home.homeDirectory = "/home/kasbjorn";
 	programs.home-manager.enable = true;  
-
-
+  
   nixpkgs = {
     config = {
       allowUnfree = true;
@@ -33,6 +32,7 @@
     gnome-keyring
     yt-dlp
     scrot
+    chromium
     
     # Live Code
     supercollider
@@ -74,15 +74,16 @@
     # Hyprland
     mako
     hyprpaper
-    hyprcursor
     waybar
-    hypridle
-    hyprlock
     rofi
     wlogout
     swaylock
     yazi
 
+    # General X
+    wl-clipboard-x11
+    wl-clipboard
+    
     # Music!! :D
     playerctl
     audacious
@@ -98,21 +99,7 @@
     vagrant
     virt-manager
   ];
-
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = pkgs.hyprland;
-    xwayland.enable = true;
-  };
-  
-  
-  gtk = {
-    enable = true;
-    theme = {
-      name = "Nordic";
-    };
-  };
-
+ 
   programs.java = { 
     enable = true;
   };
@@ -122,8 +109,15 @@
     package = pkgs.emacs;
     extraPackages = epkgs: [
       epkgs.vterm
-      epkgs.mu4e ];
+      epkgs.mu4e
+      epkgs.ement
+   ];
   };
+ 
+  services.emacs = {
+	enable = true;
+	package = pkgs.emacs;
+  };  
 
   programs.zsh = {
 	  enable = true;
@@ -136,6 +130,7 @@
     shellAliases = {
 			update = "sudo nixos-rebuild switch";
 			bat = "acpi";
+      copy = "echo file://`realpath $1` | wl-copy -t text/uri-list";
 		};
     initExtraBeforeCompInit = ''
                             autoload -U add-zsh-hook
@@ -154,6 +149,7 @@
                                     printf "\e]%s\e\\" "$1"
                                fi
                 }
+
    '';
  };
   

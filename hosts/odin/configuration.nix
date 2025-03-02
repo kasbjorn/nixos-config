@@ -13,7 +13,7 @@
     ];
 
   environment.systemPackages = with pkgs; [
-    
+    xwayland-satellite
   ];
 
   fonts.packages = with pkgs; [
@@ -33,30 +33,19 @@
   networking.firewall.checkReversePath = "loose";
 
   services.flatpak.enable = true;
-  xdg.portal = {
-    enable = true;
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-    ];
-  };
   
-  systemd.services.flatpak-repo = {
-    wantedBy = [ "multi-user.target" ];
-    path = [ pkgs.flatpak ];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
-  };
-
-   services.greetd = {
+  services.greetd = {
     enable = true;
    };
 
-   programs.regreet = {
-	   enable = true;
-   };
+  programs.niri.enable = true;
+ 
 
-   time.timeZone = "America/Chicago";
+  programs.regreet = {
+	  enable = true;
+  };
+
+  time.timeZone = "America/Chicago";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -73,6 +62,7 @@
   };
 
 
+  hardware.graphics.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.sensor.iio.enable = true;

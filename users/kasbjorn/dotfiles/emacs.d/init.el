@@ -7,6 +7,7 @@
 (load "~/.emacs.d/config/mail")
 (load "~/.emacs.d/config/lsp")
 (load "~/.emacs.d/config/treemacs")
+(load "~/.emacs.d/config/publish.el")
 
 (setq inferior-lisp-program "sbcl")
 
