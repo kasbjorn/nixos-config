@@ -12,9 +12,6 @@
       ../../modules/virtualization
     ];
 
-  environment.systemPackages = with pkgs; [
-    xwayland-satellite
-  ];
 
   fonts.packages = with pkgs; [
     fira-code
@@ -65,11 +62,6 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.sensor.iio.enable = true;
-
-  hardware.sane.enable = true;
-  hardware.sane.extraBackends = [ pkgs.hplipWithPlugin ];
-  
-  services.blueman.enable = true;
 
   services.tailscale.enable = true;
 	

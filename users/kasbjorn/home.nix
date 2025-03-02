@@ -82,6 +82,7 @@
     # General X
     wl-clipboard-x11
     wl-clipboard
+    xwayland-satellite
     
     # Music!! :D
     playerctl
