@@ -18,6 +18,7 @@
 (use-package nord-theme
     :ensure t)
 
+;; Mastodon
 (use-package mastodon
     :ensure t
     :config

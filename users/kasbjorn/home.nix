@@ -115,8 +115,8 @@
   };
  
   services.emacs = {
-	enable = true;
-	package = pkgs.emacs;
+	  enable = true;
+	  package = pkgs.emacs;
   };  
 
   programs.zsh = {

@@ -23,10 +23,5 @@
     cpio
     gcc
   ];
-  
-  programs.zsh.enable = true;
 
-  services.kubo = {
-    enable = true;
-  };
 }
