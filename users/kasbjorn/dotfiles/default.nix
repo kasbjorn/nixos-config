@@ -7,7 +7,7 @@
 		      ".emacs.d/config".source = ./emacs.d/config;
 		      ".emacs.d/snippets".source = ./emacs.d/snippets;
           ".wallpaper".source = ./wallpaper;
-          ".config/hypr".source = ./hyprland;
+          ".config/niri".source = ./niri;
           
     	};
 
