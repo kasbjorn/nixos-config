@@ -1,5 +1,0 @@
-(setq erc-server "irc.sdf.org"
-      erc-nick "praetor"
-      erc-user-full-name "Praetor"
-      erc-track-shorten-start 8
-      erc-autojoin-channels-alist '(("irc.libera.chat" "#lispcafe" "#norge"))
