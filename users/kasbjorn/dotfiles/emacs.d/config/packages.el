@@ -78,7 +78,5 @@
 (use-package persp-mode
   :bind
   ("C-x C-b" . ivy-switch-buffer)
-  :custom
-  (persp-mode-prefix-key (kbd "C-z"))
   :init
   (persp-mode))
