@@ -77,7 +77,7 @@
     rofi
     swaylock
     yazi
-    swaybg
+    wpaperd
 
     # General X
     wl-clipboard-x11

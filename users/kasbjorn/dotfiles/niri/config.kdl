@@ -10,7 +10,7 @@ hotkey-overlay {
 
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "--image ~/.wallpaper/yggdrasil.png"
+spawn-at-startup "wpaper" "-d"
 
 
 input {
