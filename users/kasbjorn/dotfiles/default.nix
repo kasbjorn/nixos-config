@@ -3,7 +3,9 @@
 {
 	home.file = {
       		".config/alacritty".source = ./alacritty;
-      		".emacs.d".source = ./emacs.d;
+      		".emacs.d/init.el".source = ./emacs.d/init.el;
+		".emacs.d/config".source = ./emacs.d/config;
+		".emacs.d/snippets".source = ./emacs.d/snippets;
           ".wallpaper".source = ./wallpaper;
           ".config/hypr".source = ./hyprland;
           
