@@ -71,14 +71,13 @@
     signal-cli
     obs-studio
     
-    # Hyprland
+    # Niri / WM
     mako
-    hyprpaper
     waybar
     rofi
-    wlogout
     swaylock
     yazi
+    swaybg
 
     # General X
     wl-clipboard-x11
