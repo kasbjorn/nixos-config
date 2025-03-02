@@ -15,8 +15,8 @@
   (require 'use-package-ensure)
   (setq use-package-always-ensure t))
 
-(use-package mastodon-async-mode
-  :ensure t)
+(use-package nord-theme
+    :ensure t)
 
 (use-package mastodon
     :ensure t
@@ -35,13 +35,8 @@
 (use-package auth-source
   :ensure t)
 
-(use-package erc-image
-  :ensure t
-  :after erc
-  :config
-  (setq erc-image-inline-rescale 300)
-  (setq erc-prompt-for-password nil)
-  (add-to-list 'erc-modules 'image))
+(use-package all-the-icons
+  :ensure t)	
 
 (use-package emojify
   :ensure t
