@@ -74,7 +74,7 @@
   (global-set-key (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
-(use-package perspective
+(use-package persp-mode
   :bind
   ("C-x C-b" . ivy-switch-buffer)
   :custom
