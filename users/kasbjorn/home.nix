@@ -73,7 +73,7 @@
     
     # Niri / WM
     mako
-    waybar
+    eww
     rofi
     swaylock
     yazi

@@ -13,10 +13,9 @@
 (use-package treemacs-magic
   :ensure t)
 
-(use-package tremacs-perp
+(use-package treemacs-persp
   :ensure t)
 
 (with-eval-after-load 'treemacs
   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
 
-(treemacs-git-mode 'deferred)
