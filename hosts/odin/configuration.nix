@@ -38,8 +38,7 @@
       options = "compse:ralt";
     };
   };
-    
-  
+      
   services.greetd = {
     enable = true;
    };
@@ -48,6 +47,10 @@
 	  enable = true;
   };
 
+  xdg.portal = {
+    enable = true;
+  };
+  
   programs.niri.enable = true;
 
   programs.zsh.enable = true;
