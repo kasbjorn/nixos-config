@@ -11,7 +11,7 @@
     
   };
 
-	outputs = {nixpkgs, home-manager, sops-nix, musnix, ...}:
+	outputs = {nixpkgs, home-manager, sops-nix, ...}:
     {
 
       nixpkgs.config.allowUnfree = true;
