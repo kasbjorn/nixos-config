@@ -30,6 +30,15 @@
   networking.firewall.checkReversePath = "loose";
 
   services.flatpak.enable = true;
+
+  services.xserver = {
+    enable = true;
+    xkb = {
+      layout = "us";
+      options = "compse:ralt";
+    };
+  };
+    
   
   services.greetd = {
     enable = true;

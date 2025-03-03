@@ -8,16 +8,15 @@ hotkey-overlay {
 	       skip-at-startup
 }
 
+spawn-at-startup "wpaper -d"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
-spawn-at-startup "wpaper" "-d"
-
 
 input {
     keyboard {
         xkb {
             layout "us"
-            options "compose:ralt,ctrl:nocaps"
+            options "compose:ralt"
         }
     }
 

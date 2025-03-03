@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    musnix.url = "github:musnix/musnix";
     
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -30,10 +29,9 @@
         system = "x86_64-linux";
         modules = [
           sops-nix.nixosModules.sops
-          musnix.nixosModules.musnix
           ./hosts/odin/configuration.nix
           ./hosts/odin/hardware-configuration.nix
-	        ./hosts
+	  ./hosts
         ];
 		  };
     };

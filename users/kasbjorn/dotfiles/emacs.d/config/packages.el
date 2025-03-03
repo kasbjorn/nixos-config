@@ -18,6 +18,8 @@
 (use-package nord-theme
     :ensure t)
 
+;; Chat
+
 ;; Mastodon
 (use-package mastodon
     :ensure t

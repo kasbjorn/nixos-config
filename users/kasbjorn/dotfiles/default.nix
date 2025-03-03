@@ -8,6 +8,7 @@
 		      ".emacs.d/snippets".source = ./emacs.d/snippets;
           ".wallpaper".source = ./wallpaper;
           ".config/niri".source = ./niri;
+          ".config/wpaperd".source = ./wpaperd;
           
     	};
 

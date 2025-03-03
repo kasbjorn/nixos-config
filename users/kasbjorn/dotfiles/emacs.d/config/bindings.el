@@ -1,9 +1,9 @@
 (global-set-key [f8] 'treemacs)
 
 
-(defun pmi/named-term (term-name)
+(defun my/named-term (term-name)
     "Generate a terminal with buffer name TERM-NAME."
-    (interactive "Terminal purpose: ")
+    (interactive "sTerminal purpose: ")
     (vterm (concat "term-" term-name)))
 
-(global-set-key (kbd "M-<return>") 'pmi/named-term)
+(global-set-key (kbd "M-<return>") 'my/named-term)
