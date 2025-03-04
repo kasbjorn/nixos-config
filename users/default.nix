@@ -14,7 +14,6 @@
           "libvirtd"
           "lp"
           "scanner"
-          config.services.kubo.group
         ];
 			shell = pkgs.zsh;
   	};
