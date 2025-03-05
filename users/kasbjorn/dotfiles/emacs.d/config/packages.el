@@ -32,6 +32,9 @@
 (use-package sly
   :ensure t)
 
+(use-package yuck-mode
+  :ensure t)
+
 (use-package company
   :ensure t)
 

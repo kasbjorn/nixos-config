@@ -8,9 +8,8 @@ hotkey-overlay {
 	       skip-at-startup
 }
 
-spawn-at-startup "wpaper -d"
+spawn-at-startup "wpaperd" "-d"
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "waybar"
 
 input {
     keyboard {
