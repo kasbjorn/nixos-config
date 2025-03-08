@@ -34,8 +34,8 @@
   services.xserver = {
     enable = true;
     xkb = {
-      layout = "us";
-      options = "compse:ralt";
+      layout = "us,no";
+      options = "grp:win_space_toggle";
     };
   };
       

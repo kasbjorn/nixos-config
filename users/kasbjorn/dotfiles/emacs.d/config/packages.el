@@ -32,9 +32,6 @@
 (use-package sly
   :ensure t)
 
-(use-package yuck-mode
-  :ensure t)
-
 (use-package company
   :ensure t)
 
@@ -72,16 +69,7 @@
   :ensure t
   :init
   (setq projectile-project-search-path '("~/Projects/" "~/Playground"))
-  :config
-  ;; I typically use this keymap prefix on macOS
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  ;; On Linux, however, I usually go with another one
-  (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
-  (global-set-key (kbd "C-c p") 'projectile-command-map)
-  (projectile-mode +1))
-
-(use-package persp-mode
   :bind
-  ("C-x C-b" . ivy-switch-buffer)
-  :init
-  (persp-mode))
+  (:map projectile-mode-map
+	("C-c p" . projectile-command-map)))
+

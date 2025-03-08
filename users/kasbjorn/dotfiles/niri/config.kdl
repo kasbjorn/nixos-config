@@ -14,8 +14,8 @@ spawn-at-startup "xwayland-satellite"
 input {
     keyboard {
         xkb {
-            layout "us"
-            options "compose:ralt"
+            layout "us,no"
+            options "grp:win_space_toggle"
         }
     }
 
