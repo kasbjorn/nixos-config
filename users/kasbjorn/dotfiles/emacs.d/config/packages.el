@@ -28,6 +28,13 @@
     (setq mastodon-instance-url "https://mstdn.social"
 	  mastodon-active-user "praetor207@gmail.com"))
 
+;; Utilities
+(use-package paredit
+  :ensure t)
+
+(use-package rainbow-delimiters
+  :ensure t)
+
 ;; LiveCode
 (use-package sly
   :ensure t)
