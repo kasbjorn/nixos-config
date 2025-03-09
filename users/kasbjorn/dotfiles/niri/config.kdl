@@ -9,6 +9,7 @@ hotkey-overlay {
 }
 
 spawn-at-startup "wpaperd" "-d"
+spawn-at-startup "waybar"
 spawn-at-startup "xwayland-satellite"
 
 input {
