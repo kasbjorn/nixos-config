@@ -7,7 +7,8 @@
 (load "~/.emacs.d/config/mail")
 (load "~/.emacs.d/config/lsp")
 (load "~/.emacs.d/config/treemacs")
-(load "~/.emacs.d/config/publish.el")
+(load "~/.emacs.d/config/publish")
+(load "~/.emacs.d/config/theme")
 
 (setq inferior-lisp-program "sbcl")
 
@@ -27,5 +28,6 @@
   (tooltip-mode -1)
   (scroll-bar-mode -1)
   (menu-bar-mode -1)
-  (fset 'menu-bar-open nil))
+  (fset 'menu-bar-open nil)
+  (tab-bar-mode 1))
 

@@ -10,4 +10,12 @@
   (setq doom-modeline-project-detection 'auto)
   (doom-modeline-mode 1))
 
+(setq tab-bar-show 1
+      tab-bar-close-button-show nil
+      tab-bar-new-tab-choice "*scratch*"
+      tab-bar-tab-hints t
+      tab-bar-format '(tab-bar-format-tabs tab-bar-seperator))
+
+(set-face-attribute 'tab-bar-tab nil :inherit 'doom-modeline-panel :foreground nil :background nil)
+
 (load-theme 'nord t)
