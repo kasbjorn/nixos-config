@@ -49,7 +49,9 @@
 
   xdg.portal = {
     enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
+
   
   programs.niri.enable = true;
 

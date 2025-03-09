@@ -69,7 +69,7 @@
   :ensure t
   :init
   (setq projectile-project-search-path '("~/Projects/" "~/Playground"))
-  :bind
-  (:map projectile-mode-map
-	("C-c p" . projectile-command-map)))
-
+  :config
+  (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
+  (global-set-key (kbd "C-c p") 'projectile-command-map)
+  (projectile-mode +1))

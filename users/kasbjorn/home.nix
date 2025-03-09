@@ -33,6 +33,7 @@
     yt-dlp
     scrot
     chromium
+    nyxt
     
     # Live Code
     supercollider
