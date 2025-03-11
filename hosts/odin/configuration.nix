@@ -10,6 +10,7 @@
     	../../modules/hardware/zram
 	    ../../modules/hardware/audio
       ../../modules/virtualization
+      ../../modules/tailscale
     ];
 
 
@@ -78,8 +79,6 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.sensor.iio.enable = true;
-
-  services.tailscale.enable = true;
 	
   services.openssh = {
 	  enable = true;
