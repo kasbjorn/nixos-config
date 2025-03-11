@@ -1,4 +1,9 @@
-(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+(when (member "Fira Code" (font-family-list))
+  (set-face-attribute 'default nil :font "Fira Code" :height 108)
+  (set-face-attribute 'fixed-pitch nil :family "Fira Code"))
+
+(when (member "Source Sans Pro" (font-family-list))
+  (set-face-attribute 'variable-pitch nil :family "Source Sans Pro" :height 1.18))
 
 (when (display-graphic-p)
   (require 'all-the-icons))
