@@ -1,6 +1,7 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/") t)
 (add-to-list 'package-archives '("gnu" . "https://elpa.gnu.org/packages/") t)
 
@@ -15,7 +16,10 @@
   (setq use-package-always-ensure t))
 
 (use-package nord-theme
-    :ensure t)
+  :ensure t)
+
+(use-package rust-mode
+  :ensure t)
 
 ;; Ligatures / Fonts
 (use-package ligature

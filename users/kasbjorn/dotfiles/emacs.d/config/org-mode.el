@@ -1,3 +1,6 @@
+(use-package olivetti
+  :ensure t)
+
 (use-package org
   :ensure t
   :config
@@ -30,7 +33,7 @@
    '(outline-9          ((t (:height 1.1)))))
   :hook
   (org-mode . olivetti-mode))
-
+ 
 (use-package org-appear
   :commands (org-appear-mode)
   :hook     (org-mode . org-appear-mode)

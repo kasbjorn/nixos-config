@@ -51,9 +51,12 @@
 
     # Languages
     guile
-    nodejs
     sbcl
     ruby
+
+    # Rust
+    rustc
+    cargo
 
     # Libraries
     openssl
@@ -71,6 +74,7 @@
     # Misc
     signal-cli
     obs-studio
+    calibre
     
     # Niri / WM
     mako
@@ -92,7 +96,7 @@
     
     # Desktop
     nemo
-
+    tigervnc
     # Mail
     mu
 
@@ -154,6 +158,20 @@
    '';
  };
   
+
+  xdg.portal = {
+    enable = true;
+    xdgOpenUsePortal = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config = {
+      common = {
+        default = [
+          "gtk"
+        ];
+      };
+    };
+        
+  };
   
 	programs.gpg.enable = true;
 

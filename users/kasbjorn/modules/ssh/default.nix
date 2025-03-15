@@ -8,7 +8,7 @@
 
         matchBlocks = {
             "sdf" = {
-                hostname = "arpa.sdf.org";
+                hostname = "ma.sdf.org";
                 user = "praetor";
                 port = 22;
             };
@@ -17,9 +17,14 @@
                 user = "praetor";
                 port = 22;
             };
+            "envs" = {
+              hostname = "envs.sh";
+              user = "praetor";
+              port = 22;
+            };
             "book" = {
                 hostname = "book";
-                user = "u0_a184";
+                user = "u0_a192";
                 port = 8022;
             };
         };

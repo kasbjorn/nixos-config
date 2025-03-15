@@ -32,25 +32,33 @@
 
   services.flatpak.enable = true;
 
+   egnvironment.systemPackages = with pkgs; [
+	  git
+    wget
+    direnv
+    tmux
+    sshfs
+    bash
+    killall
+    unzip
+	  zst
+		acpi
+    mtp-tools
+   ];
+
   services.xserver = {
     enable = true;
+    displayManager = {
+      lightdm = {
+        enable = true;
+        greeters = {
+          gtk.enable = true;
+        };
+      };
     xkb = {
       layout = "us,no";
       options = "grp:win_space_toggle";
     };
-  };
-      
-  services.greetd = {
-    enable = true;
-   };
- 
-  programs.regreet = {
-	  enable = true;
-  };
-
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   
