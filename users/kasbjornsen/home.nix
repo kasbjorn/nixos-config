@@ -8,8 +8,8 @@
 	];
 
 
-	home.username = "kasbjorn";
-	home.homeDirectory = "/home/kasbjorn";
+	home.username = "kasbjornsen";
+	home.homeDirectory = "/home/kasbjornsen";
 	programs.home-manager.enable = true;  
   
   nixpkgs = {
@@ -181,6 +181,15 @@
 		pinentryPackage = pkgs.pinentry-curses;
 	};
 
+  programs.git = {
+    enable = true;
+    userName = "Knut Asbjorjsen";
+    userEmail = "kasbjornsen@frostbyte.works";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
+  };
+  
   programs.alacritty = {
 	  enable = true;
 	};

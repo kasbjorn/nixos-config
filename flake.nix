@@ -17,11 +17,11 @@
       nixpkgs.config.allowUnfree = true;
       
       homeConfigurations = {
-        "kasjorn" = home-manager.lib.homeManagerConfiguration {
+        "kasjornsen" = home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
-          homeDirectory = "/home/kasbjorn";
-          userName = "kasbjorn";
-          configuration.imports = [ ./users/kasbjorn/home.nix ];
+          homeDirectory = "/home/kasbjornsen";
+          userName = "kasbjornsen";
+          configuration.imports = [ ./users/kasbjornsen/home.nix ];
         };
       };
     
@@ -31,7 +31,7 @@
           sops-nix.nixosModules.sops
           ./hosts/odin/configuration.nix
           ./hosts/odin/hardware-configuration.nix
-	  ./hosts
+	  ./users
         ];
 		  };
     };

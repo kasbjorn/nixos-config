@@ -11,6 +11,7 @@
 	    ../../modules/hardware/audio
       ../../modules/virtualization
       ../../modules/tailscale
+      ../../modules/software/niri
     ];
 
 
@@ -19,6 +20,8 @@
     fira-code-symbols
   ];
 
+  programs.niri.enable = true;
+  
   boot.loader.systemd-boot.enable = true;
       
   boot.loader.efi.canTouchEfiVariables = true;
@@ -32,7 +35,7 @@
 
   services.flatpak.enable = true;
 
-   egnvironment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
 	  git
     wget
     direnv
@@ -41,28 +44,11 @@
     bash
     killall
     unzip
-	  zst
+	  zstd
 		acpi
-    mtp-tools
-   ];
-
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      lightdm = {
-        enable = true;
-        greeters = {
-          gtk.enable = true;
-        };
-      };
-    xkb = {
-      layout = "us,no";
-      options = "grp:win_space_toggle";
-    };
-  };
-
-  
-  programs.niri.enable = true;
+    mtpfs
+    home-manager
+  ];
 
   programs.zsh.enable = true;
   

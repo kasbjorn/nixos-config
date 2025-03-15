@@ -1,4 +1,4 @@
-(load "~/.emacs.d/config/packages")
+l(load "~/.emacs.d/config/packages")
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/org-mode")
 (load "~/.emacs.d/config/bindings")

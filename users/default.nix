@@ -2,9 +2,9 @@
 
 {
     
-    	users.users.kasbjorn = {
+    	users.users.kasbjornsen = {
     		isNormalUser = true;
-    		description = "Knut Asbjorn";
+    		description = "Knut Asbjornsen";
     		extraGroups = [
           "audio"
           "jackaudio"
