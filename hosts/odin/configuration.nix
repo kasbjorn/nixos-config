@@ -49,6 +49,16 @@
     mtpfs
   ];
 
+  envirnment.etc."environment".text = ''
+    export QT_QPA_PLATFORM=wayland
+    export XDG_CURRENT_DESKTOP=niri
+    export WAYLAND_DISPLAY=wayland-0
+
+    export QT_QPA_PLATFORM=xcb
+
+    export QT_QPA_PLATFORMTHEME=qt5ct
+  '';
+
   programs.zsh.enable = true;
   
   time.timeZone = "America/Chicago";
