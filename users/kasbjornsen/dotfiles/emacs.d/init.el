@@ -1,4 +1,4 @@
-l(load "~/.emacs.d/config/packages")
+(load "~/.emacs.d/config/packages")
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/org-mode")
 (load "~/.emacs.d/config/bindings")
@@ -9,6 +9,7 @@ l(load "~/.emacs.d/config/packages")
 (load "~/.emacs.d/config/treemacs")
 (load "~/.emacs.d/config/publish")
 (load "~/.emacs.d/config/theme")
+(load "~/.emacs.d/config/cider")
 
 (setq inferior-lisp-program "sbcl")
 
@@ -37,7 +38,7 @@ l(load "~/.emacs.d/config/packages")
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(mpv olivetti treemacs-magic ligature vterm mu4e ement treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rainbow-delimiters paredit org-superstar org-bullets org-appear nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy emojify emms doom-modeline company all-the-icons)))
+   '(cider all-the-icons-nerd-fonts mpv olivetti treemacs-magic ligature vterm mu4e ement treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rainbow-delimiters paredit org-superstar org-bullets org-appear nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy emojify emms doom-modeline company all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

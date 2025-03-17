@@ -22,6 +22,7 @@
   home.packages = with pkgs; [
     # System
     blueberry
+    home-manager
     
     # General
     age
@@ -32,7 +33,7 @@
     gnome-keyring
     yt-dlp
     scrot
-    chromium
+    google-chrome
     nyxt
     
     # Live Code
@@ -90,6 +91,7 @@
     xwayland-satellite
     
     # Music!! :D
+    spotify
     playerctl
     audacious
     transmission_4-gtk

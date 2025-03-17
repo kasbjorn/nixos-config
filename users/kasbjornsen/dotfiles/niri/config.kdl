@@ -156,7 +156,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+T { spawn "alacritty"; }
-    Mod+D { spawn "rofi" "-show" "drun"; }
+    Mod+D { spawn "~/.config/rofi/launchers/type-1/launcher.sh"; }
     Super+Alt+L { spawn "swaylock"; }
 
     // You can also use a shell. Do this if you need pipes, multiple commands, etc.

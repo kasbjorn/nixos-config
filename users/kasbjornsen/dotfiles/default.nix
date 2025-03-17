@@ -13,7 +13,7 @@
           ".config/niri".source = ./niri;
           ".config/wpaperd".source = ./wpaperd;
           ".config/nyxt".source = ./nyxt;
-          
+          ".config/waybar".source = ./waybar;
     	};
 
 }

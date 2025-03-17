@@ -47,7 +47,6 @@
 	  zstd
 		acpi
     mtpfs
-    home-manager
   ];
 
   programs.zsh.enable = true;
@@ -73,10 +72,9 @@
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.sensor.iio.enable = true;
-	
-  services.openssh = {
-	  enable = true;
-  };
+
+  services.gvfs.enable = true;
+  services.openssh.enable = true;
 
   nixpkgs.config.allowUnfree = true;
 
