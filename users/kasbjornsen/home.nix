@@ -22,7 +22,6 @@
   home.packages = with pkgs; [
     # System
     blueberry
-    home-manager
     
     # General
     age
