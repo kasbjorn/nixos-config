@@ -145,6 +145,14 @@
     '';
     
     initExtra  = ''
+               export QT_QPA_PLATFORM=wayland
+               export XDG_CURRENT_DESKTOP=niri
+               export WAYLAND_DISPLAY=wayland-0
+
+               export QT_QPA_PLATFORM=xcb
+
+               export QT_QPA_PLATFORMTHEME=qt5ct
+
                 vterm_printf() {
                                if [ -n "$TMUX" ] \
                                   && { [ "''${TERM%%-*}" = "tmux" ] \

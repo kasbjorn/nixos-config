@@ -10,6 +10,7 @@
 (load "~/.emacs.d/config/publish")
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/cider")
+(load "~/.emacs.d/config/chat")
 
 (setq inferior-lisp-program "sbcl")
 

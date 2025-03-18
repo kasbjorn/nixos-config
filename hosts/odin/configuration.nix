@@ -49,7 +49,7 @@
     mtpfs
   ];
 
-  envirnment.etc."environment".text = ''
+  environment.etc."environment".text = ''
     export QT_QPA_PLATFORM=wayland
     export XDG_CURRENT_DESKTOP=niri
     export WAYLAND_DISPLAY=wayland-0
