@@ -159,15 +159,16 @@
   (projectile-mode +1))
 
 
-(use-package yasnippet
+(use-package yasnippet-capf
   :ensure t
   :hook ((text-mode
+	  lisp-mode
+	  sly-mode
           prog-mode
           conf-mode
           snippet-mode) . yas-minor-mode-on)
   :config
-  (setq yas-snippet-dirs '("~/.emacs.d/snippets")))
+  (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
+  (yas-global-mode 1))
 
-(use-package yasnippet-capf
-  :ensure t)
 

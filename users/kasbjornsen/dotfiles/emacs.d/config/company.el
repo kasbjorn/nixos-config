@@ -3,5 +3,5 @@
   :hook
   (lisp-mode . company-mode)
   :config
-  (setq company-backends '(company-caph
-			   company-yasnippet)))
+  (add-to-list 'company-backends '(company-yasnippet
+				   company-capf)))
