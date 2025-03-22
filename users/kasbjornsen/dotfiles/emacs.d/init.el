@@ -10,7 +10,6 @@
 (load "~/.emacs.d/config/publish")
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/cider")
-(load "~/.emacs.d/config/chat")
 
 (setq inferior-lisp-program "sbcl")
 
@@ -33,13 +32,6 @@
   (fset 'menu-bar-open nil)
   (tab-bar-mode 1))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(cider all-the-icons-nerd-fonts mpv olivetti treemacs-magic ligature vterm mu4e ement treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rainbow-delimiters paredit org-superstar org-bullets org-appear nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy emojify emms doom-modeline company all-the-icons)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -54,3 +46,13 @@
  '(outline-6 ((t (:height 1.1))))
  '(outline-8 ((t (:height 1.1))))
  '(outline-9 ((t (:height 1.1)))))
+
+;; Misc
+(add-hook 'after-init-hook 'global-company-mode)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(yasnippet-caph all-the-icons-completion yasnippet-capf treemacs-magit yasnippet treemacs-magic mu4e ement vterm treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rust-mode rainbow-delimiters paredit org-superstar org-appear olivetti nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy ligature emojify emms doom-modeline company cider all-the-icons-nerd-fonts)))

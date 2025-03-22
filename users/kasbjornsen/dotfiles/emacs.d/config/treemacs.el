@@ -10,12 +10,10 @@
   :ensure t
   :after treemacs)
 
-(use-package treemacs-magic
-  :ensure t)
-
-(use-package treemacs-persp
+(use-package treemacs-magit
   :ensure t)
 
 (with-eval-after-load 'treemacs
   (define-key treemacs-mode-map [mouse-1] #'treemacs-single-click-expand-action))
 
+(lsp-treemacs-sync-mode 1)

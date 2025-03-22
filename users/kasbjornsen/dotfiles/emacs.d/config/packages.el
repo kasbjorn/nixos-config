@@ -155,3 +155,17 @@
   (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
   (global-set-key (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
+
+(use-package yasnippet
+  :ensure t
+  :config
+  :bind
+  ("C-c C-n" . yas-new-snippet)
+  (setq yas-snippet-dirs
+	'(~/.emacs.d/snippets))
+  (add-to-list 'company-backends(company-yasnippet))
+  :init
+  (yas-global-mode t))
+
+(use-package yasnippet-caph
+  :ensure t)

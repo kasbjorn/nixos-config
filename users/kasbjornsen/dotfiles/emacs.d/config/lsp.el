@@ -4,6 +4,7 @@
   (setq lsp-keymap-prefix "C-c l")
   :hook
   ((clojure-mode . lsp)
+   (rust-mode . lsp)
    (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp)
 

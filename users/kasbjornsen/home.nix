@@ -7,10 +7,10 @@
 		./dotfiles/default.nix 
 	];
 
-
+  programs.home-manager.enable = true;
+  
 	home.username = "kasbjornsen";
-	home.homeDirectory = "/home/kasbjornsen";
-	programs.home-manager.enable = true;  
+	home.homeDirectory = "/home/kasbjornsen";  
   
   nixpkgs = {
     config = {
@@ -70,11 +70,16 @@
     clojure
     leiningen
     clojure-lsp
+
+    # Chat
+    
     
     # Misc
     signal-cli
-    obs-studio
     calibre
+
+    # Video
+    obs-studio
     
     # Niri / WM
     mako
@@ -105,7 +110,7 @@
     vagrant
     virt-manager
   ];
- 
+   
   programs.java = { 
     enable = true;
   };
@@ -133,38 +138,18 @@
       plugins = [ "git" "direnv" ];
       theme = "agnoster";
     };
+    sessionVariables = {
+      XDG_CURRENT_DESKTOP="niri";
+      WAYLAND_DISPLAY="wayland-0";
+      QT_QPA_PLATFORM="xcb";
+      QT_QPA_PLATFORMTHEME="qt5ct";
+    };
     shellAliases = {
 			update = "sudo nixos-rebuild switch";
 			bat = "acpi";
       copy = "echo file://`realpath $1` | wl-copy -t text/uri-list";
 		};
-    initExtraBeforeCompInit = ''
-                            autoload -U add-zsh-hook
-                            add-zsh-hook -Uz chpwd (){ print -Pn "\e]2;%2~\a" }
-    '';
-    
-    initExtra  = ''
-               export QT_QPA_PLATFORM=wayland
-               export XDG_CURRENT_DESKTOP=niri
-               export WAYLAND_DISPLAY=wayland-0
-
-               export QT_QPA_PLATFORM=xcb
-
-               export QT_QPA_PLATFORMTHEME=qt5ct
-
-                vterm_printf() {
-                               if [ -n "$TMUX" ] \
-                                  && { [ "''${TERM%%-*}" = "tmux" ] \
-                       || [ "''${TERM%%-*}" = "screen" ]; }; then
-                                     printf "\ePtmux;\e\e]%s\007\e\\" "$1"
-                               elif [ "''${TERM%%-*}" = "screen" ]; then
-                                    printf "\eP\e]%s\007\e\\" "$1"
-                               else
-                                    printf "\e]%s\e\\" "$1"
-                               fi
-                }
-
-   '';
+    enableVteIntegration = true;
  };
   
 
