@@ -71,9 +71,6 @@
     leiningen
     clojure-lsp
 
-    # Chat
-    
-    
     # Misc
     signal-cli
     calibre
@@ -151,7 +148,13 @@
 		};
     enableVteIntegration = true;
  };
-  
+
+  services.gammastep = {
+    enable = true;
+    provider = "manual";
+    latitude = 32.0;
+    longitude = -99.0;
+  };
 
   xdg.portal = {
     enable = true;
