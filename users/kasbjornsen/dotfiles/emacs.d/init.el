@@ -11,7 +11,7 @@
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/cider")
 
-(setq inferior-lisp-program "sbcl")
+(setq inferior-lisp-program "/home/kasbjornsen/.nix-profile/bin/sbcl")
 
 (setq warning-minimum-level :emergency)
 
@@ -55,4 +55,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(yasnippet-caph all-the-icons-completion yasnippet-capf treemacs-magit yasnippet treemacs-magic mu4e ement vterm treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rust-mode rainbow-delimiters paredit org-superstar org-appear olivetti nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy ligature emojify emms doom-modeline company cider all-the-icons-nerd-fonts)))
+   '(sly-quicklisp yasnippet-caph all-the-icons-completion yasnippet-capf treemacs-magit yasnippet treemacs-magic mu4e ement vterm treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rust-mode rainbow-delimiters paredit org-superstar org-appear olivetti nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy ligature emojify emms doom-modeline company cider all-the-icons-nerd-fonts)))

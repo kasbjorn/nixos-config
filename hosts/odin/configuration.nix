@@ -35,6 +35,11 @@
 
   services.flatpak.enable = true;
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "openssl_1_1"
+  ];
+
+
   environment.systemPackages = with pkgs; [
 	  git
     wget
@@ -47,17 +52,8 @@
 	  zstd
 		acpi
     mtpfs
+    openssl
   ];
-
-  environment.etc."environment".text = ''
-    export QT_QPA_PLATFORM=wayland
-    export XDG_CURRENT_DESKTOP=niri
-    export WAYLAND_DISPLAY=wayland-0
-
-    export QT_QPA_PLATFORM=xcb
-
-    export QT_QPA_PLATFORMTHEME=qt5ct
-  '';
 
   programs.zsh.enable = true;
   
