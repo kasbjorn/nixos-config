@@ -105,10 +105,15 @@
 
 ;; Utilities
 (use-package paredit
-  :ensure t)
+  :ensure t
+  :hook
+  (sly-mode . paredit-mode)
+  (scheme-mode . paraedit-mode))
 
-(use-package rainbow-delimiters
-  :ensure t)
+(use-package rainbow-delimters
+  :ensure t
+  :hook
+  (sly-mode . rainbow-delimiters-mode))
 
 ;; LiveCode
 (use-package sly
@@ -156,16 +161,16 @@
   (global-set-key (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
-(use-package yasnippet
+(use-package yasnippet-capf
   :ensure t
-  :config
   :bind
-  ("C-c C-n" . yas-new-snippet)
-  (setq yas-snippet-dirs
-	'(~/.emacs.d/snippets))
+  ("C-c n" . yas-new-snippet)
+  :hook
+  ((
+    lisp-mode
+    sly-mode ) . yas-minor-mode)
+  :config
+  (setq yas-snippet-dirs '(~/.emacs.d/snippets))
   (add-to-list 'company-backends(company-yasnippet))
-  :init
   (yas-global-mode t))
 
-(use-package yasnippet-caph
-  :ensure t)

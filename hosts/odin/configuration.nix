@@ -47,9 +47,7 @@
 	  zstd
 		acpi
     mtpfs
-    pkg-config
-    gcc
-    gnumaek
+    openssl
   ];
 
   programs.zsh.enable = true;

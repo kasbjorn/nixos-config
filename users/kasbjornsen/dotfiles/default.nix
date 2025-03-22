@@ -7,8 +7,11 @@
             {
               source = config.lib.file.mkOutOfStoreSymlink ./emacs.d/init.el;
             };
+          ".emacs.d/snippets" =
+            {
+              source = config.lib.file.mkOutOfStoreSymlink ./emacs.d/snippets;
+            };
 		      ".emacs.d/config".source = ./emacs.d/config;
-		      ".emacs.d/snippets".source = ./emacs.d/snippets;
           ".wallpaper".source = ./wallpaper;
           ".config/niri".source = ./niri;
           ".config/wpaperd".source = ./wpaperd;

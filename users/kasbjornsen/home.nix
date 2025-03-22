@@ -44,10 +44,6 @@
     
     # ~=~=~+~+~ Coding  ~=~=~+~+
 
-    # Base
-    pkg-config
-    gcc
-    gnumake
 
     # Languages
     guile
