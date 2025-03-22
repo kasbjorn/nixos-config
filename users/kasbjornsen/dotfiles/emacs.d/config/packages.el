@@ -110,16 +110,13 @@
   (sly-mode . paredit-mode)
   (scheme-mode . paraedit-mode))
 
-(use-package rainbow-delimters
+(use-package rainbow-delimiters
   :ensure t
   :hook
   (sly-mode . rainbow-delimiters-mode))
 
 ;; LiveCode
 (use-package sly
-  :ensure t)
-
-(use-package company
   :ensure t)
 
 (use-package auth-source
@@ -166,12 +163,10 @@
   :bind
   ("C-c n" . yas-new-snippet)
   :hook
-  ((
-    lisp-mode
-    sly-mode ) . yas-minor-mode)
+  (lisp-mode . yas-minor-mode)
   :config
   (setq yas-snippet-dirs '(~/.emacs.d/snippets))
   :init
-  (add-to-list 'company-backends(company-yasnippet))
+  (add-to-list 'company-backends '(company-yasnippet))
   (yas-global-mode t))
 

@@ -10,6 +10,7 @@
 (load "~/.emacs.d/config/publish")
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/cider")
+(load "~/.emacs.d/config/company")
 
 (setq inferior-lisp-program "/home/kasbjornsen/.nix-profile/bin/sbcl")
 
@@ -54,4 +55,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(rainbow-delimters yasnippet-capfev sly-quicklisp yasnippet-caph all-the-icons-completion yasnippet-capf treemacs-magit yasnippet treemacs-magic mu4e ement vterm treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rust-mode rainbow-delimiters paredit org-superstar org-appear olivetti nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy ligature emojify emms doom-modeline company cider all-the-icons-nerd-fonts)))
+   '(company-yasnippet rainbow-delimters yasnippet-capfev sly-quicklisp yasnippet-caph all-the-icons-completion yasnippet-capf treemacs-magit yasnippet treemacs-magic mu4e ement vterm treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rust-mode rainbow-delimiters paredit org-superstar org-appear olivetti nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy ligature emojify emms doom-modeline company cider all-the-icons-nerd-fonts)))

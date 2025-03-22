@@ -11,8 +11,6 @@
 (use-package doom-modeline
   :ensure t
   :init
-  (setq doom-modeline-height 25)
-  (setq doom-modeline-project-detection 'auto)
   (doom-modeline-mode 1))
 
 (setq tab-bar-show 1
