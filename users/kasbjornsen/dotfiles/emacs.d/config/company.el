@@ -1,4 +1,7 @@
 (use-package company
   :ensure t
-  :init
-  (add-to-list 'company-backends '(company-yasnippet company-capf)))
+  :hook
+  (lisp-mode . company-mode)
+  :config
+  (setq company-backends '(company-caph
+			   company-yasnippet)))

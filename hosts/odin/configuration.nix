@@ -13,7 +13,8 @@
       ../../modules/tailscale
     ];
 
-
+  musnix.enable = true;
+  
   fonts.packages = with pkgs; [
     fira-code
     fira-code-symbols

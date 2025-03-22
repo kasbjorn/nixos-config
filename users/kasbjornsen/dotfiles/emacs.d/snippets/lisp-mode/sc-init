@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: sc-init
+# key: sc
+# --
+(ql:quickload "cl-collider")
+(in-package :sc-user)
+
+(setf *s* (make-external-server "localhost" :port 4444))
+(server-boot *s*)

@@ -4,7 +4,6 @@
 (load "~/.emacs.d/config/bindings")
 (load "~/.emacs.d/config/emms")
 (load "~/.emacs.d/config/erc")
-(load "~/.emacs.d/config/mail")
 (load "~/.emacs.d/config/lsp")
 (load "~/.emacs.d/config/treemacs")
 (load "~/.emacs.d/config/publish")
