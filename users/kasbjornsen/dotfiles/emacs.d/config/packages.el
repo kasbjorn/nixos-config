@@ -171,6 +171,7 @@
     sly-mode ) . yas-minor-mode)
   :config
   (setq yas-snippet-dirs '(~/.emacs.d/snippets))
+  :init
   (add-to-list 'company-backends(company-yasnippet))
   (yas-global-mode t))
 
