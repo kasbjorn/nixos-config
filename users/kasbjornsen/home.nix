@@ -98,8 +98,8 @@
     transmission_4-gtk
     
     # Desktop
-    nemo
     tigervnc
+
     # Mail
     mu
 
