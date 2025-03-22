@@ -11,7 +11,6 @@
 	    ../../modules/hardware/audio
       ../../modules/virtualization
       ../../modules/tailscale
-      ../../modules/software/niri
     ];
 
 
@@ -35,10 +34,6 @@
 
   services.flatpak.enable = true;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "openssl_1_1"
-  ];
-
 
   environment.systemPackages = with pkgs; [
 	  git
@@ -52,7 +47,9 @@
 	  zstd
 		acpi
     mtpfs
-    openssl
+    pkg-config
+    gcc
+    gnumaek
   ];
 
   programs.zsh.enable = true;

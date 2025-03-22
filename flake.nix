@@ -29,9 +29,10 @@
         system = "x86_64-linux";
         modules = [
           sops-nix.nixosModules.sops
+          ./hosts
           ./hosts/odin/configuration.nix
           ./hosts/odin/hardware-configuration.nix
-	  ./users
+	        ./users
         ];
 		  };
     };
