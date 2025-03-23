@@ -9,6 +9,7 @@
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/cider")
 (load "~/.emacs.d/config/company")
+(load "~/.emacs.d/config/custom")
 
 (setq inferior-lisp-program "/home/kasbjornsen/.nix-profile/bin/sbcl")
 (setq warning-minimum-level :emergency)
@@ -29,8 +30,6 @@
   (fset 'menu-bar-open nil)
   (tab-bar-mode 1))
 
-(global-display-line-numbers-mode 1)
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -48,6 +47,7 @@
 
 ;; Misc
 (add-hook 'after-init-hook 'global-company-mode)
+(add-hook 'text-mode-hook 'my/display-line-numbers)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
