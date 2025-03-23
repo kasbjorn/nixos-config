@@ -1,3 +1,6 @@
+(use-package compay-yasnippet
+  :ensure t)
+
 (use-package company
   :ensure t
   :hook

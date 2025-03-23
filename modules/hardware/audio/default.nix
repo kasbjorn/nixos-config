@@ -2,14 +2,12 @@
 
 {
   musnix.enable = true;
-
-  environment.systemPackages = with pkgs; [ pavucontrol libjack2 jack2 qjackctl  jack_capture ];
   
-  services.pipewire ={
+  services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    pulse.enable = true;
+    pulse.enable = true;s
     jack.enable = true;
   };
 }

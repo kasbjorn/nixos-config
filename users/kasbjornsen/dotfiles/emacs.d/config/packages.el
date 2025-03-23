@@ -151,17 +151,10 @@
   (global-set-key (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1))
 
-
-(use-package yasnippet-capf
+(use-package yasnippet
   :ensure t
-  :hook ((text-mode
-	  lisp-mode
-	  sly-mode
-          prog-mode
-          conf-mode
-          snippet-mode) . yas-minor-mode-on)
   :config
   (setq yas-snippet-dirs '("~/.emacs.d/snippets"))
   (yas-global-mode 1))
-
+ 
 
