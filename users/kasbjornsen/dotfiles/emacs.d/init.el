@@ -4,7 +4,6 @@
 (load "~/.emacs.d/config/bindings")
 (load "~/.emacs.d/config/emms")
 (load "~/.emacs.d/config/erc")
-(load "~/.emacs.d/config/lsp")
 (load "~/.emacs.d/config/treemacs")
 (load "~/.emacs.d/config/publish")
 (load "~/.emacs.d/config/theme")
@@ -48,10 +47,3 @@
 
 ;; Misc
 (add-hook 'after-init-hook 'global-company-mode)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(company-yasnippet rainbow-delimters yasnippet-capfev sly-quicklisp yasnippet-caph all-the-icons-completion yasnippet-capf treemacs-magit yasnippet treemacs-magic mu4e ement vterm treemacs-projectile treemacs-persp treemacs-nerd-icons svg-tag-mode sly rust-mode rainbow-delimiters paredit org-superstar org-appear olivetti nord-theme nix-mode mastodon magit lsp-ui lsp-treemacs lsp-ivy ligature emojify emms doom-modeline company cider all-the-icons-nerd-fonts)))

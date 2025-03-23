@@ -1,4 +1,3 @@
-
 (require 'package)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -16,9 +15,6 @@
   (setq use-package-always-ensure t))
 
 (use-package nord-theme
-  :ensure t)
-
-(use-package rust-mode
   :ensure t)
 
 ;; Ligatures / Fonts
@@ -144,9 +140,6 @@
   :ensure t)
 
 (use-package magit
-  :ensure t)
-
-(use-package ivy
   :ensure t)
 
 (use-package projectile
