@@ -25,15 +25,16 @@
       primary = true;
       realName = "Knut Asbjornsen";
       signature = {
-        text = ''
-             I da hoe
-        '';
+        text = '' I da hoe'';
         showSignature = "append";
       };
+
       passwordCommand = "cat ~/.insecure-password";
+
       smtp = {
         host = "smtp.ionos.com";
       };
+
       userName = "kasbjornsen@frostbyte.works";
     };
   };
