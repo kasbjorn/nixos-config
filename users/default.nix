@@ -11,13 +11,10 @@
     description = "Knut Asbjornsen";
     extraGroups = [
       "audio"
-      "jackaudio"
       "networkmanager"
       "wheel"
       "docker"
       "libvirtd"
-      "lp"
-      "scanner"
     ];
 
     shell = pkgs.zsh;

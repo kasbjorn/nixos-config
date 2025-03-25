@@ -15,7 +15,7 @@
   accounts.email = {
     accounts.frostbyte = {
       address = "kasbjornsen@frostbyte.works";
-      imap.host = "imappro.zoho.com";
+      imap.host = "imap.ionos.com";
       mbsync = {
         enable = true;
         create = "maildir";
@@ -32,7 +32,7 @@
       };
       passwordCommand = "cat ~/.insecure-password";
       smtp = {
-        host = "smtppro.zoho.com";
+        host = "smtp.ionos.com";
       };
       userName = "kasbjornsen@frostbyte.works";
     };
