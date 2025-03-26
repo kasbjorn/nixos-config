@@ -7,7 +7,7 @@
 (load "~/.emacs.d/config/treemacs")
 (load "~/.emacs.d/config/publish")
 (load "~/.emacs.d/config/theme")
-(load "~/.emacs.d/config/cider")
+;; (load "~/.emacs.d/config/cider")
 (load "~/.emacs.d/config/company")
 (load "~/.emacs.d/config/custom")
 
