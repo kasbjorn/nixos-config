@@ -103,15 +103,12 @@
 (use-package paredit
   :ensure t
   :hook
-  (sly-mode . paredit-mode)
-  (scheme-mode . paraedit-mode)
-  (cider-mode , paraedit-mode))
+  (sly-mode . paredit-mode))
 
 (use-package rainbow-delimiters
   :ensure t
   :hook
-  (sly-mode . rainbow-delimiters-mode)
-  (cider-mode . rainbow-delimiters-mode))
+  (sly-mode . rainbow-delimiters-mode))
 
 ;; LiveCode
 (use-package sly
