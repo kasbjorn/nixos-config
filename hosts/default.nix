@@ -1,12 +1,16 @@
 { pkgs, config, ... }:
 
 {
+
+  nix.settings.trusted-users = [ "root" "kasbjornsen" ];
   
   nixpkgs.config.insecurePermittedPackages = [
 	
-];
+  ];
+
+  
  
- environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     pkg-config
     gcc
     gnumake

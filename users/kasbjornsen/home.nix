@@ -61,6 +61,7 @@
     
     # Tools
     nil
+    devenv
 
     # Clojure Whoredom
     clojure

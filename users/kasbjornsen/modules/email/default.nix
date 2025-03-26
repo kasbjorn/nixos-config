@@ -22,7 +22,7 @@
       };
       msmtp.enable = true;
       notmuch.enable = true;
-      cprimary = true;
+      primary = true;
       realName = "Knut Asbjornsen";
       signature = {
         text = '' I da hoe'';
