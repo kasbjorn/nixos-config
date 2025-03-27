@@ -99,6 +99,7 @@
 
     # Mail
     mu
+    protonmail-bridge
 
     # Virtualization
     vagrant
