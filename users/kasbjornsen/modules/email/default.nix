@@ -13,9 +13,11 @@
   };
 
   accounts.email = {
-    accounts.frostbyte = {
-      address = "kasbjornsen@frostbyte.works";
-      imap.host = "imap.ionos.com";
+    accounts.praetortel = {
+      address = "kasbjornsen@praetor.tel";
+      imap.host = "127.0.0.1";
+      imap.port = 1143;
+      imap.tls.enable  = false;
       mbsync = {
         enable = true;
         create = "maildir";
@@ -28,14 +30,15 @@
         text = '' I da hoe'';
         showSignature = "append";
       };
-
       passwordCommand = "cat ~/.insecure-password";
 
       smtp = {
-        host = "smtp.ionos.com";
+        host = "127.0.0.1";
+        port= 1024;
+        tls.enable = true;
       };
 
-      userName = "kasbjornsen@frostbyte.works";
+      userName = "kasbjornsen@praetor.tel";
     };
   };
 }
