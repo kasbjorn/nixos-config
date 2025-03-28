@@ -23,7 +23,7 @@
 	    (smtpmail-smtp-server . "127.0.0.1")
 	    (smtpmail-smtp-server . 1025)
 	    (smtpmail-stream-type . 'starttls)
-	    (send-mail-function . 'smtp-mail-sendit)
+	    (send-mail-function . 'smtpmail-send-it)
 	    (mu4e-drafts-folder . "/[PraetorTEL]/Drafts")
 	    (mu4e-sent-folder . "/[PraetorTEL]/Sent")
 	    (mu4e-refile-folder . "/[PraetorTEL/All Mail")
