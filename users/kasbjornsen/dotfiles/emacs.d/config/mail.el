@@ -19,10 +19,11 @@
 	      (string-prefix-p "/PraetorTEL" (mu4e-message-field msg :maildir))))
 	  :vars
 	  '((user-mail-address . "kasbjornsen@praetor.tel")
-	    (user-full-name . "Knute Asbjornsen")
+	    (user-full-name . "Knut Asbjornsen")
 	    (smtpmail-smtp-server . "127.0.0.1")
 	    (smtpmail-smtp-server . 1025)
 	    (smtpmail-stream-type . 'starttls)
+	    (send-mail-function . 'smtp-mail-sendit)
 	    (mu4e-drafts-folder . "/[PraetorTEL]/Drafts")
 	    (mu4e-sent-folder . "/[PraetorTEL]/Sent")
 	    (mu4e-refile-folder . "/[PraetorTEL/All Mail")
