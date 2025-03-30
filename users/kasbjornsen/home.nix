@@ -181,7 +181,7 @@
   programs.git = {
     enable = true;
     userName = "Knut Asbjorjsen";
-    userEmail = "kasbjornsen@frostbyte.works";
+    userEmail = "kasbjornsen@praetor.tel";
     extraConfig = {
       init.defaultBranch = "main";
       user.signingkey = "06FF317D861507E6";
