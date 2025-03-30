@@ -7,7 +7,8 @@
   (setq mu4e-get-mail-command "mbsync -a")
   (setq mu4e-maildir "~/Maildir")
   (setq mu4e-compose-context-policy 'ask-if-none)
-  (setq mu4e-compose-format-flowed t)  
+  (setq mu4e-compose-format-flowed t)
+
   
   (setq mu4e-contexts
 	(list
@@ -20,10 +21,11 @@
 	  :vars
 	  '((user-mail-address . "kasbjornsen@praetor.tel")
 	    (user-full-name . "Knut Asbjornsen")
-	    (smtpmail-smtp-server . "127.0.0.1")
-	    (smtpmail-smtp-server . 1025)
-	    (smtpmail-stream-type . 'starttls)
-	    (send-mail-function . 'smtpmail-send-it)
+	    (smtpmail-smtp-user . "kasbjornsen@praetor.tel")
+	    (smtpmail-smtp-server  . "127.0.0.1")
+            (smtpmail-smtp-service . 1025)
+            (smtpmail-stream-type  . starttls)
+	    (message-send-mail-function . smtpmail-send-it)
 	    (mu4e-drafts-folder . "/[PraetorTEL]/Drafts")
 	    (mu4e-sent-folder . "/[PraetorTEL]/Sent")
 	    (mu4e-refile-folder . "/[PraetorTEL/All Mail")

@@ -4,6 +4,7 @@
   imports = [ 
 		./modules/ssh
     ./modules/email
+    ./modules/places
 		./dotfiles/default.nix 
 	];
 
@@ -34,6 +35,7 @@
     scrot
     google-chrome
     nyxt
+    rclone
     
     # Live Code
     supercollider
@@ -182,6 +184,9 @@
     userEmail = "kasbjornsen@frostbyte.works";
     extraConfig = {
       init.defaultBranch = "main";
+      user.signingkey = "06FF317D861507E6";
+      commit.gpgsign = true;
+      tag.gpgSign = true;
     };
   };
   
