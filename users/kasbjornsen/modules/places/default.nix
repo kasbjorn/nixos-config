@@ -17,6 +17,11 @@
       host = ma.sdf.org
       user = praetor
       key_file = ~/.ssh/id_ed25519
+    [Vault]
+      type = crypt
+      remote = SDF-MA:/meta/p/praetor/Vault
+      filename_encryption = standard
+      password = EcbyzHhWzw_eHAiulclgkf1w0otSQUVwr7vGKA
   '';
 
   systemd.user.services.proton-mount = {

@@ -17,8 +17,11 @@
       "libvirtd"
     ];
 
-    shell = pkgs.zsh;
+    packages = [ pkgs.home-manager
+                 pkgs.sops ];
   };
+
+  home-manager.users.kasbjornsen = import ./kasbjornsen/${config.networking.hostName}.nix;
 }
 
   

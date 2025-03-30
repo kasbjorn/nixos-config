@@ -32,6 +32,12 @@
           modules = [
             inputs.sops-nix.nixosModules.sops
             inputs.musnix.nixosModules.musnix
+            inputs.home-manager.nixosModules.home-manager
+            {
+              home-manager.sharedModules = [
+                inputs.sops-nix.homeManagerModules.sops
+              ];
+            }
             ./hosts
             ./hosts/odin/configuration.nix
             ./hosts/odin/hardware-configuration.nix
