@@ -1,18 +1,19 @@
-{ config, pkgs, sops-nix, ...}:
+{ config, pkgs, ...}:
 {
 
   imports = [ 
 		./modules/ssh
     ./modules/email
     ./modules/places
-		./dotfiles/default.nix 
+		./dotfiles
+    ./secrets
 	];
 
   programs.home-manager.enable = true;
   
 	home.username = "kasbjornsen";
 	home.homeDirectory = "/home/kasbjornsen";  
-  
+
   nixpkgs = {
     config = {
       allowUnfree = true;
