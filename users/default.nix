@@ -17,11 +17,8 @@
       "libvirtd"
     ];
 
-    packages = [ pkgs.home-manager
-                 pkgs.sops ];
+    packages = [ ];
   };
-
-  home-manager.users.kasbjornsen = import ./kasbjornsen/${config.networking.hostName}.nix;
 }
 
   

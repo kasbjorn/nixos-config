@@ -11,9 +11,8 @@
 	    ../../modules/hardware/audio
       ../../modules/virtualization
       ../../modules/tailscale
+      ./hardware-configuration.nix
     ];
-
-  musnix.enable = true;
   
   fonts.packages = with pkgs; [
     fira-code

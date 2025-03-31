@@ -8,18 +8,9 @@
 		./dotfiles
     ./secrets
 	];
-
-  programs.home-manager.enable = true;
   
 	home.username = "kasbjornsen";
 	home.homeDirectory = "/home/kasbjornsen";  
-
-  nixpkgs = {
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = (_: true);
-    };
-  };
   
   home.packages = with pkgs; [
     # System
