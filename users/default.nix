@@ -17,7 +17,7 @@
       "libvirtd"
     ];
 
-    packages = [ ];
+    packages = [ pkgs.sops ];
   };
 }
 
