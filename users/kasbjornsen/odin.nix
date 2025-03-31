@@ -10,7 +10,7 @@
 	];
   
 	home.username = "kasbjornsen";
-	home.homeDirectory = "/home/kasbjornsen";  
+	home.homeDirectory = "/home/kasbjornsen";
   
   home.packages = with pkgs; [
     # System

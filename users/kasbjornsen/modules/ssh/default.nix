@@ -1,7 +1,6 @@
 { config, pkgs, ...}:
 
 {
-  home.file.".ssh/id_ed25519".text =  ${sops.secrets.secret.ssh_keys};
 
   programs.ssh = {
         enable = true;
