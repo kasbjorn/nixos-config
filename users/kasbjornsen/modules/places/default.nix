@@ -21,8 +21,7 @@
       type = crypt
       remote = SDF-MA:/meta/p/praetor/Vault
       filename_encryption = standard
-      password = EcbyzHhWzw_eHAiulclgkf1w0otSQUVwr7vGKA
-  '';
+      password ='' {$sops.secrets.secret.vault_password};
 
   systemd.user.services.proton-mount = {
     Unit = {
