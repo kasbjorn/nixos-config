@@ -1,4 +1,4 @@
-{ config, pkgs, sops-nix , ... }:
+{ config, pkgs , ... }:
 {
   imports = [
     sops-nix.homeManagerModules.sops
