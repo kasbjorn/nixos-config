@@ -1,16 +1,19 @@
-{ config, pkgs, ...}:
+{ inputs,outputs,lib,config,pkgs, ...}:
+
 {
 
   imports = [ 
-		./modules/ssh
-    ./modules/email
-    ./modules/places
-		./dotfiles
-    ./secrets
-	];
+	./modules/ssh
+    	./modules/email
+    	./modules/places
+    	./dotfiles
+   ];
   
-	home.username = "kasbjornsen";
-	home.homeDirectory = "/home/kasbjornsen";
+	home = {
+		username = "kasbjornsen";
+		homeDirectory = "/home/kasbjornsen";
+	};
+	programs.home-manager.enable = true;
   
   home.packages = with pkgs; [
     # System

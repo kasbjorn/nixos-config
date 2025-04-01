@@ -2,13 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, outputs, ... }:
 
 {
   imports =
     [
     	./hardware-configuration.nix
-	../common/users
+	../common/users/kasbjornsen
 		
     ];
   
@@ -24,11 +24,6 @@
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose";
 
-
-  environment.systemPackages = with pkgs; [
-	  git
-	  bash
-  ];
   
   time.timeZone = "America/Chicago";
 

@@ -10,7 +10,6 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    systems.url = "github:nix-systems/default-linux";
     hardware.url = "github:nixos/nixos-hardware";
     
     home-manager = {
@@ -23,42 +22,36 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, systems, ...} @ inputs:
+  outputs = { self, nixpkgs, home-manager, ...} @ inputs:
     let
       inherit(self) outputs;
-      lib = nixpkgs.lib // home-manager.lib;
-      forEachSystem = f: lib.genAttrs (import systems) (system: f pkgsFor.${system});
-      pkgsFor = lib.genAttrs (import systems) (
-        system:
-        import nixpkgs {
-          inherit system;
-          config.allowUnFree = true;
-        }
-      );
-    in {
+ 
+      systems = [
+	"x86_64-linux"
+	"aarch64-linux"
+      ];
+     
+      in {
+        overlays = import ./overlays;
+        nixosModules = import ./modules/nixos;
+        homeManagerModules = import ./modules/home-manager;
+      
+	nixosConfigurations = {
 
-      inherit lib;
-
-      nixosConfigurations = {
-
-        odin = lib.nixosSystem {
-          system = "x86_64-linux";
-          modules = [ ./hosts/odin ];
-          specialArgs = {
-	  	      inherit inputs outputs;
-          };
-        };
-      };
+        	odin = nixpkgs.lib.nixosSystem {
+          		system = "x86_64-linux";
+          		modules = [ ./hosts/odin ];
+          		specialArgs = { inherit inputs outputs; };
+        	};
+      	};
    
-      homeConfigurations = {
-        "kasbjornsen@odin" = lib.homeManagerConfiguration {
-          pkgs = pkgsFor.x86_64-linux;
-          modules = [ ./users/kasbjornsen/odin.nix ];
-	        extraSpecialArgs = {
-		        inherit inputs outputs;
-          };
-        };
-      };
+      	homeConfigurations = {
+        	"kasbjornsen" = home-manager.lib.homeManagerConfiguration {
+          		pkgs = nixpkgs.x86_64-linux;
+                 	modules = [ ./users/kasbjornsen ];
+	  		extraSpecialArgs = {inherit inputs outputs;};
+        	};
+      	};
     };
 }
 

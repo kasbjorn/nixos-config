@@ -3,7 +3,7 @@
 {
 
   imports = [
-    ./users/kasbjornsen
+    ./kasbjornsen
   ];
   
   nix.settings.trusted-users = [ "root" "kasbjornsen" ];
