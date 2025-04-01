@@ -22,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ...} @ inputs:
+  outputs = { self, nixpkgs, home-manager, sops-nix, ...} @ inputs:
     let
       inherit(self) outputs;
  
@@ -47,6 +47,7 @@
 					home-manager.useGlobalPkgs = true;
 					home-manager.useUserPackages = true;
 					home-manager.users.kasbjornsen = ./users/kasbjornsen/odin.nix;
+					home-manager.extraSpecialArgs = { inherit inputs outputs; };
 				}
 			];
           		specialArgs = { inherit inputs outputs; };

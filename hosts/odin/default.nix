@@ -9,7 +9,9 @@
     [
     	./hardware-configuration.nix
 	../common/users/kasbjornsen
-		
+	
+	../../modules/hardware/zram
+	../../modules/hardware/audio	
     ];
   
   

@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ inputs, outputs, pkgs, config, ... }:
 
 {
   home.packages = [ pkgs.rclone ];
@@ -17,12 +17,7 @@
       host = ma.sdf.org
       user = praetor
       key_file = ~/.ssh/id_ed25519
-    [Vault]
-      type = crypt
-      remote = SDF-MA:/meta/p/praetor/Vault
-      filename_encryption = standard
-      password ='' ${sops.secrets.secret.vault_password};
-
+  '';
   systemd.user.services.proton-mount = {
     Unit = {
       Description = "Proton Mount";

@@ -1,8 +1,9 @@
-{ inputs,outputs,lib,config,pkgs, ...}:
+{ inputs, outputs, lib, config, pkgs, ...}:
 
 {
 
   imports = [ 
+	./modules/fonts
 	./modules/ssh
     	./modules/email
     	./modules/places
@@ -79,6 +80,8 @@
     swaylock
     yazi
     wpaperd
+    stumpwm
+    niri
 
     # General X
     wl-clipboard-x11
