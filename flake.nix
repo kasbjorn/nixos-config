@@ -40,16 +40,16 @@
 
         	odin = nixpkgs.lib.nixosSystem {
           		system = "x86_64-linux";
-          		modules = [ ./hosts/odin ];
+          		modules = [ 
+				./hosts/odin 
+				home-manager.nixosModules.home-manager
+				{
+					home-manager.useGlobalPkgs = true;
+					home-manager.useUserPackages = true;
+					home-manager.users.kasbjornsen = ./users/kasbjornsen/odin.nix;
+				}
+			];
           		specialArgs = { inherit inputs outputs; };
-        	};
-      	};
-   
-      	homeConfigurations = {
-        	"kasbjornsen" = home-manager.lib.homeManagerConfiguration {
-          		pkgs = nixpkgs.x86_64-linux;
-                 	modules = [ ./users/kasbjornsen ];
-	  		extraSpecialArgs = {inherit inputs outputs;};
         	};
       	};
     };
