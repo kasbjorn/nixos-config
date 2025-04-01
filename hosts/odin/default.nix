@@ -7,19 +7,11 @@
 {
   imports =
     [
-    	../../modules/hardware/zram
-	    ../../modules/hardware/audio
-      ../../modules/virtualization
-      ../../modules/tailscale
-      ./hardware-configuration.nix
+    	./hardware-configuration.nix
+	../common/users
+		
     ];
   
-  fonts.packages = with pkgs; [
-    fira-code
-    fira-code-symbols
-  ];
-
-  programs.niri.enable = true;
   
   boot.loader.systemd-boot.enable = true;
       
@@ -32,25 +24,11 @@
   networking.networkmanager.enable = true;
   networking.firewall.checkReversePath = "loose";
 
-  services.flatpak.enable = true;
-
 
   environment.systemPackages = with pkgs; [
 	  git
-    wget
-    direnv
-    tmux
-    sshfs
-    bash
-    killall
-    unzip
-	  zstd
-		acpi
-    mtpfs
-    openssl
+	  bash
   ];
-
-  programs.zsh.enable = true;
   
   time.timeZone = "America/Chicago";
 

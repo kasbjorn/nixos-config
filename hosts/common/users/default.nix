@@ -2,6 +2,10 @@
 
 {
 
+  imports = [
+    ./users/kasbjornsen
+  ];
+  
   nix.settings.trusted-users = [ "root" "kasbjornsen" ];
   
   nixpkgs.config.insecurePermittedPackages = [
