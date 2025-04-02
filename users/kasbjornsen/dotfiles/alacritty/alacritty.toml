@@ -3,6 +3,16 @@ import = [
        "~/.config/alacritty/nord.toml"
 ]
 
+[window]
+opacity = 0.5
+blur = true
+
+[keyboard]
+bindings = [
+	 { key = "w", mods="Control", action="Quit"},
+	 ]
+	 
+
 [font.normal]
 family = "Fira Code"
 

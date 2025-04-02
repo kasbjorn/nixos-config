@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    protonmail-bridge
+  ];
+  
   programs.mbsync.enable = true;
 
   programs.msmtp.enable = true;
@@ -12,6 +16,21 @@
     };
   };
 
+  systemd.user.services.protonmail-bridge = {
+    Unit = {
+      Description = "protonmail-bridge services";
+      After = [ "network.target" ];
+    };
+    Install = {
+      WantedBy = [ "multi-user.target" ];
+    };
+    Service = {
+      Type = "oneshot";
+      ExecStart = "/home/kasbjornsen/.local/bin/protonmail.sh start";
+      ExecStop = "/home/kasbjornsen/.local/bin/protonmai.sh stop";
+    };
+  };
+  
   accounts.email = {
     accounts.praetortel = {
       address = "kasbjornsen@praetor.tel";

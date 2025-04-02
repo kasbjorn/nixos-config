@@ -17,7 +17,7 @@
 	  :match-func
 	  (lambda (msg)
 	    (when msg
-	      (string-prefix-p "/PraetorTEL" (mu4e-message-field msg :maildir))))
+	      (string-prefix-p "/praetortel" (mu4e-message-field msg :maildir))))
 	  :vars
 	  '((user-mail-address . "kasbjornsen@praetor.tel")
 	    (user-full-name . "Knut Asbjornsen")
@@ -26,13 +26,13 @@
             (smtpmail-smtp-service . 1025)
             (smtpmail-stream-type  . starttls)
 	    (message-send-mail-function . smtpmail-send-it)
-	    (mu4e-drafts-folder . "/[PraetorTEL]/Drafts")
-	    (mu4e-sent-folder . "/[PraetorTEL]/Sent")
-	    (mu4e-refile-folder . "/[PraetorTEL/All Mail")
-	    (mu4e-trash-folder . "/[PraetorTEL/Trash")))))
+	    (mu4e-drafts-folder . "/[Praetortel]/Drafts")
+	    (mu4e-sent-folder . "/[Praetortel]/Sent")
+	    (mu4e-refile-folder . "/[Praetortel]/All Mail")
+	    (mu4e-trash-folder . "/[Praetortel]Trash")))))
   
   (setq mu4e-maildir-shortcuts
-    '((:maildir "/Inbox"    :key ?i)
+    '((:maildir "/[PraetorTEL]/Inbox"    :key ?i)
       (:maildir "/[PraetorTEL]/Sent Mail" :key ?s)
       (:maildir "/[PraetorTEL]/Trash"     :key ?t)
       (:maildir "/[PraetorTEL]/Drafts"    :key ?d)

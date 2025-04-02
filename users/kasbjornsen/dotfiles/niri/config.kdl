@@ -9,8 +9,8 @@ hotkey-overlay {
 }
 
 spawn-at-startup "xwayland-satellite"
-spawn-at-startup "wpaperd" "-d"
 spawn-at-startup "waybar"
+spawn-at-startup "wpaperd" "-d"
 spawn-at-startup "protonmail-bridge" "-n"
 
 input {

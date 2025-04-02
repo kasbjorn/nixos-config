@@ -26,12 +26,13 @@
     imagemagick
     gh
     gimp
-    gnome-keyring
+    pass
     yt-dlp
     scrot
     google-chrome
     nyxt
     rclone
+    tmux
     
     # Live Code
     supercollider
@@ -60,6 +61,7 @@
     # Tools
     nil
     devenv
+    direnv
 
     # Clojure Whoredom
     clojure

@@ -22,6 +22,9 @@
       initial-major-mode 'org-mode
       initial-scratch-message "")
 
+(defadvice split-window (after split-window-after activate)
+  (other-window 1))
+
 (setq visible-bell t)
 (when (window-system)
   (tool-bar-mode -1)

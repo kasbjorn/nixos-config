@@ -4,7 +4,7 @@
   environment.systemPackages = with pkgs;
     [ pavucontrol libjack2 jack2 qjackctl jack_capture ];
 
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   
   services.pipewire = {
     enable = true;
