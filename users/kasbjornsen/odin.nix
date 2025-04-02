@@ -3,11 +3,12 @@
 {
 
   imports = [ 
-	./modules/fonts
-	./modules/ssh
-    	./modules/email
-    	./modules/places
-    	./dotfiles
+    ./modules/fonts
+	  ./modules/ssh
+    ./modules/email
+    ./modules/places
+    ./dotfiles
+    ./secrets
    ];
   
 	home = {

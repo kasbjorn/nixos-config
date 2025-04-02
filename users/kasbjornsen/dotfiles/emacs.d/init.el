@@ -9,7 +9,7 @@
 (load "~/.emacs.d/config/theme")
 (load "~/.emacs.d/config/mail")
 (load "~/.emacs.d/config/lsp")
-;;(load "~/.emacs.d/config/company")
+(load "~/.emacs.d/config/company")
 (load "~/.emacs.d/config/custom")
 
 (setq inferior-lisp-program "/home/kasbjornsen/.nix-profile/bin/sbcl")

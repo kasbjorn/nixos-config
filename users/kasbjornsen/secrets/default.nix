@@ -1,4 +1,4 @@
-{ inputs, config, pkgs , ... }:
+{ inputs, outputs, config, pkgs , ... }:
 {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
@@ -6,13 +6,8 @@
 
   sops = {
 
-    defaultSopsFile = ../secrets.enc.yml;
+    defaultSopsFile = ../private.yml;
     validateSopsFiles = false;
-
-    secrets = {
-      "ssh_keys" = {
-        path = "/home/kasbjornsen/.ssh/id_ed25519";
-      };
-    };
-  };
+    age.keyFile = ./keys.txt;
+ };
 }
