@@ -1,13 +1,13 @@
-{ config, pkgs, ...}:
+{ inputs, config, pkgs, ...}:
 
 {
-  imports = [ ../../secrets ];
+  imports = [ inputs.sops-nix.nixosModules.sops ];
   
   users.groups.kasbjornsen = {};
   
   users.users.kasbjornsen = {
     isNormalUser = true;
-    hashedPasswordFile = config.sops.secrets.kasbjornsen.path;
+    hashedPasswordFile = config.sops.secrets."kasbjornsen".path;
     description = "Knut Asbjornsen";
     shell = pkgs.zsh;
     group = "kasbjornsen";

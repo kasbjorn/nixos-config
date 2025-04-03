@@ -7,7 +7,6 @@
 	  ./modules/ssh
     ./modules/email
     ./dotfiles
-    ./modules/places
    ];
   
 	programs.home-manager.enable = true;

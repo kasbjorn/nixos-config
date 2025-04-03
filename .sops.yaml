@@ -1,8 +1,11 @@
 keys:
   - &kasbjornsen AF1F8B538675F9D9
+  - &odin age1gqnuns9cf4lvj5uj6k7e5uxls9h7gqheg2ay2xjnrr00fzdxk3yssrltj3
 creation_rules:
   - path_regex: hosts/common/secrets/[^/]+\.(yaml|json|env|ini)$
     key_groups:
     - pgp:
       - *kasbjornsen
+    - age:
+      - *odin
  
