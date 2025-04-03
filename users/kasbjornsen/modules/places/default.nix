@@ -5,9 +5,11 @@
     inputs.sops-nix.homeManagerModules.sops
   ];
 
-  sops.secrets.rclone_proton = {
+  sops = {
 
-    defaultSopsFile = ../../secrets/secrets.enc.yml;
+    defaultSopsFile = ../../secrets/private.yml;
+    validateSopsFiles = false;
+    age.keyFile = ~/sops/age/keys.txt;
  };
   
   home.packages = [ pkgs.rclone ];
@@ -16,7 +18,7 @@
     [Proton]
       type = protondrive
       username = kasbjornsen@praetor.tel
-      password = ${config.sops.secrets."rclone_proton".path}
+      password = ${config.sops.secrets.rclone_proton.path}
       client_uid = ibs4rv35kg5s7z277mnmggvjwmgw6f7u
       client_access_token = zeumzqengc42l6g6ozvdnw52k2y26qde
       client_refresh_token = tmrupknsvudkoyfrwic5i4rcygb5z3nz

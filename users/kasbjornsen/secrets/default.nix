@@ -1,13 +1,14 @@
-{ inputs, outputs, config, pkgs , ... }:
+{ inputs, config, pkgs , ... }:
+
 {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
   ];
-
+  
   sops = {
 
-    defaultSopsFile = ./private.enc.yml;
+    defaultSopsFile = ./private.yml;
     validateSopsFiles = false;
-    age.keyFile = "";
+    age.keyFile = /home/kasbjornsen/.config/sops/age/keys.txt;
  };
 }

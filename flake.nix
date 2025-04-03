@@ -43,7 +43,7 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.users.kasbjornsen= ./users/kasbjornsen/odin.nix;
-
+                
                 home-manager.extraSpecialArgs = { inherit inputs outputs; };
               }
             ];
