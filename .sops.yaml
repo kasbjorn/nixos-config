@@ -1,0 +1,11 @@
+keys:
+  &users:
+  - &kasbjornsen: age1n8l7j8ke7umzcxl3e0km2zjas0hkyyg4h4fza0cp6rswt53a79jsm8jaqe06FF317D861507E6
+  &hosts:
+  - &odin: age1gqnuns9cf4lvj5uj6k7e5uxls9h7gqheg2ay2xjnrr00fzdxk3yssrltj3
+creation_rules:
+  - path_regex: hosts/odin/secrets.yml$
+    key_groups:
+    -age:
+      - *kasbjornsen
+      - *odin

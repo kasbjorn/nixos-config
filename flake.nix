@@ -43,7 +43,9 @@
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.users.kasbjornsen= ./users/kasbjornsen/odin.nix;
-                
+                home-manager.sharedModules = [
+                  inputs.sops-nix.homeManagerModules.sops
+                ];
                 home-manager.extraSpecialArgs = { inherit inputs outputs; };
               }
             ];

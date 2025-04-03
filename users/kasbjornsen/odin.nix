@@ -7,7 +7,6 @@
 	  ./modules/ssh
     ./modules/email
     ./dotfiles
-    ./secrets
     ./modules/places
    ];
   
