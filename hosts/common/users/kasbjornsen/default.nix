@@ -13,7 +13,6 @@
   
   users.users.kasbjornsen = {
     isNormalUser = true;
-    hashedPasswordFile = config.sops.secret;
     description = "Knut Asbjornsen";
     shell = pkgs.zsh;
     group = "kasbjornsen";
