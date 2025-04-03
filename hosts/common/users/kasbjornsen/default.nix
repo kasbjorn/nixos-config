@@ -1,13 +1,19 @@
 { inputs, config, pkgs, ...}:
 
 {
-  imports = [ inputs.sops-nix.nixosModules.sops ];
+  imports = [inputs.sops-nix.nixosModules.sops];
+  
+  sops = {
+    defaultSopsFile = ../../secrets/private.yml;
+    validateSopsFiles = false;
+    age.keyFile = /home/kasbjornsen/.config/sops/age/keys.txt;
+ };
   
   users.groups.kasbjornsen = {};
   
   users.users.kasbjornsen = {
     isNormalUser = true;
-    hashedPasswordFile = config.sops.secrets."kasbjornsen".path;
+    hashedPasswordFile = config.sops.secret;
     description = "Knut Asbjornsen";
     shell = pkgs.zsh;
     group = "kasbjornsen";
