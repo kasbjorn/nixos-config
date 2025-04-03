@@ -37,12 +37,12 @@
             system = "x86_64-linux";
             modules = [ 
 		          ./hosts/odin 
+              ./home
               sops-nix.nixosModules.sops
               home-manager.nixosModules.home-manager
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.kasbjornsen= ./home/kasbjornsen/odin.nix;
                 home-manager.extraSpecialArgs = { inherit inputs outputs; };
               }
             ];
