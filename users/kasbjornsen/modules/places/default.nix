@@ -7,8 +7,7 @@
 
   sops.secrets.rclone_proton = {
 
-    defaultSopsFile = ../../secrets/private.enc.yml;
-    validateSopsFiles = false;
+    defaultSopsFile = ../../secrets/secrets.enc.yml;
  };
   
   home.packages = [ pkgs.rclone ];
