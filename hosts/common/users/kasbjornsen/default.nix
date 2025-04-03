@@ -1,12 +1,13 @@
-{ config, pkgs, lib, ...}:
-let
-  ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
-in {
+{ config, pkgs, ...}:
 
+{
+  imports = [ ../../secrets ];
+  
   users.groups.kasbjornsen = {};
   
   users.users.kasbjornsen = {
     isNormalUser = true;
+    hashedPasswordFile = config.sops.secrets.kasbjornsen.path;
     description = "Knut Asbjornsen";
     shell = pkgs.zsh;
     group = "kasbjornsen";
