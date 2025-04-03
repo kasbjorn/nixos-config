@@ -3,6 +3,8 @@ let
   ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
 
+  users.groups.kasbjornsen = {};
+  
   users.users.kasbjornsen = {
     isNormalUser = true;
     description = "Knut Asbjornsen";

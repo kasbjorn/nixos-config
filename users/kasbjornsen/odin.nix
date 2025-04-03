@@ -6,9 +6,9 @@
     ./modules/fonts
 	  ./modules/ssh
     ./modules/email
-    ./modules/places
     ./dotfiles
     ./secrets
+   # ./modules/places
    ];
   
 	programs.home-manager.enable = true;
@@ -17,8 +17,11 @@
     # System
     blueberry
     
-    # General
+    # Crypto
     age
+    sops
+    
+    # General 
     mpv
     imagemagick
     gh
