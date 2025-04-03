@@ -8,6 +8,6 @@
 
     defaultSopsFile = ./private.enc.yml;
     validateSopsFiles = false;
-    age.keyFile = ./keys.txt;
+    age.keyFile = "";
  };
 }

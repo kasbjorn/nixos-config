@@ -8,7 +8,7 @@
     ./modules/email
     ./dotfiles
     ./secrets
-   # ./modules/places
+    ./modules/places
    ];
   
 	programs.home-manager.enable = true;
