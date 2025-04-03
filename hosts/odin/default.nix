@@ -8,8 +8,9 @@
   imports =
     [
     	./hardware-configuration.nix
-	    ../common/users/kasbjornsen
-	
+
+      ../common/users
+      
 	    ../../modules/hardware/zram
 	    ../../modules/hardware/audio
       ../../modules/tailscale

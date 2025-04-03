@@ -7,6 +7,7 @@ in {
     isNormalUser = true;
     description = "Knut Asbjornsen";
     shell = pkgs.zsh;
+    group = "kasbjornsen";
     extraGroups = [
       "audio"
       "networkmanager"
@@ -20,7 +21,6 @@ in {
   
   programs.zsh.enable = true;
 
-  security.pam.services = {
-    swaylock = {};
- };
+  home-manager.users.kasbjornsen = ../../../../users/kasbjornsen/${config.networking.hostName}.nix;
+  
 }

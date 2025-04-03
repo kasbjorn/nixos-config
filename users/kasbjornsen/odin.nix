@@ -11,10 +11,6 @@
     ./secrets
    ];
   
-	home = {
-		username = "kasbjornsen";
-		homeDirectory = "/home/kasbjornsen";
-	};
 	programs.home-manager.enable = true;
   
   home.packages = with pkgs; [
