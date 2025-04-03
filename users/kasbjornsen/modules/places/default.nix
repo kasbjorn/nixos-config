@@ -9,7 +9,6 @@
 
     defaultSopsFile = ../../secrets/private.enc.yml;
     validateSopsFiles = false;
-    age.keyFile = "~/.config/sops/age/keys.txt";
  };
   
   home.packages = [ pkgs.rclone ];
