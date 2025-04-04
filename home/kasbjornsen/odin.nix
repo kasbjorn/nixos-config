@@ -11,7 +11,13 @@
    ];
   
 	programs.home-manager.enable = true;
-  
+
+  home = {
+    username = "kasbjornsen";
+    homeDirectory = "/home/kasbjornsen";
+    sessionPath = ["$HOME/.local/bin"];
+  };
+
   home.packages = with pkgs; [
     # System
     blueberry

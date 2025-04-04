@@ -21,9 +21,12 @@
     let
 
       inherit(self) outputs;
-
+      
+      lib = nixpkgs.lib // home-manager.lib;
+      
     in {
-
+      inherit lib;
+      
       nixosConfigurations = {
      
           odin = nixpkgs.lib.nixosSystem {
@@ -32,17 +35,15 @@
 
             modules = [
               ./hosts/odin
-            ]; 
+              home-manager.nixosModules.home-manager
+              {
+                home-manager.useGlobalPkgs = true;
+                home-manager.useUserPackages = true;
+                home-manager.users.kasbjornsen = ./home/kasbjornsen/odin.nix;
+              } 
+            ];
           };
       };
-
-     homeConfigurations = {
-      "kasbjornsen@odin" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/kasbjorsen/odin.nix];
-      };
-     };
     };
 }
     
