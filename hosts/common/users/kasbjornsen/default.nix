@@ -3,11 +3,11 @@
 {
   imports = [inputs.sops-nix.nixosModules.sops];
   
-  sops = {
-    defaultSopsFile = ../../secrets/private.yml;
-    validateSopsFiles = false;
-    age.keyFile = /home/kasbjornsen/.config/sops/age/keys.txt;
- };
+ # sops = {
+ #   defaultSopsFile = ../../secrets/private.yml;
+ #   validateSopsFiles = false;
+ #   age.keyFile = /home/kasbjornsen/.config/sops/age/keys.txt;
+ #};
   
   users.groups.kasbjornsen = {};
   
@@ -29,6 +29,6 @@
   
   programs.zsh.enable = true;
 
-  home-manager.users.kasbjornsen = ../../../../users/kasbjornsen/${config.networking.hostName}.nix;
+  home-manager.users.kasbjornsen = ../../../../home/kasbjornsen/${config.networking.hostName}.nix;
   
 }

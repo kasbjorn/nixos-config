@@ -22,6 +22,8 @@
       initial-major-mode 'org-mode
       initial-scratch-message "")
 
+(setq auth-sources '("~/.authinfo.gpg" "~/.authinfo" "~/.netrc"))
+
 (defadvice split-window (after split-window-after activate)
   (other-window 1))
 

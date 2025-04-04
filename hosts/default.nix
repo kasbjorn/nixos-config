@@ -2,11 +2,11 @@
 
 {
   imports = [
-    inputs.sops-nix.homeManagerModules.sops
+    inputs.sops-nixosModules.sops
   ];
   
   sops = {
-    defaultSopsFile = ./private.yml;
+    defaultSopsFile = ./common/secrets/private.yml;
     validateSopsFiles = false;
     age.keyFile = /home/kasbjornsen/.config/sops/age/keys.txt;
  };

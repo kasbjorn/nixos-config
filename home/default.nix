@@ -1,5 +1,5 @@
 { config, pkgs, lib, ...}:
 
 {
-   home-manager.users.kasbjornsen= ./home/kasbjornsen/odin.nix;
+   home-manager.users.kasbjornsen = ./kasbjornsen/odin.nix;
 }

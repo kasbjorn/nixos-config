@@ -96,6 +96,7 @@
     :ensure t
     :config
     (mastodon-discover)
+    (setq mastodon-auth-use-auth-source nil)
     (setq mastodon-instance-url "https://mstdn.social"
 	  mastodon-active-user "praetor207@gmail.com"))
 

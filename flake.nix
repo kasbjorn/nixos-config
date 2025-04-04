@@ -17,8 +17,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-      sops-nix.url = "github:mic92/sops-nix";
-      sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix.url = "github:mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
     
   };
 
@@ -27,17 +27,13 @@
       inherit(self) outputs;
      
       in {
-        overlays = import ./overlays;
-        nixosModules = import ./modules/nixos;
-        homeManagerModules = import ./modules/home-manager;
       
         nixosConfigurations = {
 
           odin = nixpkgs.lib.nixosSystem {
-            system = "x86_64-linux";
             modules = [ 
-		          ./hosts/odin 
-              ./home
+		          ./hosts/odin
+              
               sops-nix.nixosModules.sops
               home-manager.nixosModules.home-manager
               {

@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, outputs, ... }:
+{ inputs, outputs, pkgs, config, ... }:
 
 {
   imports =
@@ -45,15 +45,25 @@
     LC_TIME = "en_US.UTF-8";
   };
 
+  services.gnome = {
+    gnome-keyring = {
+      enable = true;
+    };
+  };
 
   hardware.graphics.enable = true;
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
   hardware.sensor.iio.enable = true;
 
+  xdg.portal.enable = true;
+  
+  services.flatpak.enable = true;
   services.gvfs.enable = true;
   services.openssh.enable = true;
 
+  programs.regreet.enable = true;
+  
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "24.05"; # Did you read the comment?

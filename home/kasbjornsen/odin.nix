@@ -1,4 +1,4 @@
-{ inputs, outputs, lib, config, pkgs, ...}:
+{ inputs, outputs, lib, cfg, pkgs, ...}:
 
 {
 
@@ -7,6 +7,7 @@
 	  ./modules/ssh
     ./modules/email
     ./dotfiles
+    ./modules/places
    ];
   
 	programs.home-manager.enable = true;
@@ -31,7 +32,7 @@
     nyxt
     rclone
     tmux
-    
+
     # Live Code
     supercollider
     supercolliderPlugins.sc3-plugins
@@ -146,7 +147,7 @@
 		};
     enableVteIntegration = true;
  };
-
+  
   services.gammastep = {
     enable = true;
     provider = "manual";
