@@ -1,11 +1,10 @@
-{inputs, pkgs, config, ... }:
+{inputs, pkgs, config, lib, ... }:
 
 {
   imports = [
     inputs.sops-nix.nixosModules.sops
   ];
 
-  system = "x86_64-linux";
   sops = {
     defaultSopsFile = "../../../secrets/private.yml";
   };
