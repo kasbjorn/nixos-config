@@ -19,10 +19,10 @@
     
     sops-nix.url = "github:mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
-    
+    systems.url = "github:nix-systems/default-linux";
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, ...} @ inputs:
+  outputs = { self, nixpkgs, home-manager, systems, sops-nix, ...} @ inputs:
     let
       inherit(self) outputs;
      
@@ -31,6 +31,7 @@
         nixosConfigurations = {
 
           odin = nixpkgs.lib.nixosSystem {
+            system = "x86_64-linux";
             modules = [ 
 		          ./hosts/odin
               
