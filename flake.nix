@@ -1,11 +1,5 @@
 {
   description = "A very basic flake";
-
-  
-    nixConfig.extra-substituter = [
-      "https://cache.m7.rs"
-      "https://nix-community.cachix.org"
-    ];
   
   
   inputs = {
@@ -17,22 +11,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     
-    sops-nix.url = "github:mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, systems, sops-nix, ...} @ inputs:
+  outputs = { self, nixpkgs, home-manager, sops-nix, ...} @ inputs:
     let
 
       inherit(self) outputs;
-      systems = [
-        "x86_64-linux"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
 
     in {
-
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
 
       nixosConfigurations = {
      
@@ -46,15 +36,13 @@
           };
       };
 
-      homeConfigurations = {
-        "kasbjornsen@odin" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = { inherit inputs outputs; };
-          modules = [
-            ./home
-          ];
-        };
+     homeConfigurations = {
+      "kasbjornsen@odin" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home/kasbjorsen/odin.nix];
       };
+     };
     };
 }
     

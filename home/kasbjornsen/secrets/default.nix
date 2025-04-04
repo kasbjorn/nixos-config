@@ -1,1 +1,1 @@
-{ cfg, pkgs, ... }:
+{ inputs, outputs, cfg, pkgs, ... }:

@@ -28,7 +28,5 @@
   };
   
   programs.zsh.enable = true;
-
-  home-manager.users.kasbjornsen = ../../../../home/kasbjornsen/${config.networking.hostName}.nix;
   
 }
