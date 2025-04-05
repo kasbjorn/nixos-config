@@ -189,7 +189,7 @@
     userEmail = "kasbjornsen@praetor.tel";
     extraConfig = {
       init.defaultBranch = "main";
-      user.signingkey = "06FF317D861507E6";
+      user.signingkey = "37E798C7D6FE114C";
       commit.gpgsign = true;
       tag.gpgSign = true;
     };
