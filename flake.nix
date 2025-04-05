@@ -17,9 +17,14 @@
       url = "github:mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    disko = {
+      url = "github:nix-community/disko";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, sops-nix, impermanence, ...} @ inputs:
+  outputs = { self, nixpkgs, home-manager, sops-nix, impermanence, disko, ...} @ inputs:
     let
 
       inherit(self) outputs;
@@ -38,7 +43,7 @@
             modules = [
               ./hosts/odin
               impermanence.nixosModules.impermanence
-              
+              disko.nixosModules.disko
               home-manager.nixosModules.home-manager
               {
                 home-manager.useGlobalPkgs = true;

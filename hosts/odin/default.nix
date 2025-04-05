@@ -8,6 +8,7 @@
   imports =
     [
     	./hardware-configuration.nix
+      ./persistence.nix
 
       ../common/users
       
