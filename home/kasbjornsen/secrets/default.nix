@@ -1,1 +1,4 @@
-{ inputs, outputs, cfg, pkgs, ... }:
+{ inputs, config, pkgs, lib, ...}:
+{
+  config.sops.defaultSopsFile = ./private.yml;
+}

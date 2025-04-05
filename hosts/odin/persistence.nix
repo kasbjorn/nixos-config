@@ -27,7 +27,6 @@
         { directory = ".ssh"; mode = "0700"; }
         { directory = ".local/share/keyrings"; mode = "0700"; }
         ".local/share/direnv"
-        ".local/share/fonts"
         ".local/share/themes"
       ];
     };
