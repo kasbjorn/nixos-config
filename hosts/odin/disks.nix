@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, outputs, ...}:
+{ config, libm, pkgs, inputs, outputs, ...}:
 
 {
   disko.devices = {
