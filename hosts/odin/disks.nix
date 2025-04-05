@@ -1,53 +1,50 @@
-{ config, libm, pkgs, inputs, outputs, ...}:
-
 {
   disko.devices = {
     disk = {
-      sda = {
+      main = {
         type = "disk";
         device = "/dev/sda";
         content = {
           type = "gpt";
           partitions = {
             ESP = {
-              label = "boot";
+              priority = 1;
               name = "ESP";
-              size = "512M";
+              start = "1M";
+              end = "128M";
               type = "EF00";
               content = {
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
-                mountOptions = [
-                  "defaults"
-                ];
+                mountOptions = [ "umask=0077" ];
               };
             };
-            root= {
+            root = {
               size = "100%";
               content = {
                 type = "btrfs";
-                extraArgs = ["-L" "nixos" "-f"];
+                extraArgs = [ "-L" "nixos" "-f" ]; # Override existing partition
+                # Subvolumes must set a mountpoint in order to be mounted,
+                # unless their parent is mounted
                 subvolumes = {
+                  # Subvolume name is different from mountpoint
                   "/root" = {
                     mountpoint = "/";
                     mountOptions = ["subvol=root" "compress=zstd" "noatime"];
-                   };
-                  "/home" = {
-                    mountpoint = "/home";
-                    mountOptions = ["subvol=home" "compress=zstd" "noatime"];
                   };
-                  "/nix" = {
-                    mountpoint = "/nix";
-                    mountOptions = ["subvol=nix" "compress=zstd" "noatime"];
+                  # Subvolume name is the same as the mountpoint
+                  "/home" = {
+                    mountOptions = ["subvol=root" "compress=zstd" "noatime"];
+                    mountpoint = "/home";
                   };
                   "/persist" = {
                     mountpoint = "/persist";
-                    mountOptions = ["subvol=persist" "compress=zstd" "noatime"];
+                    mountOptions = [ "subvol=persist" "compress=zstd" "noatime"];
                   };
-                  "/log" = {
-                    mountpoint = "/var/log";
-                    mountOptions = ["subvol=log" "compress=zstd" "noatime"];
+                  "/nix" = {
+                    mountOptions = [ "subvol=nix" "compress=zstd" "noatime"];
+                    mountpoint = "/nix";
                   };
                 };
               };
@@ -57,8 +54,5 @@
       };
     };
   };
-
   fileSystems."/persist".neededForBoot = true;
-  fileSystems."/var/log".neededForBoot = true;
-
 }
