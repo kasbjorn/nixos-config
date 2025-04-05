@@ -47,7 +47,7 @@
               sops-nix.nixosModules.sops
               home-manager.nixosModules.home-manager
               {
-                home-manager.sharedModuels =[ inputs.sops-nix.homeManagerModules.sops ];
+                home-manager.sharedModules =[ inputs.sops-nix.homeManagerModules.sops ];
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
                 home-manager.users.kasbjornsen = ./home/kasbjornsen/odin.nix;
