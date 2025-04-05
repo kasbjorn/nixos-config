@@ -11,13 +11,13 @@
             {
               source = config.lib.file.mkOutOfStoreSymlink ./emacs.d/snippets;
             };
-		      ".emacs.d/config".source = ./emacs.d/config;
+	  ".emacs.d/config".source = ./emacs.d/config;
           ".wallpaper".source = ./wallpaper;
           ".config/niri".source = ./niri;
           ".config/wpaperd".source = ./wpaperd;
           ".config/nyxt".source = ./nyxt;
           ".config/waybar".source = ./waybar;
-          ".local/share/fonts".source = ./fonts;
+          ".fonts".source = ./fonts;
     	};
 
 }
