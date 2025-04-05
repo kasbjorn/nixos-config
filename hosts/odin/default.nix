@@ -9,7 +9,7 @@
     [
     	./hardware-configuration.nix
       ./persistence.nix
-      ./disks.nix
+      
 
       
       ../common/users
