@@ -11,11 +11,6 @@
     ./secrets
 
   ];
-
-  sops.secrets."big_secret" = {
-    format = "yaml";
-    sopsFile = ./secrets/secrets.yaml;
-  };
   
 	programs.home-manager.enable = true;
 
