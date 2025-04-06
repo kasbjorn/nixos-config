@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, lib, ...}:
+{ inputs,config, pkgs, lib, ...}:
 {
   sops = {
     age.keyFile = "/home/kasbjornsen/.config/sops/age/keys.txt"; # must have no password!

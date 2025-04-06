@@ -147,7 +147,6 @@
       WAYLAND_DISPLAY="wayland-0";
       QT_QPA_PLATFORM="xcb";
       QT_QPA_PLATFORMTHEME="qt5ct";
-      SECRET="${config.sops.secrets."big_secret".path}";
     };
     shellAliases = {
 			update = "sudo nixos-rebuild switch";
