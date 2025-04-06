@@ -1,4 +1,5 @@
 { inputs, outputs, config, pkgs, ...}:
+
 {
   environment.persistence."/persist" = {
     enable = true;  # NB: Defaults to true, not needed
@@ -9,6 +10,7 @@
       "/var/lib/nixos"
       "/var/lib/systemd/coredump"
       "/etc/NetworkManager/system-connections"
+      "/run/user"
     ];
     files = [
       "/etc/machine-id"
@@ -28,6 +30,7 @@
         { directory = ".local/share/keyrings"; mode = "0700"; }
         ".local/share/direnv"
         ".local/share/themes"
+        ".config"
       ];
     };
   };

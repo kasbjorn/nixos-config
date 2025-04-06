@@ -9,8 +9,7 @@
     defaultSecretsMountPoint = "/run/user/1000/secrets.d";
   };
 
-  sops.secrets."big_secret" = {
-    format = "yaml";
+  sops.secrets.big_secret = {
     sopsFile = ./secrets.yaml;
   };
 }
