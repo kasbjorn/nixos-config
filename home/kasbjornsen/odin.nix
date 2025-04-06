@@ -1,4 +1,4 @@
-{ inputs, lib, config, pkgs, ...}:
+{inputs, config, pkgs, ...}:
 
 {
 
@@ -9,7 +9,13 @@
     ./dotfiles
     ./modules/places
     ./secrets
-   ];
+
+  ];
+
+  sops.secrets.big_secret = {
+    format = "yaml";
+    sopsFile = ./secrets/secrets.yaml;
+  };
   
 	programs.home-manager.enable = true;
 
