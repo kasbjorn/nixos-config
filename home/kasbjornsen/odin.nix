@@ -8,7 +8,6 @@
     ./modules/email
     ./dotfiles
     ./modules/places
-    ./secrets
 
   ];
   
