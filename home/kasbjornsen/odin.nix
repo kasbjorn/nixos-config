@@ -35,10 +35,11 @@
     pass
     yt-dlp
     scrot
-    google-chrome
+    chromium
     nyxt
     rclone
     tmux
+    onlyoffice-bin
 
     # Live Code
     supercollider
@@ -130,7 +131,9 @@
  
   services.emacs = {
 	  enable = true;
-	  package = pkgs.emacs;
+	  package = [
+      pkgs.emacs
+    ];
   };  
 
   programs.zsh = {
