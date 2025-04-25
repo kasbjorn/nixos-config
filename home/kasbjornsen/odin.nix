@@ -6,6 +6,7 @@
     ./modules/fonts
 	  ./modules/ssh
     ./modules/email
+    ./modules/services
     ./dotfiles
     ./modules/places
 
@@ -89,8 +90,6 @@
     swaylock
     yazi
     wpaperd
-    stumpwm
-    niri
 
     # General X
     wl-clipboard-x11
@@ -128,14 +127,7 @@
       epkgs.ement
    ];
   };
- 
-  services.emacs = {
-	  enable = true;
-	  package = [
-      pkgs.emacs
-    ];
-  };  
-
+   
   programs.zsh = {
 	  enable = true;
 		enableCompletion = true;
@@ -147,6 +139,7 @@
     sessionVariables = {
       XDG_CURRENT_DESKTOP="niri";
       WAYLAND_DISPLAY="wayland-0";
+      DISPLAY=":0";
       QT_QPA_PLATFORM="xcb";
       QT_QPA_PLATFORMTHEME="qt5ct";
     };

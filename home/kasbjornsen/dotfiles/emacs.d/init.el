@@ -12,7 +12,7 @@
 (load "~/.emacs.d/config/company")
 (load "~/.emacs.d/config/custom")
 
-(setq inferior-lisp-program "/home/kasbjornsen/.nix-profile/bin/sbcl")
+(setq inferior-lisp-program "/etc/profiles/per-user/kasbjornsen/bin/sbcl")
 (setq warning-minimum-level :emergency)
 
 ;; Fonts
