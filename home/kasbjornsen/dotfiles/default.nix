@@ -17,6 +17,7 @@
           ".config/wpaperd".source = ./wpaperd;
           ".config/nyxt".source = ./nyxt;
           ".config/waybar".source = ./waybar;
+          ".config/gammastep".source = ./gammastep;
           ".local/share/fonts".source = ./fonts;
     	};
 

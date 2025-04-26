@@ -8,9 +8,7 @@ hotkey-overlay {
 	       skip-at-startup
 }
 
-spawn-at-startup "xwayland-satellite"
-spawn-at-startup "waybar"
-spawn-at-startup "wpaperd" "-d"
+spawn-at-startup "startup"
 
 input {
     keyboard {
@@ -154,7 +152,7 @@ window-rule {
 }
 
 workspace "chat"
-worspace "code"
+workspace "code"
 
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
