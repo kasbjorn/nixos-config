@@ -22,6 +22,7 @@
       "wheel"
       "docker"
       "libvirtd"
+      "users"
     ];
 
     packages = [pkgs.home-manager];

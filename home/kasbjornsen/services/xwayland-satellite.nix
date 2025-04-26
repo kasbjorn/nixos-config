@@ -1,15 +1,18 @@
 {pkgs, ...}:
 
 {
-	systemd.services.xwayland-satellite = {
-		wantedBy = ["graphical-session.target"];
-		after = [ "graphical-session.target"];
-		serviceConfig = {
-      Group = "users";
-			ExecStart = "env DISPLAY=:0 ${pkgs.xwayland-satellite}/bin/xwayland-satellite";
-			ExecStop = "pkill xwayland";
+	systemd.user.services.xwayland-satellite = {
+		Install = {
+			WantedBy= ["graphical-session.target"];
+		};
+		Service = {
+			ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
+		};
+		Unit = {
+			After="graphical-session-pre.target";
+			PartOf=[ "graphical-session.target"];
 		};
 	};
   
-  environment.systemPackages = [ pkgs.xwayland-satellite ];
+  	home.packages = [ pkgs.xwayland-satellite ];
 }

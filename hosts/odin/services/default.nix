@@ -1,5 +1,5 @@
 {
 	imports = [
-		./xwayland-satellite.nix 
+		 
 	];
 }

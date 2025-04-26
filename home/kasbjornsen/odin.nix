@@ -7,6 +7,7 @@
 	  ./modules/ssh
     ./modules/email
     ./dotfiles
+    ./services
     ./modules/places
 
   ];
@@ -93,7 +94,6 @@
     # General X
     wl-clipboard-x11
     wl-clipboard
-    xwayland-satellite
     
     # Music!! :D
     spotify

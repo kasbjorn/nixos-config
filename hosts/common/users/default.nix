@@ -5,6 +5,12 @@
   imports = [
     ../users/kasbjornsen
   ];
+
+  users.groups = {
+    users = {
+      members = [ "kasbjornsen" ];
+    };
+  };
   
   nix.settings.trusted-users = [ "root" "kasbjornsen" ];
   

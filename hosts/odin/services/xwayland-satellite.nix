@@ -5,10 +5,11 @@
 		wantedBy = ["graphical-session.target"];
 		after = [ "graphical-session.target"];
 		serviceConfig = {
-			ExecStart = "${pkgs.xwayland-satellite}/bin/xwayland-satellite";
+      Group = "users";
+			ExecStart = "env DISPLAY=:0 ${pkgs.xwayland-satellite}/bin/xwayland-satellite";
 			ExecStop = "pkill xwayland";
 		};
-		
-		environment.systemPackages = [ pkgs.xwayland-satellite ];
 	};
+  
+  environment.systemPackages = [ pkgs.xwayland-satellite ];
 }
