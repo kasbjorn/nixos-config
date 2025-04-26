@@ -9,10 +9,11 @@
     [
     	./hardware-configuration.nix
       ./persistence.nix
-      
+      ./services
 
       
       ../common/users
+ 
       
 	    ../../modules/hardware/zram
 	    ../../modules/hardware/audio
@@ -34,6 +35,30 @@
   
   time.timeZone = "America/Chicago";
 
+  programs.niri.enable = true;
+
+  programs.xwayland.enable = true;
+
+  services.libinput = {
+    touchpad = {
+      disableWhileTyping = true;
+      naturalScrolling = true;
+    };
+  };
+
+  services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    xkb.variant = "";
+    displayManager = {
+	lightdm =
+      	{
+        	enable = true;
+        	greeters.gtk.enable = true;
+      	};
+    };    
+  };
+  
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
@@ -64,8 +89,6 @@
   services.flatpak.enable = true;
   services.gvfs.enable = true;
   services.openssh.enable = true;
-
-  programs.regreet.enable = true;
   
   nixpkgs.config.allowUnfree = true;
 
