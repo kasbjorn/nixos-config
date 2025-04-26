@@ -6,7 +6,6 @@
     ./modules/fonts
 	  ./modules/ssh
     ./modules/email
-    ./modules/services
     ./dotfiles
     ./modules/places
 
