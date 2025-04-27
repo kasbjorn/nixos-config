@@ -1,13 +1,16 @@
 prefer-no-csd
 
 environment {
-	    DISPLAY ":0"
+	    DISPLAY ":1"
 }
 
 hotkey-overlay {
 	       skip-at-startup
 }
 
+spawn-at-startup "waybar"
+spawn-at-startup "wpaperd" "-d"
+spawn-at-startup "gammastep"
 spawn-at-startup "startup"
 
 input {

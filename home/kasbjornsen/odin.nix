@@ -8,7 +8,6 @@
     ./modules/email
     ./dotfiles
     ./services
-    ./modules/places
 
   ];
   
@@ -40,7 +39,7 @@
     nyxt
     rclone
     tmux
-    onlyoffice-bin
+    wpsoffice
 
     # Live Code
     supercollider
@@ -60,6 +59,9 @@
     # Rust
     rustc
     cargo
+
+    # Pascal <3
+    fpc
 
     # Libraries
     openssl
@@ -86,10 +88,12 @@
     # Niri / WM
     mako
     waybar
-    rofi
+    rofi-wayland
     swaylock
     yazi
     wpaperd
+    xwayland-satellite
+    gammastep
 
     # General X
     wl-clipboard-x11
@@ -124,6 +128,7 @@
       epkgs.vterm
       epkgs.mu4e
       epkgs.ement
+      epkgs.lsp-pascal
    ];
   };
    
@@ -138,7 +143,6 @@
     sessionVariables = {
       XDG_CURRENT_DESKTOP="niri";
       WAYLAND_DISPLAY="wayland-0";
-      DISPLAY=":0";
       QT_QPA_PLATFORM="xcb";
       QT_QPA_PLATFORMTHEME="qt5ct";
     };
@@ -150,13 +154,6 @@
     enableVteIntegration = true;
  };
   
-  services.gammastep = {
-    enable = true;
-    provider = "manual";
-    latitude = 32.0;
-    longitude = -99.0;
-  };
-
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;

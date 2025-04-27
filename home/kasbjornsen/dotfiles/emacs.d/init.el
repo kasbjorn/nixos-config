@@ -3,6 +3,7 @@
 (load "~/.emacs.d/config/org-mode")
 (load "~/.emacs.d/config/bindings")
 (load "~/.emacs.d/config/emms")
+(load "~/.emacs.d/config/elfeed")
 (load "~/.emacs.d/config/erc")
 (load "~/.emacs.d/config/treemacs")
 (load "~/.emacs.d/config/publish")

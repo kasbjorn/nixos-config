@@ -1,12 +1,12 @@
 {pkgs, ...}:
 
 {
-	systemd.user.service.rclone-proton = {
+	systemd.user.services.rclone-proton = {
 		Install = {
 			WantedBy= ["default.target"];
 		};
 		Service = {
-			ExecStart = "rclone mount Proton:/ ~/Places/Proton";
+			ExecStart = "${pkgs.rclone}/bin/rclone mount Proton:/ /home/kasbjornsen/Places/Proton --vfs-cache-mode writes";
 		};
 	};
 }
