@@ -7,6 +7,7 @@
             {
               source = config.lib.file.mkOutOfStoreSymlink ./emacs.d/init.el;
             };
+          ".emacs.d/feeds.org" = ./emacs.d/feeds.org;
           ".emacs.d/snippets" =
             {
               source = config.lib.file.mkOutOfStoreSymlink ./emacs.d/snippets;

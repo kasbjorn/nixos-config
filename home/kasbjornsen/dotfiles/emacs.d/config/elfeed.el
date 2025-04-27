@@ -1,7 +1,10 @@
 (use-package elfeed
-  :ensure t)
+  :ensure
+  :bind
+  ("C-c w e" . elfeed))
 
-(setq elfeed-feeds
-      '(
-	("https://www.cbsnews.com/latest/rss/main" news headlines)
-       ))
+(use-package elfeed-org
+  :ensure t
+  :config
+  (elfeed-org)
+  (setq rmh-elfeed-org-files (list "~.emacs.d/feeds.org")))

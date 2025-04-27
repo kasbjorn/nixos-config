@@ -1,0 +1,4 @@
+* Blogs                                                                 :elfeed:
+** News - US                                                            :us-news:
+*** http://associated-press.s3-website-us-east-1.amazonaws.com/us-news.xml
+*** https://www.theguardian.com/us/rss
